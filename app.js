@@ -4,7 +4,7 @@ var path = require('path');
 express.static.mime.types['wasm'] = 'application/wasm'
 
 var app = express();
-const webPort = 80;
+const webPort = 5555;
 
 
 
