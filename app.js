@@ -6,9 +6,6 @@ express.static.mime.types['wasm'] = 'application/wasm'
 var app = express();
 const webPort = 5555;
 
-
-
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
