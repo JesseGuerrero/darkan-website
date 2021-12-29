@@ -17,6 +17,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 /* GET home page. */
 app.get('/', function(req, res, next) {
+  console.log(req.socket.remoteAddress)
   res.render('home', { title: 'Express' });
 });
 
