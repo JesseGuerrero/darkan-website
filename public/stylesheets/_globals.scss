@@ -1,0 +1,69 @@
+html {
+    font-size: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    *, *::before, *::after {
+        box-sizing: inherit;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.5;
+        font-size: $font-sm;
+        margin: 0px;
+        background-color: grey;
+        color: black;
+        cursor: auto;
+
+        a, a:visited, a:hover {
+            text-decoration: none;
+        }
+
+        .button {
+            &:hover {
+                opacity: 85%;
+                transition: opacity 200ms ease-in-out;
+            }
+            cursor: pointer;
+        }
+
+        .shadow-dropdown {
+            box-shadow: 0px 0px 5px lightgray;
+        }
+
+        .container {
+            padding: 3rem 4rem 3rem 4rem;
+        }
+
+        .flex {
+            display: flex;
+
+            &-jc-sb {
+                justify-content: space-between;
+            }
+
+            &-jc-c {
+                justify-content: center;
+            }
+
+            &-ai-c {
+                align-items: center;
+            }
+        }
+
+        .hide-for-mobile {
+            @include breakpoint-down(medium){
+                display: none;
+            }
+        }
+
+        .hide-for-desktop {
+            @include breakpoint-up(large) {
+                display: none;
+            }
+        }
+    }
+}
