@@ -14,12 +14,13 @@ html {
         line-height: 1.5;
         font-size: $font-sm;
         margin: 0px;
-        background-color: grey;
+        background-color: whitesmoke;
         color: black;
         cursor: auto;
 
         a, a:visited, a:hover {
             text-decoration: none;
+            color: blue;
         }
 
         .button {

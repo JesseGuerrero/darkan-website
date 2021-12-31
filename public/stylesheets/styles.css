@@ -17,13 +17,14 @@ html body {
   line-height: 1.5;
   font-size: 0.875rem;
   margin: 0px;
-  background-color: grey;
+  background-color: green;
   color: black;
   cursor: auto;
 }
 
 html body a, html body a:visited, html body a:hover {
   text-decoration: none;
+  color: blue;
 }
 
 html body .button {
