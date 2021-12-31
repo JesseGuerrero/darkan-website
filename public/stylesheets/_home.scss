@@ -1,6 +1,87 @@
-nav {
-    .top-nav{
-        display: flex;
-        justify-content: space-between;
+// mobile
+.title-mobile {
+    text-align: center;
+}
+
+// desktop
+.main-container {
+    padding: 15% 0rem;
+}
+.sub-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    // grids 1 & 2
+    .g1-hero {
+        width: 100%;
+        height: 100%;
+        padding-left: 5rem;
+        background-color: none;
+    
+        h1 {
+            font-size: $font-lg;
+            margin: 0rem;
+        }
+
+        p {
+            font-size: $font-med;
+            max-width: 100%;
+        }
+    }
+
+    .g2-form {
+        text-align: center;
+        background-color: whitesmoke;
+        width: 22.5rem;
+        height: 20rem;
+        border: none;
+        border-radius: 5px;
+        padding: 1rem;
+        margin-left: 5rem;
+
+        // log & pass
+        .log-container, .pass-container {
+            width: 20rem;
+            height: 1rem;
+            padding: 1.5rem;
+            border: 1.25px;
+            border-style: solid;
+            border-color: lightgray;
+            border-radius: 5px;
+            margin-bottom: .75rem;
+
+            font-size: $font-sm;
+        }
+
+        // forget password link
+        .forget-pass {
+            margin: 1rem;
+        }
+
+
+        // buttons
+        .log-in {
+            width: 20rem;
+            padding: 1rem;
+            background-color: lightgrey;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+
+            font-size: $font-sm;
+            font-weight: 500;
+        }
+
+        .create-account {
+            width: 10rem;
+            padding: 1rem;
+            background-color: lightgrey;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+
+            font-size: $font-sm;
+            font-weight: 500;
+        }
     }
 }

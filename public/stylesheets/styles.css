@@ -16,8 +16,8 @@ html body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
   font-size: 0.875rem;
-  margin: 0px;
-  background-color: green;
+  padding: 0rem 4rem 0rem 4rem;
+  background-color: darkgray;
   color: black;
   cursor: auto;
 }
@@ -40,10 +40,6 @@ html body .button:hover {
 html body .shadow-dropdown {
   -webkit-box-shadow: 0px 0px 5px lightgray;
           box-shadow: 0px 0px 5px lightgray;
-}
-
-html body .container {
-  padding: 3rem 4rem 3rem 4rem;
 }
 
 html body .flex {
@@ -82,13 +78,84 @@ html body .flex-ai-c {
   }
 }
 
-nav .top-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  background-color: green;
+.title-mobile {
+  text-align: center;
+}
+
+.main-container {
+  padding: 15% 0rem;
+}
+
+.sub-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.sub-container .g1-hero {
+  width: 100%;
+  height: 100%;
+  padding-left: 5rem;
+  background-color: none;
+}
+
+.sub-container .g1-hero h1 {
+  font-size: 3.25rem;
+  margin: 0rem;
+}
+
+.sub-container .g1-hero p {
+  font-size: 1.25rem;
+  max-width: 100%;
+}
+
+.sub-container .g2-form {
+  text-align: center;
+  background-color: whitesmoke;
+  width: 22.5rem;
+  height: 20rem;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-left: 5rem;
+}
+
+.sub-container .g2-form .log-container, .sub-container .g2-form .pass-container {
+  width: 20rem;
+  height: 1rem;
+  padding: 1.5rem;
+  border: 1.25px;
+  border-style: solid;
+  border-color: lightgray;
+  border-radius: 5px;
+  margin-bottom: .75rem;
+  font-size: 0.875rem;
+}
+
+.sub-container .g2-form .forget-pass {
+  margin: 1rem;
+}
+
+.sub-container .g2-form .log-in {
+  width: 20rem;
+  padding: 1rem;
+  background-color: lightgrey;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.sub-container .g2-form .create-account {
+  width: 10rem;
+  padding: 1rem;
+  background-color: lightgrey;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
 }
 /*# sourceMappingURL=styles.css.map */

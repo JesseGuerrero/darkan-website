@@ -13,16 +13,18 @@ html {
         font-family: Arial, Helvetica, sans-serif;
         line-height: 1.5;
         font-size: $font-sm;
-        margin: 0px;
-        background-color: whitesmoke;
+        padding: 0rem 4rem 0rem 4rem;
+        background-color: darkgray;
         color: black;
         cursor: auto;
 
+        // text design
         a, a:visited, a:hover {
             text-decoration: none;
             color: blue;
         }
-
+        
+        // button
         .button {
             &:hover {
                 opacity: 85%;
@@ -30,15 +32,13 @@ html {
             }
             cursor: pointer;
         }
-
+        
+        // drop shadow
         .shadow-dropdown {
             box-shadow: 0px 0px 5px lightgray;
         }
 
-        .container {
-            padding: 3rem 4rem 3rem 4rem;
-        }
-
+        // alignment
         .flex {
             display: flex;
 
@@ -55,6 +55,7 @@ html {
             }
         }
 
+        // visibility state
         .hide-for-mobile {
             @include breakpoint-down(medium){
                 display: none;
