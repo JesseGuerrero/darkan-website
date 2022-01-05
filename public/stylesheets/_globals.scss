@@ -13,19 +13,20 @@ html {
         font-family: Arial, Helvetica, sans-serif;
         line-height: 1.5;
         font-size: $font-sm;
-        padding: 0rem 4rem 0rem 4rem;
-        background-color: darkgray;
+        padding: 0rem;
+        margin: 0rem;
+        background-color: #202020;
         color: black;
         cursor: auto;
 
         // text design
         a, a:visited, a:hover {
             text-decoration: none;
-            color: blue;
+            color: white;
         }
         
         // button
-        .button {
+        .button-hover {
             &:hover {
                 opacity: 85%;
                 transition: opacity 200ms ease-in-out;

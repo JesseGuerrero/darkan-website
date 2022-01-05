@@ -1,31 +1,97 @@
-// mobile
+// mobile - only
 .title-mobile {
     text-align: center;
 }
 
 // desktop
+nav {
+    color: white;
+    text-align: right;
+    padding: 1rem;
+
+    .main-page-link {
+        text-align: right;
+    }
+}
+
 .main-container {
-    padding: 15% 0rem;
+    padding: 4rem 0rem 0rem 0rem;
+    min-height: 100vh;
+    background: linear-gradient(95deg, rgba(22, 45, 59, 0), rgb(22, 22, 22));
+
+    @include breakpoint-up(large) {
+        padding: 8rem 0rem;
+    }
 }
 .sub-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    @include breakpoint-up(large) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     // grids 1 & 2
     .g1-hero {
         width: 100%;
         height: 100%;
-        padding-left: 5rem;
-        background-color: none;
-    
+        text-align: center;
+        color: white;
         h1 {
-            font-size: $font-lg;
+            font-size: $font-xlg;
             margin: 0rem;
         }
-
-        p {
+        h2 {
             font-size: $font-med;
-            max-width: 100%;
+            font-weight: 400;
+            margin-top: 0rem;
+            margin-bottom: 2rem;
+            width: auto;
+        }
+
+        // client download buttons
+        .dwn-client {
+            margin-bottom: 1.75rem;
+        }
+        .dwn-btn1, .dwn-btn2 {
+            font-size: $font-sm;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .dwn-btn1 {
+            padding: 1rem;
+            background-color: rgb(55, 89, 78);
+        }
+        .dwn-btn2 {
+            padding: 0.875rem;
+            background: none;
+            border-style: solid;
+            border-width: 2px;
+            border-color: #CCC9DC;
+            position: relative;
+            left: .75rem;
+        }
+        .material-icons {
+            align-items: center;
+        }
+        .pf-icon {
+            margin-left: .5rem;
+            font-size: 16px;
+        }
+
+        @include breakpoint-up(large) {
+            padding-left: 10rem;
+            background-color: none;
+            text-align: left;
+            
+            h2 {
+                line-height: 1.25;
+                padding: 0rem;
+                font-size: $font-xmed;
+                font-weight: 400;
+            }
+            .dwn-client {
+                margin-bottom: 0rem;
+            }
         }
     }
 
@@ -33,11 +99,24 @@
         text-align: center;
         background-color: whitesmoke;
         width: 22.5rem;
-        height: 20rem;
+        height: 19.5rem;
         border: none;
         border-radius: 5px;
         padding: 1rem;
-        margin-left: 5rem;
+        margin-right: auto;
+        margin-bottom: 0rem;
+        margin-left: auto;
+        box-shadow: 0px 0px 25px black;
+
+        a {
+            color: blue;
+        }
+
+        @include breakpoint-up(large) {
+            position: relative;
+            left: 7rem;
+            margin: 0rem;
+        }
 
         // log & pass
         .log-container, .pass-container {
@@ -63,7 +142,8 @@
         .log-in {
             width: 20rem;
             padding: 1rem;
-            background-color: lightgrey;
+            color: white;
+            background-color: rgb(55, 89, 78);
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -75,13 +155,43 @@
         .create-account {
             width: 10rem;
             padding: 1rem;
-            background-color: lightgrey;
+            background-color: rgb(48, 48, 48);
             border: none;
             border-radius: 5px;
+            color: white;
             cursor: pointer;
 
             font-size: $font-sm;
             font-weight: 500;
         }
+    }
+}
+
+// footer
+footer {
+    background-color: #202020;
+    font-size: $font-xsm;
+    color: white;
+    padding: 1rem;
+
+    p {
+        margin: 0rem;
+    }
+
+    a {
+        color: grey;
+    }
+
+    .site-map, .legal {
+        a:not(:last-child) {
+            margin-right: 1rem;
+        }
+        p {
+            margin-right: 1rem;
+        }
+    }
+
+    @include breakpoint-up(large) {
+        height: auto;
     }
 }
