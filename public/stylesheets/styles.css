@@ -105,6 +105,12 @@ nav .main-page-link {
   }
 }
 
+@media (min-width: 87.5em) {
+  .main-container {
+    padding-top: 16rem;
+  }
+}
+
 @media (min-width: 64em) {
   .sub-container {
     display: -ms-grid;
@@ -185,6 +191,12 @@ nav .main-page-link {
   }
   .sub-container .g1-hero .dwn-client {
     margin-bottom: 0rem;
+  }
+}
+
+@media (min-width: 87.5em) {
+  .sub-container .g1-hero {
+    padding-left: 30rem;
   }
 }
 

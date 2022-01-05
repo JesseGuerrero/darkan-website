@@ -22,6 +22,9 @@ nav {
     @include breakpoint-up(large) {
         padding: 8rem 0rem;
     }
+    @include breakpoint-up(xlarge) {
+        padding-top: 16rem;
+    }
 }
 .sub-container {
     @include breakpoint-up(large) {
@@ -92,6 +95,9 @@ nav {
             .dwn-client {
                 margin-bottom: 0rem;
             }
+        }
+        @include breakpoint-up("xlarge") {
+            padding-left: 30rem;
         }
     }
 
