@@ -96,7 +96,7 @@ nav .main-page-link {
 .main-container {
   padding: 4rem 0rem 0rem 0rem;
   min-height: 100vh;
-  background: linear-gradient(95deg, rgba(22, 45, 59, 0), #161616);
+  background: linear-gradient(95deg, rgba(25, 52, 68, 0), #161616);
 }
 
 @media (min-width: 64em) {
@@ -202,7 +202,7 @@ nav .main-page-link {
 
 .sub-container .g2-form {
   text-align: center;
-  background-color: whitesmoke;
+  background-color: #232323;
   width: 22.5rem;
   height: 19.5rem;
   border: none;
@@ -216,7 +216,7 @@ nav .main-page-link {
 }
 
 .sub-container .g2-form a {
-  color: blue;
+  color: white;
 }
 
 @media (min-width: 64em) {
@@ -233,9 +233,10 @@ nav .main-page-link {
   padding: 1.5rem;
   border: 1.25px;
   border-style: solid;
-  border-color: lightgray;
+  border-color: none;
   border-radius: 5px;
   margin-bottom: .75rem;
+  background-color: #303030;
   font-size: 0.875rem;
 }
 
@@ -247,7 +248,7 @@ nav .main-page-link {
   width: 20rem;
   padding: 1rem;
   color: white;
-  background-color: #37594e;
+  background-color: #7e7e7e;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -258,13 +259,19 @@ nav .main-page-link {
 .sub-container .g2-form .create-account {
   width: 10rem;
   padding: 1rem;
-  background-color: #303030;
+  background-color: #37594e;
   border: none;
   border-radius: 5px;
   color: white;
   cursor: pointer;
   font-size: 0.875rem;
   font-weight: 500;
+}
+
+.sub-container .g2-form .cta-discord {
+  color: white;
+  position: relative;
+  top: 2rem;
 }
 
 footer {

@@ -17,7 +17,7 @@ nav {
 .main-container {
     padding: 4rem 0rem 0rem 0rem;
     min-height: 100vh;
-    background: linear-gradient(95deg, rgba(22, 45, 59, 0), rgb(22, 22, 22));
+    background: linear-gradient(95deg, rgba(25, 52, 68, 0), rgb(22, 22, 22));
 
     @include breakpoint-up(large) {
         padding: 8rem 0rem;
@@ -103,7 +103,7 @@ nav {
 
     .g2-form {
         text-align: center;
-        background-color: whitesmoke;
+        background-color: rgb(35, 35, 35);
         width: 22.5rem;
         height: 19.5rem;
         border: none;
@@ -115,7 +115,7 @@ nav {
         box-shadow: 0px 0px 25px black;
 
         a {
-            color: blue;
+            color: white;
         }
 
         @include breakpoint-up(large) {
@@ -131,9 +131,10 @@ nav {
             padding: 1.5rem;
             border: 1.25px;
             border-style: solid;
-            border-color: lightgray;
+            border-color: none;
             border-radius: 5px;
             margin-bottom: .75rem;
+            background-color: rgb(48, 48, 48);
 
             font-size: $font-sm;
         }
@@ -149,7 +150,7 @@ nav {
             width: 20rem;
             padding: 1rem;
             color: white;
-            background-color: rgb(55, 89, 78);
+            background-color: rgb(126, 126, 126);
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -161,7 +162,7 @@ nav {
         .create-account {
             width: 10rem;
             padding: 1rem;
-            background-color: rgb(48, 48, 48);
+            background-color: rgb(55, 89, 78);
             border: none;
             border-radius: 5px;
             color: white;
@@ -169,6 +170,12 @@ nav {
 
             font-size: $font-sm;
             font-weight: 500;
+        }
+
+        .cta-discord {
+            color: white;
+            position: relative;
+            top: 2rem;
         }
     }
 }
