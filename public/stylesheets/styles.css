@@ -211,8 +211,8 @@ nav .main-page-link {
   margin-right: auto;
   margin-bottom: 0rem;
   margin-left: auto;
-  -webkit-box-shadow: 0px 0px 25px black;
-          box-shadow: 0px 0px 25px black;
+  -webkit-box-shadow: 0px 0px 50px black;
+          box-shadow: 0px 0px 50px black;
 }
 
 .sub-container .g2-form a {
@@ -259,10 +259,10 @@ nav .main-page-link {
 .sub-container .g2-form .create-account {
   width: 10rem;
   padding: 1rem;
-  background-color: #f35c36;
+  background-color: white;
   border: none;
   border-radius: 5px;
-  color: white;
+  color: black;
   cursor: pointer;
   font-size: 0.875rem;
   font-weight: 500;
