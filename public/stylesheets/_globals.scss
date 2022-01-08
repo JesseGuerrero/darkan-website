@@ -19,13 +19,22 @@ html {
         color: black;
         cursor: auto;
 
-        // text design
+        //top nav
+        nav {
+            padding: 1rem;
+
+            @include breakpoint-up(large) {
+                padding: 0rem 1rem;
+            }
+        }
+
+        // link-text design
         a, a:visited, a:hover {
             text-decoration: none;
             color: white;
         }
         
-        // button
+        // button-opacity
         .button-hover {
             &:hover {
                 opacity: 85%;
@@ -36,10 +45,10 @@ html {
         
         // drop shadow
         .shadow-dropdown {
-            box-shadow: 0px 0px 5px lightgray;
+            box-shadow: 0px 0px 10px rgb(0, 0, 0);
         }
 
-        // alignment
+        // content alignment
         .flex {
             display: flex;
 

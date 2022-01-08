@@ -23,6 +23,16 @@ html body {
   cursor: auto;
 }
 
+html body nav {
+  padding: 1rem;
+}
+
+@media (min-width: 64em) {
+  html body nav {
+    padding: 0rem 1rem;
+  }
+}
+
 html body a, html body a:visited, html body a:hover {
   text-decoration: none;
   color: white;
@@ -39,8 +49,8 @@ html body .button-hover:hover {
 }
 
 html body .shadow-dropdown {
-  -webkit-box-shadow: 0px 0px 5px lightgray;
-          box-shadow: 0px 0px 5px lightgray;
+  -webkit-box-shadow: 0px 0px 10px black;
+          box-shadow: 0px 0px 10px black;
 }
 
 html body .flex {
@@ -83,13 +93,13 @@ html body .flex-ai-c {
   text-align: center;
 }
 
-nav {
+.land-top-nav {
   color: white;
   text-align: right;
   padding: 1rem;
 }
 
-nav .main-page-link {
+.land-top-nav .main-page-link {
   text-align: right;
 }
 
@@ -307,29 +317,33 @@ footer .site-map p, footer .legal p {
   }
 }
 
-nav a {
+.main-nav a {
   position: relative;
   font-size: 0.875rem;
   margin-right: 1rem;
 }
 
-nav a:hover {
-  color: grey;
+.main-nav a:hover {
+  color: #e7e7e7;
   -webkit-transition: color 200ms ease-in-out;
   transition: color 200ms ease-in-out;
 }
 
-nav a:last-child {
+.main-nav a:last-child {
   margin-right: 0rem;
 }
 
-nav ul {
+.main-nav ul {
   margin: 0rem;
   padding: 1rem;
 }
 
-nav li {
+.main-nav li {
   list-style-type: none;
+}
+
+.main-nav .cta-dwnl {
+  color: #83c0dd;
 }
 
 .hamburger {
@@ -350,6 +364,7 @@ nav li {
 .dropbtn {
   font-size: 0.875rem;
   margin: 0rem;
+  color: white;
   cursor: pointer;
 }
 
@@ -362,11 +377,10 @@ nav li {
 .dropdown {
   position: relative;
   display: inline-block;
-  color: white;
 }
 
 .dropdown p {
-  margin-right: 1rem;
+  padding: 1rem 1rem 1rem 0rem;
 }
 
 .dropdown-content {
@@ -375,7 +389,8 @@ nav li {
   background-color: #2b2b2b;
   min-width: 15rem;
   border-radius: 5px;
-  top: 1.25rem;
+  top: 3rem;
+  left: -1rem;
 }
 
 .dropdown-links {
@@ -393,8 +408,8 @@ nav li {
 }
 
 .dropdown-content a:hover {
-  color: grey;
-  background-color: white;
+  color: white;
+  background-color: #202020;
   border-radius: 5px;
   -webkit-transition: background-color 200ms ease-in-out;
   transition: background-color 200ms ease-in-out;
@@ -405,7 +420,7 @@ nav li {
 }
 
 .dwn-arrow {
-  cursor: pointer;
+  margin-left: .25rem;
 }
 
 .signup-main-container {
@@ -438,8 +453,12 @@ nav li {
           box-shadow: 0px 0px 50px black;
 }
 
-.signup-sub-container .signup-form h2, .signup-sub-container .signup-form h3, .signup-sub-container .signup-form a, .signup-sub-container .signup-form p {
+.signup-sub-container .signup-form h1, .signup-sub-container .signup-form a, .signup-sub-container .signup-form p {
   color: white;
+}
+
+.signup-sub-container .signup-form h1 {
+  font-size: 24px;
 }
 
 .signup-sub-container .signup-form p {
