@@ -206,7 +206,7 @@ nav .main-page-link {
 
 .sub-container .g2-form {
   text-align: center;
-  background-color: #202020;
+  background-color: #2b2b2b;
   width: 22.5rem;
   height: 19.5rem;
   border: none;
@@ -236,11 +236,11 @@ nav .main-page-link {
   height: 1rem;
   padding: 1.5rem;
   border: 1.25px;
-  border-style: solid;
   border-color: none;
   border-radius: 5px;
   margin-bottom: .75rem;
-  background-color: #2b2b2b;
+  background-color: #202020;
+  color: white;
   font-size: 0.875rem;
 }
 
@@ -252,7 +252,7 @@ nav .main-page-link {
   width: 20rem;
   padding: 1rem;
   color: black;
-  background-color: #5f8ba0;
+  background-color: #83c0dd;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -276,6 +276,210 @@ nav .main-page-link {
   color: white;
   position: relative;
   top: 2rem;
+}
+
+footer {
+  background-color: #202020;
+  font-size: 0.75rem;
+  color: white;
+  padding: 1rem;
+}
+
+footer p {
+  margin: 0rem;
+}
+
+footer a {
+  color: grey;
+}
+
+footer .site-map a:not(:last-child), footer .legal a:not(:last-child) {
+  margin-right: 1rem;
+}
+
+footer .site-map p, footer .legal p {
+  margin-right: 1rem;
+}
+
+@media (min-width: 64em) {
+  footer {
+    height: auto;
+  }
+}
+
+nav a {
+  position: relative;
+  font-size: 0.875rem;
+  margin-right: 1rem;
+}
+
+nav a:hover {
+  color: grey;
+  -webkit-transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out;
+}
+
+nav a:last-child {
+  margin-right: 0rem;
+}
+
+nav ul {
+  margin: 0rem;
+  padding: 1rem;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+.hamburger {
+  padding-right: 0rem;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 1.25rem;
+  height: .125rem;
+  margin: .25rem auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+.dropbtn {
+  font-size: 0.875rem;
+  margin: 0rem;
+  cursor: pointer;
+}
+
+.dropbtn:hover {
+  color: #e7e7e7;
+  -webkit-transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  color: white;
+}
+
+.dropdown p {
+  margin-right: 1rem;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #2b2b2b;
+  min-width: 15rem;
+  border-radius: 5px;
+  top: 1.25rem;
+}
+
+.dropdown-links {
+  position: relative;
+  padding: .75rem;
+}
+
+.dropdown-content a {
+  font-size: 0.875rem;
+  text-align: left;
+  color: black;
+  padding: .25rem;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  color: grey;
+  background-color: white;
+  border-radius: 5px;
+  -webkit-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dwn-arrow {
+  cursor: pointer;
+}
+
+.signup-main-container {
+  padding: 4rem 0rem 0rem 0rem;
+  min-height: 100vh;
+  background: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 87.5em) {
+  .signup-main-container {
+    padding-top: 8rem;
+  }
+}
+
+.signup-sub-container .signup-form {
+  text-align: center;
+  background-color: #2b2b2b;
+  width: 24rem;
+  height: 29.25rem;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem;
+  -webkit-box-shadow: 0px 0px 50px black;
+          box-shadow: 0px 0px 50px black;
+}
+
+.signup-sub-container .signup-form h2, .signup-sub-container .signup-form h3, .signup-sub-container .signup-form a, .signup-sub-container .signup-form p {
+  color: white;
+}
+
+.signup-sub-container .signup-form p {
+  font-size: 0.75rem;
+  margin-top: .25rem;
+}
+
+.signup-sub-container .signup-form .username-container, .signup-sub-container .signup-form .log-container, .signup-sub-container .signup-form .pass-container, .signup-sub-container .signup-form .confirm-pass-container {
+  width: 21.5rem;
+  height: 1rem;
+  padding: 1.5rem;
+  border: 1.25px;
+  border-color: none;
+  border-radius: 5px;
+  margin-bottom: .75rem;
+  background-color: #202020;
+  color: white;
+  font-size: 0.875rem;
+}
+
+.signup-sub-container .signup-form .forget-pass {
+  margin: 1rem;
+}
+
+.signup-sub-container .signup-form .create-account {
+  width: 10rem;
+  padding: 1rem;
+  margin-right: 1rem;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.signup-sub-container .signup-form .reCAPTCHA {
+  position: relative;
+  top: 4.5rem;
 }
 
 footer {

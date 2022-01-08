@@ -107,7 +107,7 @@ nav {
 
     .g2-form {
         text-align: center;
-        background-color: rgb(32, 32, 32);
+        background-color: rgb(43, 43, 43);
         width: 22.5rem;
         height: 19.5rem;
         border: none;
@@ -134,11 +134,12 @@ nav {
             height: 1rem;
             padding: 1.5rem;
             border: 1.25px;
-            border-style: solid;
+            
             border-color: none;
             border-radius: 5px;
             margin-bottom: .75rem;
-            background-color: rgb(43, 43, 43);
+            background-color: rgb(32, 32, 32);
+            color: white;
 
             font-size: $font-sm;
         }
@@ -154,7 +155,7 @@ nav {
             width: 20rem;
             padding: 1rem;
             color: black;
-            background-color: rgb(95, 139, 160);
+            background-color: rgb(131, 192, 221);
             border: none;
             border-radius: 5px;
             cursor: pointer;

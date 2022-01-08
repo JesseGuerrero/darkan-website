@@ -25,8 +25,8 @@ app.post('/posty', (request, response) => {
   console.log(request.body)
 })
 
-app.get('/work', function(req, res, next) {
-  res.send("test")
+app.get('/signup', function(req, res, next) {
+  res.render("signup", {})
 });
 
 app.listen(webPort, "0.0.0.0", ()=> console.log("Successful on port " + webPort))

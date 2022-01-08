@@ -1,0 +1,213 @@
+// top navigation
+
+nav {
+
+    a {
+      position: relative;
+      font-size: $font-sm;
+      margin-right: 1rem;
+
+      &:hover {
+        color: grey;
+        transition: color 200ms ease-in-out;
+      }
+      
+      &:last-child {
+        margin-right: 0rem;
+      }
+    }
+
+    ul {
+        margin: 0rem;
+        padding: 1rem;
+    }
+
+    li {
+      list-style-type: none;
+    }
+}
+
+//hamburger menu (mobile)
+
+    .hamburger {
+      padding-right: 0rem;
+      cursor: pointer;
+    }
+
+    .bar {
+      display: block;
+      width: 1.25rem;
+      height: .125rem;
+      margin: .25rem auto;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      background-color: rgb(255, 255, 255);
+    }
+
+//dropdown menu
+
+    .dropbtn {
+      font-size: $font-sm;
+      margin: 0rem;
+      cursor: pointer;
+
+      &:hover {
+        color: rgb(231, 231, 231);
+        transition: color 200ms ease-in-out;
+      }
+    }
+    //parent dropdown text
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        color: rgb(255, 255, 255);
+      
+        p {
+            margin-right: 1rem;
+        }
+    }
+    //dropdown menu content
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: rgb(43, 43, 43);
+      min-width: 15rem;
+      border-radius: 5px;
+      top: 1.25rem;
+    }
+    //dropdown link position
+    .dropdown-links {
+      position: relative;
+      padding: .75rem;
+    }
+    //dropdown link design
+    .dropdown-content a {
+      font-size: $font-sm;
+      text-align: left;
+      color: black;
+      padding: .25rem;
+      text-decoration: none;
+      display: block;
+    }
+    
+    //dropdown hover-over
+    .dropdown-content a:hover {
+      color: grey;
+      background-color: rgb(255, 255, 255);
+      border-radius: 5px;
+      transition: background-color 200ms ease-in-out
+    }
+      
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dwn-arrow {
+      cursor: pointer;
+    }
+
+// create acccount form
+
+.signup-main-container {
+    padding: 4rem 0rem 0rem 0rem;
+    min-height: 100vh;
+    background: none;
+    display: flex;
+    justify-content: center;
+
+    @include breakpoint-up(xlarge) {
+        padding-top: 8rem;
+    }
+}
+.signup-sub-container {
+
+    // Signup form
+    
+    .signup-form {
+        text-align: center;
+        background-color: rgb(43, 43, 43);
+        width: 24rem;
+        height: 29.25rem;
+        border: none;
+        border-radius: 5px;
+        padding: 1rem;
+        box-shadow: 0px 0px 50px black;
+
+        h2, h3, a, p {
+            color: white;
+        }
+        p {
+            font-size: $font-xsm;
+            margin-top: .25rem;
+        }
+
+        // log & pass
+        .username-container, .log-container, .pass-container, .confirm-pass-container {
+            width: 21.5rem;
+            height: 1rem;
+            padding: 1.5rem;
+            border: 1.25px;
+            
+            border-color: none;
+            border-radius: 5px;
+            margin-bottom: .75rem;
+            background-color: rgb(32, 32, 32);
+            color: white;
+
+            font-size: $font-sm;
+        }
+
+        // forget password link
+        .forget-pass {
+            margin: 1rem;
+        }
+
+        .create-account {
+            width: 10rem;
+            padding: 1rem;
+            margin-right: 1rem;
+            background-color: white;
+            border: none;
+            border-radius: 5px;
+            color: black;
+            cursor: pointer;
+
+            font-size: $font-sm;
+            font-weight: 500;
+        }
+
+        .reCAPTCHA {
+            position: relative;
+            top: 4.5rem;
+        }
+    }
+}
+
+// footer
+footer {
+    background-color: #202020;
+    font-size: $font-xsm;
+    color: white;
+    padding: 1rem;
+
+    p {
+        margin: 0rem;
+    }
+
+    a {
+        color: grey;
+    }
+
+    .site-map, .legal {
+        a:not(:last-child) {
+            margin-right: 1rem;
+        }
+        p {
+            margin-right: 1rem;
+        }
+    }
+
+    @include breakpoint-up(large) {
+        height: auto;
+    }
+}
