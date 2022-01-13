@@ -11,10 +11,10 @@
     }
 
     @include breakpoint-up(large) {
-        padding: 4rem 0rem;
+        padding: 2rem 0rem;
     }
     @include breakpoint-up(xlarge) {
-        padding-top: 8rem;
+        padding-top: 6rem;
     }
 }
 .login-sub-container {

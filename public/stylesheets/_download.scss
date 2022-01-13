@@ -11,10 +11,10 @@
     }
 
     @include breakpoint-up(large) {
-        padding: 4rem 0rem;
+        padding: 2rem 0rem;
     }
     @include breakpoint-up(xlarge) {
-        padding-top: 8rem;
+        padding-top: 6rem;
     }
 }
 .download-sub-container {
@@ -31,6 +31,7 @@
         padding: 2rem 1rem;
         margin-bottom: 2rem;
         box-shadow: 0px 0px 50px black;
+        font-size: $font-med;
 
         a {
             color: white;
@@ -62,7 +63,7 @@
         justify-content: center;
 
         .download-client1 {
-            margin-right: 5rem;
+            margin-right: 6.5rem;
         }
 
         .download-client1, .download-client2 {
@@ -80,5 +81,16 @@
                 color: white;
             }
         }
+    }
+}
+.usr-agree {
+    text-align: center;
+    font-size: $font-xsm;
+    color: rgb(222, 222, 222);
+    margin-bottom: 1rem;
+
+    @include breakpoint-up (large) {
+        position: relative;
+        top: 2rem;
     }
 }

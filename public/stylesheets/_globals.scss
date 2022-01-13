@@ -37,10 +37,10 @@ html {
             
             // - padding
             nav {
-                padding: 1rem;
+                padding: 2rem;
 
                 @include breakpoint-up(large) {
-                    padding: 0rem 8rem;
+                    padding: 1rem 8rem;
                 }
             }
             // - formatting
@@ -96,7 +96,7 @@ html {
             .dropdown-content {
                 display: none;
                 position: absolute;
-                background-color: rgb(37, 42, 49);
+                background-color: rgb(53, 60, 70);
                 min-width: 15rem;
                 border-radius: 2.5px;
                 top: 3.25rem;
@@ -139,7 +139,7 @@ html {
             footer {
                 background-color: rgb(29, 32, 37);
                 font-size: $font-xsm;
-                color: white;
+                color: rgb(222, 222, 222);
                 padding: 1rem;
 
                 p {
@@ -147,7 +147,10 @@ html {
                 }
 
                 a {
-                    color: grey;
+                    color: rgb(222, 222, 222);
+                    &:hover {
+                        color: white;
+                    }
                 }
 
                 .site-map, .legal {

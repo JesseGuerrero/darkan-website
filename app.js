@@ -37,6 +37,14 @@ app.get('/download', function(req, res, next) {
   res.render("download", {})
 });
 
+app.get('/terms', function(req, res, next) {
+  res.render("terms", {})
+});
+
+app.get('/privacy-policy', function(req, res, next) {
+  res.render("privacy-policy", {})
+});
+
 app.listen(webPort, "0.0.0.0", ()=> console.log("Successful on port " + webPort))
 
 
