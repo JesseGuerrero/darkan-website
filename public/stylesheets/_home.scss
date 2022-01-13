@@ -17,7 +17,6 @@
 .main-container {
     padding: 4rem 0rem 0rem 0rem;
     min-height: 100vh;
-    background: linear-gradient(95deg, rgba(49, 104, 136, 0), rgb(22, 22, 22));
 
     @include breakpoint-up(large) {
         padding: 8rem 0rem;
@@ -37,14 +36,15 @@
         width: 100%;
         height: 100%;
         text-align: center;
-        color: white;
         h1 {
             font-size: $font-xlg;
+            color: white;
             margin: 0rem;
         }
         h2 {
             font-size: $font-med;
             font-weight: 400;
+            color: rgb(222, 222, 222);
             margin-top: 0rem;
             margin-bottom: 2rem;
             width: auto;
@@ -62,10 +62,10 @@
         }
         .dwn-btn1 {
             padding: 1rem;
-            background-color: white;
+            background-color: rgb(38, 62, 82);
 
             a {
-                color: black;
+                color: white;
             }
         }
         .dwn-btn2 {
@@ -107,12 +107,12 @@
 
     .g2-form {
         text-align: center;
-        background-color: rgb(43, 43, 43);
+        background-color: rgb(36, 40, 46);
         width: 22.5rem;
-        height: 19.5rem;
+        height: 21.5rem;
         border: none;
         border-radius: 5px;
-        padding: 1rem;
+        padding: 2rem 1rem;
         margin-right: auto;
         margin-bottom: 0rem;
         margin-left: auto;
@@ -138,7 +138,7 @@
             border-color: none;
             border-radius: 5px;
             margin-bottom: .75rem;
-            background-color: rgb(32, 32, 32);
+            background-color: rgb(27, 29, 34);;
             color: white;
 
             font-size: $font-sm;
@@ -154,8 +154,8 @@
         .log-in {
             width: 20rem;
             padding: 1rem;
-            color: black;
-            background-color: rgb(131, 192, 221);
+            color: white;
+            background-color: rgb(38, 62, 82);
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -180,36 +180,7 @@
         .cta-discord {
             color: white;
             position: relative;
-            top: 2rem;
+            top: 3rem;
         }
-    }
-}
-
-// footer
-footer {
-    background-color: #202020;
-    font-size: $font-xsm;
-    color: white;
-    padding: 1rem;
-
-    p {
-        margin: 0rem;
-    }
-
-    a {
-        color: grey;
-    }
-
-    .site-map, .legal {
-        a:not(:last-child) {
-            margin-right: 1rem;
-        }
-        p {
-            margin-right: 1rem;
-        }
-    }
-
-    @include breakpoint-up(large) {
-        height: auto;
     }
 }

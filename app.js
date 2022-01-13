@@ -29,6 +29,14 @@ app.get('/signup', function(req, res, next) {
   res.render("signup", {})
 });
 
+app.get('/login', function(req, res, next) {
+  res.render("login", {})
+});
+
+app.get('/download', function(req, res, next) {
+  res.render("download", {})
+});
+
 app.listen(webPort, "0.0.0.0", ()=> console.log("Successful on port " + webPort))
 
 

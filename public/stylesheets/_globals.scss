@@ -4,7 +4,6 @@ html {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
     *, *::before, *::after {
         box-sizing: inherit;
     }
@@ -15,67 +14,198 @@ html {
         font-size: $font-sm;
         padding: 0rem;
         margin: 0rem;
-        background-color: #202020;
+        background-color: rgb(29, 32, 37);
         color: black;
         cursor: auto;
 
-        //top nav
-        nav {
-            padding: 1rem;
+        // top nav
 
-            @include breakpoint-up(large) {
-                padding: 0rem 1rem;
+            // - hamburger menu - (mobile)
+            .hamburger {
+                padding-right: 0rem;
+                cursor: pointer;
             }
-        }
+            .bar {
+                display: block;
+                width: 1.25rem;
+                height: .125rem;
+                margin: .25rem auto;
+                -webkit-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+                background-color: rgb(255, 255, 255);
+            }
+            
+            // - padding
+            nav {
+                padding: 1rem;
 
-        // link-text design
-        a, a:visited, a:hover {
-            text-decoration: none;
-            color: white;
-        }
+                @include breakpoint-up(large) {
+                    padding: 0rem 8rem;
+                }
+            }
+            // - formatting
+            .main-nav {
+                .top-logo a {
+                    font-size: $font-med;
+                }
+                a {
+                    position: relative;
+                    font-size: $font-sm;
+                    margin-right: 2rem;
+                    color: rgb(222, 222, 222);
+
+                    &:hover {
+                        color: rgb(255, 255, 255);
+                        transition: color 200ms ease-in-out;
+                    }
         
-        // button-opacity
-        .button-hover {
-            &:hover {
-                opacity: 85%;
-                transition: opacity 200ms ease-in-out;
+                    &:last-child {
+                        margin-right: 0rem;
+                    }
+                }
+
+                ul {
+                    margin: 0rem;
+                    padding: 0rem;
+                }
+
+                li {
+                    list-style-type: none;
+                }
             }
-            cursor: pointer;
-        }
-        
-        // drop shadow
-        .shadow-dropdown {
-            box-shadow: 0px 0px 10px rgb(0, 0, 0);
-        }
+            // - dropdown menu
+            .dropbtn {
+                font-size: $font-sm;
+                margin: 0rem;
+                color: rgb(222, 222, 222);
+                cursor: pointer;
 
-        // content alignment
-        .flex {
-            display: flex;
-
-            &-jc-sb {
-                justify-content: space-between;
+                &:hover {
+                    color: rgb(255, 255, 255);
+                    transition: color 200ms ease-in-out;
+                }
             }
+            .dropdown {
+                position: relative;
+                display: inline-block;
 
-            &-jc-c {
-                justify-content: center;
+                p {
+                    padding: 1rem 2rem 1rem 0rem;
+                }
             }
-
-            &-ai-c {
-                align-items: center;
-            }
-        }
-
-        // visibility state
-        .hide-for-mobile {
-            @include breakpoint-down(medium){
+            .dropdown-content {
                 display: none;
+                position: absolute;
+                background-color: rgb(37, 42, 49);
+                min-width: 15rem;
+                border-radius: 2.5px;
+                top: 3.25rem;
+                left: -1rem;
             }
-        }
+            .dropdown-links {
+                position: relative;
+                padding: .75rem;
+            }
+            .dropdown-content a {
+                font-size: $font-sm;
+                text-align: left;
+                padding: .75rem;
+                text-decoration: none;
+                display: block;
+            }
+            .dropdown-content p {
+                font-size: $font-sm;
+                text-align: left;
+                margin: 0rem;
+                padding: .25rem;
+                text-decoration: none;
+                display: block;
+                color: rgb(145, 145, 145);
+            } 
+            .dropdown-content a:hover {
+                background-color: rgb(35, 60, 81);
+                border-radius: 2.5px;
+                transition: background-color 200ms ease-in-out
+            }
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+            .dwn-arrow {
+                margin-left: .25rem;
+            }
 
-        .hide-for-desktop {
-            @include breakpoint-up(large) {
-                display: none;
+        // footer
+
+            footer {
+                background-color: rgb(29, 32, 37);
+                font-size: $font-xsm;
+                color: white;
+                padding: 1rem;
+
+                p {
+                    margin: 0rem;
+                }
+
+                a {
+                    color: grey;
+                }
+
+                .site-map, .legal {
+                    a:not(:last-child) {
+                        margin-right: 1rem;
+                    }
+                    p {
+                        margin-right: 1rem;
+                    }
+                }
+
+                @include breakpoint-up(large) {
+                    height: auto;
+                }
+            }
+
+        // global design
+
+            // link - design
+            a, a:visited, a:hover {
+                text-decoration: none;
+                color: rgb(222, 222, 222);
+            }
+            // button - hover state
+            .button-hover {
+                &:hover {
+                    opacity: 85%;
+                    transition: opacity 200ms ease-in-out;
+                }
+                cursor: pointer;
+            } 
+            // drop shadow
+            .shadow-dropdown {
+                box-shadow: 0px 0px 5px rgb(0, 0, 0);
+            }
+            // content - alignment
+            .flex {
+                display: flex;
+                    &-jc-sb {
+                        justify-content: space-between;
+                    }
+                    &-jc-c {
+                        justify-content: center;
+                    }
+                    &-ai-c {
+                        align-items: center;
+                    }
+            }
+            // content - visibility state
+            .hide-for-mobile {
+                @include breakpoint-down(medium) {
+                    display: none;
+                }
+            }
+            .hide-for-desktop {
+                @include breakpoint-up(large) {
+                    display: none;
+                }
             }
         }
-    }
 }
