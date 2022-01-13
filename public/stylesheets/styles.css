@@ -260,7 +260,7 @@ html body .flex-ai-c {
 
 @media (min-width: 87.5em) {
   .main-container {
-    padding-top: 13rem;
+    padding-top: 10rem;
   }
 }
 
@@ -337,7 +337,7 @@ html body .flex-ai-c {
 
 @media (min-width: 64em) {
   .sub-container .g1-hero {
-    padding-left: 8rem;
+    padding-left: 10rem;
     background-color: none;
     text-align: left;
   }
@@ -354,7 +354,7 @@ html body .flex-ai-c {
 
 @media (min-width: 87.5em) {
   .sub-container .g1-hero {
-    padding-left: 30rem;
+    padding-left: 25rem;
   }
 }
 

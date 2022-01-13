@@ -22,7 +22,7 @@
         padding: 8rem 0rem;
     }
     @include breakpoint-up(xlarge) {
-        padding-top: 13rem;
+        padding-top: 10rem;
     }
 }
 .sub-container {
@@ -86,7 +86,7 @@
         }
 
         @include breakpoint-up(large) {
-            padding-left: 8rem;
+            padding-left: 10rem;
             background-color: none;
             text-align: left;
             
@@ -101,7 +101,7 @@
             }
         }
         @include breakpoint-up("xlarge") {
-            padding-left: 30rem;
+            padding-left: 25rem;
         }
     }
 
