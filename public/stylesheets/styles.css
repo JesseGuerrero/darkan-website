@@ -149,6 +149,11 @@ html body .dwn-arrow {
 }
 
 html body footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   background-color: #1d2025;
   font-size: 0.75rem;
   color: #dedede;

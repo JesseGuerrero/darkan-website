@@ -137,6 +137,8 @@ html {
         // footer
 
             footer {
+                display: flex;
+                flex-wrap: wrap;
                 background-color: rgb(29, 32, 37);
                 font-size: $font-xsm;
                 color: rgb(222, 222, 222);

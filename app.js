@@ -25,8 +25,8 @@ app.post('/posty', (request, response) => {
   console.log(request.body)
 })
 
-app.get('/signup', function(req, res, next) {
-  res.render("signup", {})
+app.get('/create-account', function(req, res, next) {
+  res.render("create-account", {})
 });
 
 app.get('/login', function(req, res, next) {
@@ -35,6 +35,42 @@ app.get('/login', function(req, res, next) {
 
 app.get('/download', function(req, res, next) {
   res.render("download", {})
+});
+
+app.get('/features', function(req, res, next) {
+  res.render("features", {})
+});
+
+app.get('/guides', function(req, res, next) {
+  res.render("guides", {})
+});
+
+app.get('/highscores', function(req, res, next) {
+  res.render("highscores", {})
+});
+
+app.get('/tools', function(req, res, next) {
+  res.render("tools", {})
+});
+
+app.get('/ge-tracker', function(req, res, next) {
+  res.render("ge-tracker", {})
+});
+
+app.get('/skill-calculator', function(req, res, next) {
+  res.render("skill-calculator", {})
+});
+
+app.get('/bug-reporter', function(req, res, next) {
+  res.render("bug-reporter", {})
+});
+
+app.get('/world-map', function(req, res, next) {
+  res.render("world-map", {})
+});
+
+app.get('/api', function(req, res, next) {
+  res.render("api", {})
 });
 
 app.get('/terms', function(req, res, next) {
