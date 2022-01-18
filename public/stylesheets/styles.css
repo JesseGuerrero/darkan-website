@@ -186,6 +186,16 @@ html body footer .site-map p, html body footer .legal p {
   }
 }
 
+html body .header-image {
+  padding: 3rem;
+}
+
+@media (min-width: 64em) {
+  html body .header-image {
+    padding: 6rem;
+  }
+}
+
 html body a, html body a:visited, html body a:hover {
   text-decoration: none;
   color: #dedede;
@@ -778,5 +788,72 @@ footer .site-map p, footer .legal p {
 
 .privacy h1 {
   text-align: center;
+}
+
+.main-container-calc h1, .main-container-calc h2 {
+  text-align: center;
+  margin-top: 0rem;
+}
+
+.main-container-calc h3 {
+  font-size: 1.25rem;
+  margin: 0rem;
+}
+
+.main-container-calc p {
+  margin: 0rem;
+}
+
+.main-container-calc h1, .main-container-calc h2, .main-container-calc h3, .main-container-calc h4, .main-container-calc p {
+  color: #dedede;
+}
+
+.main-container-calc li {
+  list-style-type: none;
+}
+
+.main-container-calc ul {
+  padding-right: 2.5rem;
+}
+
+.main-container-calc .sub-container-skills {
+  background-color: black;
+  border-radius: 5px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (min-width: 40em) {
+  .main-container-calc .sub-container-skills {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 64em) {
+  .main-container-calc .sub-container-skills {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.main-container-calc .sub-container-skills .skill-icon {
+  padding: 1rem;
+}
+
+.main-container-calc .sub-container-skills .skill-title {
+  padding: 1rem 1rem 0rem 1rem;
+}
+
+.main-container-calc .sub-container-skills .skill-description {
+  padding: 0rem 1rem 1rem 1rem;
 }
 /*# sourceMappingURL=styles.css.map */

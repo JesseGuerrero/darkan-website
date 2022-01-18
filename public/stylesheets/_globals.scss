@@ -171,6 +171,14 @@ html {
 
         // global design
 
+            // header section
+            .header-image {
+                padding: 3rem;
+
+                @include breakpoint-up (large) {
+                    padding: 6rem;
+                }
+            }
             // link - design
             a, a:visited, a:hover {
                 text-decoration: none;
