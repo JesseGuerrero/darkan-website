@@ -943,13 +943,10 @@ footer .site-map p, footer .legal p {
 
 .main-container-calc-attack .sub-container-calc-attack table {
   padding: .5rem;
-  table-layout: fixed;
 }
 
 .main-container-calc-attack .sub-container-calc-attack table .tbody-result-data {
-  display: block;
-  height: 24.5rem;
-  overflow-y: scroll;
+  overflow: visible;
 }
 
 .main-container-calc-attack .sub-container-calc-attack table th {
@@ -985,6 +982,10 @@ footer .site-map p, footer .legal p {
 .main-container-calc-attack .sub-container-calc-attack table .td-data-result {
   font-size: 0.875rem;
   padding: .5rem 1rem;
+}
+
+.main-container-calc-attack .sub-container-calc-attack .table-data-entry {
+  max-height: 25rem;
 }
 
 .main-container-calc-attack .sub-container-calc-attack .result-data-table {

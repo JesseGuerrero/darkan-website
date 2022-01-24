@@ -55,12 +55,9 @@
 
         table {
             padding: .5rem;
-            table-layout: fixed;
 
             .tbody-result-data {
-                display: block;
-                height: 24.5rem;
-                overflow-y: scroll;
+                overflow: visible;
             }
 
             th {
@@ -93,6 +90,9 @@
                 font-size: $font-sm;
                 padding: .5rem 1rem;
             }
+        }
+        .table-data-entry {
+            max-height: 25rem
         }
         .result-data-table {
             max-width: 40rem;
