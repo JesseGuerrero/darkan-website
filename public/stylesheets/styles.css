@@ -196,6 +196,16 @@ html body .header-image {
   }
 }
 
+html body .header-image-med {
+  padding: 1rem;
+}
+
+@media (min-width: 64em) {
+  html body .header-image-med {
+    padding: 3rem;
+  }
+}
+
 html body a, html body a:visited, html body a:hover {
   text-decoration: none;
   color: #dedede;
@@ -250,6 +260,14 @@ html body .flex-ai-c {
   html body .hide-for-desktop {
     display: none;
   }
+}
+
+html body .calc_data_available {
+  background-color: white;
+}
+
+html body .calc_data_unavailable {
+  background-color: red;
 }
 
 .title-mobile {
@@ -855,5 +873,143 @@ footer .site-map p, footer .legal p {
 
 .main-container-calc .sub-container-skills .skill-description {
   padding: 0rem 1rem 1rem 1rem;
+}
+
+.main-container-calc-attack .sub-container-calc-attack {
+  min-height: 100vh;
+}
+
+.main-container-calc-attack .sub-container-calc-attack .sub2-container-calc-data {
+  padding: 2rem;
+}
+
+@media (min-width: 40em) {
+  .main-container-calc-attack .sub-container-calc-attack .sub2-container-calc-data {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.main-container-calc-attack .sub-container-calc-attack .attack-header {
+  padding: 1rem;
+}
+
+.main-container-calc-attack .sub-container-calc-attack .attack-header h1, .main-container-calc-attack .sub-container-calc-attack .attack-header p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-container-calc-attack .sub-container-calc-attack .attack-header h1 {
+  margin: 0rem;
+  color: #dedede;
+}
+
+.main-container-calc-attack .sub-container-calc-attack .attack-header p {
+  margin-top: 0rem;
+  margin-bottom: 2rem;
+  font-size: 1.25rem;
+  color: #dedede;
+}
+
+.main-container-calc-attack .sub-container-calc-attack .username-form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: .5rem;
+}
+
+.main-container-calc-attack .sub-container-calc-attack .username-form-container .username-input, .main-container-calc-attack .sub-container-calc-attack .username-form-container .submit-user-button {
+  border: none;
+  border-radius: 5px;
+  font-size: 0.875rem;
+  padding: 1rem 2rem;
+}
+
+.main-container-calc-attack .sub-container-calc-attack .username-form-container .submit-user-button {
+  background-color: #dedede;
+  cursor: pointer;
+}
+
+.main-container-calc-attack .sub-container-calc-attack table {
+  padding: .5rem;
+  table-layout: fixed;
+}
+
+.main-container-calc-attack .sub-container-calc-attack table .tbody-result-data {
+  display: block;
+  height: 24.5rem;
+  overflow-y: scroll;
+}
+
+.main-container-calc-attack .sub-container-calc-attack table th {
+  text-align: left;
+  width: 15rem;
+  padding: .75rem;
+  border-radius: 5px;
+  background-color: black;
+  color: #dedede;
+}
+
+.main-container-calc-attack .sub-container-calc-attack table .th-or {
+  text-align: center;
+  background-color: #1d2025;
+}
+
+.main-container-calc-attack .sub-container-calc-attack table .td-data {
+  font-size: 0.875rem;
+  padding: .75rem;
+  width: 7.9rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.main-container-calc-attack .sub-container-calc-attack table .required-exp {
+  font-size: 1.25rem;
+  text-align: center;
+  padding: .5rem;
+  background-color: none;
+  color: #dedede;
+}
+
+.main-container-calc-attack .sub-container-calc-attack table .td-data-result {
+  font-size: 0.875rem;
+  padding: .5rem 1rem;
+}
+
+.main-container-calc-attack .sub-container-calc-attack .result-data-table {
+  max-width: 40rem;
+}
+
+@media (min-width: 64em) {
+  .main-container-calc-attack .sub-container-calc-attack .result-data-table {
+    margin-left: 2rem;
+  }
+}
+
+.main-container-calc-attack .sub-container-calc-attack .list-cat {
+  padding: .5rem;
+  border-radius: 5px;
+}
+
+.main-container-calc-attack .sub-container-calc-attack .list-cat h2 {
+  color: #dedede;
+  margin: 0rem 2rem 0rem 0rem;
+}
+
+.main-container-calc-attack .sub-container-calc-attack .cat-options {
+  background-color: white;
+  width: 10rem;
+  height: 2rem;
 }
 /*# sourceMappingURL=styles.css.map */

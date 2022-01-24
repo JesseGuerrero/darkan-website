@@ -74,7 +74,7 @@ app.get('/skill-calculator', function(req, res, next) {
   });
 
   app.get('/skill-calculator-range', function(req, res, next) {
-    res.render("skill-calculator-range", {})
+    res.render("skill-calculator-ranged", {})
   });
 
   app.get('/skill-calculator-magic', function(req, res, next) {

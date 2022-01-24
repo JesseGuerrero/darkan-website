@@ -179,6 +179,13 @@ html {
                     padding: 6rem;
                 }
             }
+            .header-image-med {
+                padding: 1rem;
+
+                @include breakpoint-up (large) {
+                    padding: 3rem;
+                }
+            }
             // link - design
             a, a:visited, a:hover {
                 text-decoration: none;
@@ -219,6 +226,13 @@ html {
                 @include breakpoint-up(large) {
                     display: none;
                 }
+            }
+            // table cell design
+            .calc_data_available {
+                background-color: rgb(255, 255, 255);
+            }
+            .calc_data_unavailable {
+                background-color: red;
             }
         }
 }
