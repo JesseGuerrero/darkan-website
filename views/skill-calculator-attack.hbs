@@ -41,6 +41,9 @@
             <div class="header-image-med">
                 <h1>Attack Calculator</h1>
                 <p>Calculate your targeted experience or level in Attack.</p>
+                <div class="flex flex-jc-c">
+                    <a href="/skill-calculator">Skill Menu</a>
+                </div>
             </div>
         </div>
         <form class="username-form-container" action="javascript:getData()">
@@ -52,35 +55,9 @@
                 <table>
                     <tbody>
                         <tr>
-                            <th>Required Exp</th>
-                            <td class="required-exp">
+                            <td colspan="2" class="required-exp">
                                 <span id="xp_delta">104,273,167</span>
                             </td>
-                        </tr>
-                        <div class="level-container">
-                            <tr>
-                                <th>% Bonus Exp</th>
-                                <td>
-                                    <input class= "td-data" id="xp_modifier" type="number" min="0" max="999" value="0">
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>Current Level</th>
-                                <td>
-                                    <input class="td-data" id="cur_lvl" type="number" value="1" min="1" max="120">
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>Target Level</th>
-                                <td>
-                                    <input class="td-data" id="target_lvl" type="number" value="2" min="2" max="120">
-                                </td>
-                            </tr>
-                        </div>
-                        <tr>
-                            <th colspan="2" class="th-or">
-                                or
-                            </th>
                         </tr>
                         <div class="exp-container">
                             <tr>
@@ -93,6 +70,31 @@
                                 <th>Target Exp</th>
                                 <td>
                                     <input class="td-data" id="target_xp" type="number" value="83" min="83" max="200000000">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>% Bonus Exp</th>
+                                <td>
+                                    <input class= "td-data" id="xp_modifier" type="number" min="0" max="999" value="0">
+                                </td>
+                            </tr>
+                        </div>
+                        <tr>
+                            <th colspan="2" class="th-or">
+                                or
+                            </th>
+                        </tr>
+                        <div class="level-container">
+                            <tr>
+                                <th>Current Level</th>
+                                <td>
+                                    <input class="td-data" id="cur_lvl" type="number" value="1" min="1" max="120">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Target Level</th>
+                                <td>
+                                    <input class="td-data" id="target_lvl" type="number" value="2" min="2" max="120">
                                 </td>
                             </tr>
                         </div>
@@ -108,10 +110,8 @@
                                         <h2>Combat Style</h2>
                                         <div>
                                             <select class="cat-options">
-                                                <option value="All">All</option>
-                                                <option value="Burying">Burying</option>
-                                                <option value="Ectofuntus">Ectofuntus</option>
-                                                <option value="Altar">Altar</option>
+                                                <option value="Single">Single</option>
+                                                <option value="Shared">Shared</option>
                                             </select>
                                         </div>
                                     </div>
@@ -119,8 +119,8 @@
                             </tr>
                             <tr>
                                 <th>Amount</th>
-                                <th>NPC Name</th>
-                                <th>Combat Level</th>
+                                <th>Item</th>
+                                <th>Level</th>
                                 <th>Exp</th>
                             </tr>
                         </thead>

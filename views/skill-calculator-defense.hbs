@@ -1,0 +1,233 @@
+<nav class="main-nav flex flex-ai-c flex-jc-sb">
+    <div class="top-logo flex flex-ai-c">
+        <a href="/home">Darkan</a>
+    </div>
+    <div class="hamburger hide-for-desktop">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <div class="flex flex-ai-c hide-for-mobile">
+        <div class="dropdown">
+            <p class="dropbtn flex flex-ai-c">Explore<i class="fas fa-caret-down dwn-arrow"></i></p>
+                <div class="dropdown-content">
+                    <ul class="dropdown-links">
+                        <li><a href="/features">Features</a></li>
+                        <li><a href="/guides">Guides</a></li>
+                    </ul>
+                </div>
+        </div>
+        <a href="#">Highscores</a>
+        <div class="dropdown">
+        <p class="dropbtn flex flex-ai-c">Tools<i class="fas fa-caret-down dwn-arrow"></i></p>
+            <div class="dropdown-content">
+                <ul class="dropdown-links">
+                    <li><a href="/ge-tracker">GE Tracker</a></li>
+                    <li><a href="/skill-calculator">Skill Calculator</a></li>
+                    <li><a href="/bug-reporter">Bug Reporter</a></li>
+                    <li><a href="/world-map">World Map</a></li>
+                    <li><a href="/api">API Documents</a></li>
+                </ul>
+            </div>
+        </div>
+        <a href="/create-account">Create account</a>
+        <a href="/login">Login</a>
+        <a href="/assets/uploads/files/Darkan.exe" class="cta-dwnl">Download</a>
+    </div>
+</nav>
+<div class="main-container-calc-attack">
+    <div class="sub-container-calc-attack">
+        <div class="attack-header">
+            <div class="header-image-med">
+                <h1>Defense Calculator</h1>
+                <p>Calculate your targeted experience or level in Defense.</p>
+                <div class="flex flex-jc-c">
+                    <a href="/skill-calculator">Skill Menu</a>
+                </div>
+            </div>
+        </div>
+        <form class="username-form-container" action="javascript:getData()">
+            <input class="username-input" type="text" id="username" placeholder="Username" required="">
+            <input class="submit-user-button" type="submit" value="Get Stats" id="submit_user">
+        </form>
+        <div class="sub2-container-calc-data">
+            <div class="table-data-entry flex flex-jc-c">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td colspan="2" class="required-exp">
+                                <span id="xp_delta">104,273,167</span>
+                            </td>
+                        </tr>
+                        <div class="exp-container">
+                            <tr>
+                                <th>Current Exp</th>
+                                <td>
+                                    <input class="td-data" id="cur_xp" type="number" value="0" min="0" max="200000000">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Target Exp</th>
+                                <td>
+                                    <input class="td-data" id="target_xp" type="number" value="83" min="83" max="200000000">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>% Bonus Exp</th>
+                                <td>
+                                    <input class= "td-data" id="xp_modifier" type="number" min="0" max="999" value="0">
+                                </td>
+                            </tr>
+                        </div>
+                        <tr>
+                            <th colspan="2" class="th-or">
+                                or
+                            </th>
+                        </tr>
+                        <div class="level-container">
+                            <tr>
+                                <th>Current Level</th>
+                                <td>
+                                    <input class="td-data" id="cur_lvl" type="number" value="1" min="1" max="120">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Target Level</th>
+                                <td>
+                                    <input class="td-data" id="target_lvl" type="number" value="2" min="2" max="120">
+                                </td>
+                            </tr>
+                        </div>
+                    </tbody>
+                </table>
+            </div>
+            <div class="result-data-table">
+                <table>
+                       <thead>
+                            <tr>
+                                <th colspan="4">
+                                    <div class="list-cat flex flex-jc-c flex-ai-c">
+                                        <h2>Combat Style</h2>
+                                        <div>
+                                            <select class="cat-options">
+                                                <option value="Single">Single</option>
+                                                <option value="Shared">Shared</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>Amount</th>
+                                <th>Item</th>
+                                <th>Level</th>
+                                <th>Exp</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody-result-data">
+                            <tr class="calc_data_available">
+                                <td class="td-data-result">1</td>
+                                <td class="td-data-result">Imp</td>
+                                <td class="td-data-result">3</td>
+                                <td class="td-data-result">4</td>
+                            </tr>
+                            <tr class="calc_data_available">
+                                <td class="td-data-result">1</td>
+                                <td class="td-data-result">Imp</td>
+                                <td class="td-data-result">3</td>
+                                <td class="td-data-result">4</td>
+                            </tr>
+                            <tr class="calc_data_available">
+                                <td class="td-data-result">1</td>
+                                <td class="td-data-result">Imp</td>
+                                <td class="td-data-result">3</td>
+                                <td class="td-data-result">4</td>
+                            </tr>
+                            <tr class="calc_data_available">
+                                <td class="td-data-result">1</td>
+                                <td class="td-data-result">Imp</td>
+                                <td class="td-data-result">3</td>
+                                <td class="td-data-result">4</td>
+                            </tr>
+                            <tr class="calc_data_available">
+                                <td class="td-data-result">1</td>
+                                <td class="td-data-result">Imp</td>
+                                <td class="td-data-result">3</td>
+                                <td class="td-data-result">4</td>
+                            </tr>
+                            <tr class="calc_data_available">
+                                <td class="td-data-result">1</td>
+                                <td class="td-data-result">Imp</td>
+                                <td class="td-data-result">3</td>
+                                <td class="td-data-result">4</td>
+                            </tr>
+                            <tr class="calc_data_available">
+                                <td class="td-data-result">1</td>
+                                <td class="td-data-result">Imp</td>
+                                <td class="td-data-result">3</td>
+                                <td class="td-data-result">4</td>
+                            </tr>
+                            <tr class="calc_data_available">
+                                <td class="td-data-result">1</td>
+                                <td class="td-data-result">Imp</td>
+                                <td class="td-data-result">3</td>
+                                <td class="td-data-result">4</td>
+                            </tr>
+                            <tr class="calc_data_available">
+                                <td class="td-data-result">1</td>
+                                <td class="td-data-result">Imp</td>
+                                <td class="td-data-result">3</td>
+                                <td class="td-data-result">4</td>
+                            </tr>
+                            <tr class="calc_data_available">
+                                <td class="td-data-result">1</td>
+                                <td class="td-data-result">Imp</td>
+                                <td class="td-data-result">3</td>
+                                <td class="td-data-result">4</td>
+                            </tr>
+                            <tr class="calc_data_available">
+                                <td class="td-data-result">1</td>
+                                <td class="td-data-result">Imp</td>
+                                <td class="td-data-result">3</td>
+                                <td class="td-data-result">4</td>
+                            </tr>
+                            <tr class="calc_data_available">
+                                <td class="td-data-result">1</td>
+                                <td class="td-data-result">Imp</td>
+                                <td class="td-data-result">3</td>
+                                <td class="td-data-result">4</td>
+                            </tr>
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="flex flex-jc-sb flex-ai-c">
+    <div class="site-map flex flex-ai-c flex-jc-c">
+        <p class="hide-for-mobile">Site Map</p>
+        <a href="#" class="hide-for-desktop">Site Map</a>
+        <div class="hide-for-mobile">
+            <a href="/home">Home</a>
+            <a href="/create-account">Create account</a>
+            <a href="/login">Log In</a>
+            <a href="/download">Download</a>
+            <a href="/highscores">Highscores</a>
+            <a href="/tools">Tools</a>
+            <a href="/discord">Discord</a>
+            <a href="/developers">Developers</a>
+            <a href="/faq">FAQ</a>
+        </div>        
+    </div>
+    <div></div>
+        <a href="#">Darkan</a>
+    </div>
+    <div class="legal flex flex-ai-c flex-jc-c">
+        <p>No in-game purchases</p>
+        <p>Darkan @ 2022</p>
+        <div>
+            <a href="/terms">Terms</a>
+            <a href="/privacy-policy">Privacy</a>
+        </div>
+    </div>
+</footer>

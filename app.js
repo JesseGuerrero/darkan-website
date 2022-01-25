@@ -73,16 +73,12 @@ app.get('/skill-calculator', function(req, res, next) {
     res.render("skill-calculator-defense", {})
   });
 
-  app.get('/skill-calculator-range', function(req, res, next) {
+  app.get('/skill-calculator-ranged', function(req, res, next) {
     res.render("skill-calculator-ranged", {})
   });
 
   app.get('/skill-calculator-magic', function(req, res, next) {
     res.render("skill-calculator-magic", {})
-  });
-
-  app.get('/skill-calculator-hitpoints', function(req, res, next) {
-    res.render("skill-calculator-hitpoints", {})
   });
 
   app.get('/skill-calculator-prayer', function(req, res, next) {
