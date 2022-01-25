@@ -928,6 +928,12 @@ footer .site-map p, footer .legal p {
   cursor: pointer;
 }
 
+.main-container-calc-attack .sub-container-calc-attack .attack-header .skill-icon {
+  position: relative;
+  top: 1.5px;
+  margin-right: .75rem;
+}
+
 .main-container-calc-attack .sub-container-calc-attack .username-form-container {
   display: -webkit-box;
   display: -ms-flexbox;
