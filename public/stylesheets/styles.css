@@ -226,6 +226,14 @@ html body .shadow-dropdown {
           box-shadow: 0px 0px 5px black;
 }
 
+html body .calc_data_available {
+  background-color: white;
+}
+
+html body .calc_data_unavailable {
+  background-color: red;
+}
+
 html body .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -260,14 +268,6 @@ html body .flex-ai-c {
   html body .hide-for-desktop {
     display: none;
   }
-}
-
-html body .calc_data_available {
-  background-color: white;
-}
-
-html body .calc_data_unavailable {
-  background-color: red;
 }
 
 .title-mobile {
@@ -882,7 +882,7 @@ footer .site-map p, footer .legal p {
 .main-container-calc-attack .sub-container-calc-attack .sub2-container-calc-data {
   margin: 2rem 2rem;
   padding: 1rem;
-  border-radius: 5px;
+  border-radius: 2px;
   background-color: #747474;
 }
 
@@ -922,7 +922,7 @@ footer .site-map p, footer .legal p {
   font-size: 0.875rem;
   padding: 1rem 3rem;
   border: 1px solid;
-  border-radius: 5px;
+  border-radius: 2px;
   border-color: lightgreen;
   background-color: #1d2025;
   cursor: pointer;
@@ -946,7 +946,7 @@ footer .site-map p, footer .legal p {
 
 .main-container-calc-attack .sub-container-calc-attack .username-form-container .username-input, .main-container-calc-attack .sub-container-calc-attack .username-form-container .submit-user-button {
   border: none;
-  border-radius: 5px;
+  border-radius: 2px;
   font-size: 0.875rem;
   padding: 1rem 2rem;
 }
@@ -966,9 +966,9 @@ footer .site-map p, footer .legal p {
 
 .main-container-calc-attack .sub-container-calc-attack table th {
   text-align: left;
-  width: 15rem;
+  width: 10rem;
   padding: .75rem;
-  border-radius: 5px;
+  border-radius: 2px;
   background-color: black;
   color: #dedede;
 }
@@ -981,9 +981,9 @@ footer .site-map p, footer .legal p {
 .main-container-calc-attack .sub-container-calc-attack table .td-data {
   font-size: 0.875rem;
   padding: .75rem;
-  width: 15rem;
+  width: 13rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 2px;
 }
 
 .main-container-calc-attack .sub-container-calc-attack table .required-exp {
@@ -992,7 +992,7 @@ footer .site-map p, footer .legal p {
   padding: .5rem;
   border: 2px solid;
   border-color: lightgreen;
-  border-radius: 5px;
+  border-radius: 2px;
   background-color: none;
   color: #dedede;
 }
@@ -1007,6 +1007,12 @@ footer .site-map p, footer .legal p {
 }
 
 .main-container-calc-attack .sub-container-calc-attack .result-data-table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 2rem;
 }
 
@@ -1019,7 +1025,7 @@ footer .site-map p, footer .legal p {
 
 .main-container-calc-attack .sub-container-calc-attack .list-cat {
   padding: .5rem;
-  border-radius: 5px;
+  border-radius: 2px;
 }
 
 .main-container-calc-attack .sub-container-calc-attack .list-cat h2 {
@@ -1031,5 +1037,114 @@ footer .site-map p, footer .legal p {
   background-color: white;
   width: 10rem;
   height: 2rem;
+}
+
+.main-container-highscores .sub-container-highscores {
+  color: #dedede;
+}
+
+.main-container-highscores .sub-container-highscores h1 {
+  font-size: 2rem;
+  margin: 0rem;
+}
+
+.main-container-highscores .sub-container-highscores h2 {
+  text-align: left;
+}
+
+.main-container-highscores .sub-container-highscores nav {
+  padding: 1rem;
+}
+
+.main-container-highscores .sub-container-highscores nav a {
+  padding: 1rem 3rem;
+  background-color: blue;
+  border-radius: 2px;
+}
+
+@media (min-width: 40em) {
+  .main-container-highscores .sub-container-highscores nav a {
+    padding: 1rem 4rem;
+  }
+}
+
+.main-container-highscores .sub-container-highscores nav a:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.main-container-highscores .sub-container-highscores .skill-icon {
+  height: 7rem;
+}
+
+.main-container-highscores .sub-container-highscores #hs-overall {
+  margin: 0rem 5rem 0rem 0rem;
+}
+
+.main-container-highscores .sub-container-highscores .header-highscores {
+  text-align: left;
+  padding: 1rem 1rem 0rem 1rem;
+}
+
+@media (min-width: 64em) {
+  .main-container-highscores .sub-container-highscores .header-highscores {
+    padding: 6rem 6rem 0rem 6rem;
+  }
+}
+
+.main-container-highscores .sub-container-highscores .sub-header-hs {
+  padding: 0rem 5rem;
+  margin-bottom: 1rem;
+}
+
+.main-container-highscores .sub-container-highscores .filter-skill-hs {
+  padding: 3rem;
+}
+
+.main-container-highscores .sub-container-highscores .filter-account-hs {
+  padding: .75rem;
+}
+
+.main-container-highscores .sub-container-highscores #search-user-hs {
+  font-size: 0.875rem;
+  padding: .75rem;
+  border: none;
+  border-radius: 2px;
+}
+
+@media (min-width: 40em) {
+  .main-container-highscores .sub-container-highscores table {
+    width: 95vw;
+  }
+}
+
+@media (min-width: 64em) {
+  .main-container-highscores .sub-container-highscores table {
+    width: 95vw;
+  }
+}
+
+.main-container-highscores .sub-container-highscores table th {
+  padding: .75rem;
+  background-color: green;
+}
+
+.main-container-highscores .sub-container-highscores table #rank {
+  text-align: left;
+  width: 5rem;
+}
+
+.main-container-highscores .sub-container-highscores table #player {
+  text-align: left;
+  width: 10rem;
+}
+
+.main-container-highscores .sub-container-highscores table #level, .main-container-highscores .sub-container-highscores table #exp {
+  text-align: right;
+  width: 10rem;
+}
+
+.main-container-highscores .sub-container-highscores table td {
+  padding: .5rem;
+  background-color: brown;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -203,6 +203,13 @@ html {
             .shadow-dropdown {
                 box-shadow: 0px 0px 5px rgb(0, 0, 0);
             }
+            // table cell design
+            .calc_data_available {
+                background-color: rgb(255, 255, 255);
+            }
+            .calc_data_unavailable {
+                background-color: red;
+            }
             // content - alignment
             .flex {
                 display: flex;
@@ -226,13 +233,6 @@ html {
                 @include breakpoint-up(large) {
                     display: none;
                 }
-            }
-            // table cell design
-            .calc_data_available {
-                background-color: rgb(255, 255, 255);
-            }
-            .calc_data_unavailable {
-                background-color: red;
             }
         }
 }

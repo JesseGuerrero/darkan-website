@@ -35,33 +35,56 @@
         <a href="/assets/uploads/files/Darkan.exe" class="cta-dwnl">Download</a>
     </div>
 </nav>
-<div class="signup-main-container">
-    <div class="signup-sub-container flex-ai-c">
-    <form class="signup-form">
-        <div>
-            <div>
-                <h1>Create your account</h1>
-                <div>
-                    <input type="username" class="username-container" id="username-input" aria-describedby="username-error" placeholder="Username">
-                </div>
-                <div>
-                    <input type="text" class="log-container" name="email" id="email" data-testid="#" placeholder="Email" autofocus="1" aria-label="Email">
-                </div>
-                <div>
-                    <input type="password" class="pass-container" name="pass" id="pass" data-testid="#" placeholder="Password" aria-label="Password">
-                </div>
-                <div>
-                    <input type="password" class="confirm-pass-container" name="pass" id="pass" data-testid="#" placeholder="Confirm Password" aria-label="Password">
-                </div>
-            </div>
-            <p>By signing up for a Darkan account you agree to our <a href="/privacy-policy"><u>Privacy policy</u></a> and <a href="/terms"><u>Terms of Service</u>.</a></p>
-            <button class="create-account">Create Account</button>
-            <a href="/login">Already have an account?</a>
+
+<div class="main-container-highscores">
+    <div class="sub-container-highscores">
+        <div class="header-highscores">
+            <h1>Highscores</h1>
+            <h2>Track, Compare, Achieve Rank #1</h2>
         </div>
-        <iframe title="reCAPTCHA" class= "reCAPTCHA"src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Lfob18UAAAAAEx08Pvihg-vpSZ_wsFtG1aPotQw&amp;co=aHR0cHM6Ly9kYXJrYW4ub3JnOjQ0Mw..&amp;hl=en&amp;v=-FJgYf1d3dZ_QPcZP7bd85hc&amp;size=normal&amp;cb=78e0ggyrm14f" width="304" height="78" role="presentation" name="a-ftya7z1zz8lb" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"></iframe>
-    </form>
+        <nav class="flex flex-jc-c flex-ai-c">
+            <a href="#" class="button-hover">All Time</a>
+            <a href="#" class="button-hover">Weekly</a>
+            <a href="#" class="button-hover">Monthly</a>
+        </nav>
+        <div class="sub-header-hs">
+            <h2 id="hs-overall">Overall</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore tenetur beatae repellat delectus incidunt ipsa facere!</p>
+            <div>
+                <select class="filter-skill-hs">
+                    <option>Skill</option>
+                </select>
+                <select class="filter-account-hs">
+                    <option>All</option>
+                    <option>Regular</option>
+                    <option>Ironman</option>
+                    <option>Hardcore Ironman</option>
+                    <option>Ultimate Ironman</option>
+                </select>
+                <input id="search-user-hs" type="text" name="Username" placeholder="Search Username" value="">
+            </div>
+        </div>
+        <div class="flex flex-jc-c">
+            <table>
+                <thead>
+                    <th id="rank">Rank</th>
+                    <th id="player">Player</th>
+                    <th id="level">Level</th>
+                    <th id="exp">Exp</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
+
 <footer class="flex flex-jc-sb flex-ai-c">
     <div class="site-map flex flex-ai-c flex-jc-c">
         <p class="hide-for-mobile">Site Map</p>
