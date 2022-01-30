@@ -3,3 +3,5 @@
 /.idea/modules.xml
 /.idea/untitled3.iml
 /.idea/vcs.xml
+config.json
+package-lock.json

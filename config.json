@@ -1,6 +1,0 @@
-{
-    "port": "443",
-    "https": true,
-    "certPath": "/home/trent/dk-prod/cert.pem",
-    "keyPath": "/home/trent/dk-prod/key.pem"
-}
