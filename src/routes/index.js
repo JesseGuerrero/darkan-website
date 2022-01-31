@@ -1,16 +1,10 @@
-import express from 'express';
+import express from "express";
 
-let router = express.Router();
+const router = express.Router();
 
-router.use((req, res, next) => {
-    console.log('API request for:  ' + req.path);
-    next();
-});
-
-router.use('/users', require('./users'));
-
-router.use((req, res, next, err) => {
-    if (err) res.status(500).send(err);
+router.get('/', async (req, res) => {
+    let reactComp = ''; // So that program doesn't break
+    res.status(200).render('pages/index', { reactApp: reactComp });
 });
 
 export default router;

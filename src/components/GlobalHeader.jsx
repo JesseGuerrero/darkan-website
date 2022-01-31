@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
-import { Link } from 'react-router-dom';
+
+import { Link } from "react-router-dom";
 
 export default class GlobalHeader extends Component {
   render() {
@@ -11,7 +12,7 @@ export default class GlobalHeader extends Component {
         <Navbar bg='dark' variant='dark'>
           <Container>
             <Navbar.Brand>
-              <Link to={'/landing'} className='nav-link'>
+              <Link to={'/'} className='nav-link'>
                 Darkan
               </Link>
             </Navbar.Brand>
@@ -29,7 +30,6 @@ export default class GlobalHeader extends Component {
                 </Link>
               </Nav>
             </Nav>
-
           </Container>
         </Navbar>
       </header>
