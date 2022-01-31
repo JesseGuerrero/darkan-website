@@ -1,17 +1,40 @@
+import config from './config.json';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { BrowserRouter } from "react-router-dom";
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import https from 'https';
+import fs from 'fs';
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+import express from 'express';
+import { renderToString } from 'react-dom/server';
+import App from './app';
+import template from './template';
+
+const server = express();
+
+server.use('/assets', express.static('assets'));
+
+server.use('/api', require('./routes'));
+
+server.get('/', (req, res) => {
+  const isMobile = true;
+  const startState = { isMobile };
+  const appString = renderToString(<BrowserRouter><App/></BrowserRouter>);
+  res.send(template({
+    body: appString,
+    title: 'Hello World from the server',
+    initialState: JSON.stringify(startState)
+  }));
+});
+
+if (config.https) {
+  const httpsServer = https.createServer({
+    key: fs.readFileSync(config.keyPath),
+    cert: fs.readFileSync(config.certPath),
+  }, server);
+
+  httpsServer.listen(443, '0.0.0.0', () => console.log('HTTPS successful on port 443.'));
+} else {
+  server.listen(config.port, '0.0.0.0', () => console.log('HTTP successful on port ' + config.port));
+}
