@@ -4,11 +4,10 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import 'bootstrap/dist/css/bootstrap.css';
 
-import GlobalHeader from './components/GlobalHeader';
-import Landing from './components/Landing';
+import GlobalHeader from '../GlobalHeader';
+import Landing from '../Landing';
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.scss';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
@@ -20,10 +19,10 @@ const App = () => {
             <Col md={12}>
               <div className='wrapper'>
                 <Routes>
-                  <Route path='/' element={<Landing/>} />
+                  <Route exact path='/' element={<Landing />} />
                   {/* <Route path='/download' component={Download} />
-                <Route path='/account/create' component={SignUp} />
-                <Route path='/skillcalc/:skill' component={SkillCalculator} /> */}
+                   <Route path='/account/create' component={SignUp} />
+                   <Route path='/skillcalc/:skill' component={SkillCalculator} /> */}
                 </Routes>
               </div>
             </Col>
