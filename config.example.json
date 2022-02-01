@@ -1,0 +1,6 @@
+{
+	"port": "4040",
+	"https": false,
+	"certPath": "/home/root/cert.pem",
+	"keyPath": "/home/root/key.pem"
+}
