@@ -20,7 +20,7 @@ if (config.https) {
     cert: fs.readFileSync(config.certPath),
   }, app);
 
-  httpsServer.listen(443, '0.0.0.0', () => console.log('HTTPS successful on port 443.'));
+  httpsServer.listen(4043, '0.0.0.0', () => console.log('HTTPS successful on port 4043.'));
 } else {
   app.listen(webPort, '0.0.0.0', () => console.log('HTTP successful on port ' + webPort));
 }
