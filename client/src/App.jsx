@@ -20,7 +20,7 @@ const App = () => {
             <Col md={12}>
               <div className='wrapper'>
                 <Routes>
-                  <Route exact path='/' component={Landing} />
+                  <Route path='/' element={<Landing/>} />
                   {/* <Route path='/download' component={Download} />
                 <Route path='/account/create' component={SignUp} />
                 <Route path='/skillcalc/:skill' component={SkillCalculator} /> */}
