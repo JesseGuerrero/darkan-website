@@ -7,7 +7,7 @@ const config = {
     /// Every pages entry point should be mentioned here
   },
   output: {
-    path: path.resolve(__dirname, 'src', 'public'),
+    path: path.resolve(__dirname, 'public'),
     filename: '[name].js'
   },
   module: {
