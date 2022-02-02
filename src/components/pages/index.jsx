@@ -2,10 +2,10 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import 'bootstrap/dist/css/bootstrap.css';
+import './index.scss'
 
-import GlobalHeader from '../GlobalHeader';
-import Landing from '../Landing';
+import GlobalHeader from '../global-header/GlobalHeader';
+import Landing from '../landing/Landing';
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 

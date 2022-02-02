@@ -7,7 +7,7 @@ const config = {
     /// Every pages entry point should be mentioned here
   },
   output: {
-    path: path.resolve(__dirname, 'src', 'public'),
+    path: path.resolve(__dirname, 'public'),
     filename: '[name].js'
   },
   module: {
@@ -21,6 +21,16 @@ const config = {
           }
         },
         exclude: [/node_modules/, /public/]
+      },
+      {
+        test: /\.scss$/,
+          use: [{
+            loader: "style-loader"
+          }, {
+            loader: "css-loader" 
+          }, {
+            loader: "sass-loader"
+          }]
       },
       {
         test: /\.css$/,
