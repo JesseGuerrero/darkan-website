@@ -23,6 +23,16 @@ const config = {
         exclude: [/node_modules/, /public/]
       },
       {
+        test: /\.scss$/,
+          use: [{
+            loader: "style-loader"
+          }, {
+            loader: "css-loader" 
+          }, {
+            loader: "sass-loader"
+          }]
+      },
+      {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
       }
