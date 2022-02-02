@@ -8,7 +8,7 @@ import './GlobalHeader.scss'
 
 const GlobalHeader = props => {
   return (
-    <header className='App-header'>
+    <header className='global-header'>
       <Navbar bg='dark' variant='dark'>
         <Container>
           <Navbar.Brand>

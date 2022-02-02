@@ -2,14 +2,15 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import './index.scss'
 
-import GlobalHeader from '../global-header/GlobalHeader';
-import Landing from '../landing/Landing';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import GlobalHeader from './components/global-header/GlobalHeader';
+import Landing from './components/landing/Landing';
 
-const App = () => {
+import './App.scss';
+
+function App(props) {
   return (
     <Router>
       <div className='App'>
