@@ -16,7 +16,7 @@ module.exports = {
 				exclude: /node_modules/,
         use: 'babel-loader'
       },
-			{ test: /\.(scss|css)$/, loader: 'ignore-loader' }
+			{ test: /\.(scss|css|png|svg)$/, loader: 'ignore-loader' }
     ]
   }
 };
