@@ -6,7 +6,8 @@ import Col from 'react-bootstrap/Col';
 import { Routes, Route } from 'react-router-dom';
 
 import GlobalHeader from './components/global-header/GlobalHeader';
-import Landing from './components/landing/Landing';
+import Landing from './pages/landing/Landing';
+import Download from './pages/download/Download';
 
 import './App.scss';
 
@@ -19,9 +20,9 @@ function App(props) {
           <Col md={12}>
             <div className='wrapper'>
               <Routes>
-                <Route exact path='/' element={<Landing />} />
-                {/* <Route path='/download' component={Download} />
-                   <Route path='/account/create' component={SignUp} />
+                <Route exact path='/' element={<Landing/>} />
+                <Route path='/download' element={<Download/>} />
+                {/* <Route path='/account/create' component={SignUp} />
                    <Route path='/skillcalc/:skill' component={SkillCalculator} /> */}
               </Routes>
             </div>
