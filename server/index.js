@@ -1,4 +1,4 @@
-import config from '../../config.json';
+import config from '../config.json';
 
 import path from 'path';
 import fs from 'fs';
