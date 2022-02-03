@@ -17,6 +17,8 @@ const server = express();
 import api from './api/index.js';
 server.use('/api', api);
 
+server.use(express.static(path.resolve('./build/')));
+
 server.get('/*', (req, res) => {
   const app = ReactDOMServer.renderToString(
     <StaticRouter location={req.url}>
@@ -36,8 +38,6 @@ server.get('/*', (req, res) => {
     );
   });
 });
-
-server.use(express.static('./build'));
 
 if (config.https) {
   const httpsServer = https.createServer({
