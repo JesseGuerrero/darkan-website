@@ -20,10 +20,11 @@
     "webpack-node-externals": "^3.0.0"
   },
   "scripts": {
-    "develop:build-server": "NODE_ENV=development webpack --config webpack.server.js --mode=development",
+    "develop:build-client": "BROWSER=none react-scripts start",
+    "develop:build-server": "webpack --config webpack.server.js --mode=development -w",
     "develop:start": "nodemon ./server-build/index.js",
     "build": "react-scripts build",
-    "dev": "run-s build develop:build-server develop:start"
+    "dev": "run-p develop:*"
   },
   "eslintConfig": {
     "extends": [
@@ -44,6 +45,9 @@
     ]
   },
   "devDependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "dotenv": "^16.0.0",
+    "dotenv-cli": "^4.1.1",
     "nodemon": "^2.0.15",
     "webpack-cli": "^4.9.2"
   }

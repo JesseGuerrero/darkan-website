@@ -1,35 +1,36 @@
 import React from 'react';
-import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap'
+import { Navbar, NavLink, Nav, NavDropdown } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 import './GlobalHeader.scss'
+import logo from './logo.svg';
 
 function GlobalHeader(props) {
   return (
-    <header className='global-header'>
-      <div className='row'>
-        <div className='col-md-12'>
-          <Navbar bg='dark' variant='dark' expand='lg' sticky='top'>
-            <Navbar.Brand href='#home'>Darkan</Navbar.Brand>
-            <Navbar.Toggle aria-controls='basic-navbar-nav' />
-            <Navbar.Collapse id='basic-navbar-nav'>
-              <Nav className='mr-auto'>
-                <Link to={'/'} className='nav-link'>Home</Link>
-                <Link to={'/account/create'} className='nav-link'>Create-Account</Link>
-                <Link to={'/download'} className='nav-link'>Download</Link>
-                <Link to={'/highscores'} className='nav-link'>Highscores</Link>
-                <NavDropdown title='Dropdown' id='basic-nav-dropdown'>
-                  <NavDropdown.Item href='#action/3.1'>Action</NavDropdown.Item>
-                  <NavDropdown.Item href='#action/3.2'>Another action</NavDropdown.Item>
-                  <NavDropdown.Item href='#action/3.3'>Something</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href='#action/3.4'>Separated link</NavDropdown.Item>
-                </NavDropdown>
-              </Nav>
-            </Navbar.Collapse>
+    <header class='masthead row'>
+      <Row>
+        <Col>
+          <Navbar bg="dark" expand="lg">
+            <Link to={'/'}><img src={logo} class="logo masthead-brand" alt="logo" /></Link>
+            <Nav class='mr-auto nav-masthead justify-content-center'>
+              <Link to={'/'} class='nav-link'>Home</Link>
+              <Link to={'/account/create'} class='nav-link'>Create-Account</Link>
+              <Link to={'/download'} class='nav-link'>Download</Link>
+              <Link to={'/highscores'} class='nav-link'>Highscores</Link>
+              <NavDropdown title='Dropdown' id='basic-nav-dropdown'>
+                <NavDropdown.Item href='#action/3.1'>Action</NavDropdown.Item>
+                <NavDropdown.Item href='#action/3.2'>Another action</NavDropdown.Item>
+                <NavDropdown.Item href='#action/3.3'>Something</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href='#action/3.4'>Separated link</NavDropdown.Item>
+              </NavDropdown>
+            </Nav>
           </Navbar>
-        </div>
-      </div>
+        </Col>
+      </Row>
     </header>
   );
 }
