@@ -1,0 +1,244 @@
+//Jesse's stuff, you can edit ofc
+html {
+    font-size: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    *, *::before, *::after {
+        box-sizing: inherit;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.5;
+        font-size: $font-sm;
+        padding: 0rem;
+        margin: 0rem;
+        background-color: rgb(29, 32, 37);
+        color: black;
+        cursor: auto;
+
+        // top nav
+
+            // - hamburger menu - (mobile)
+            .hamburger {
+                padding-right: 0rem;
+                cursor: pointer;
+            }
+            .bar {
+                display: block;
+                width: 1.25rem;
+                height: .125rem;
+                margin: .25rem auto;
+                -webkit-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+                background-color: rgb(255, 255, 255);
+            }
+            
+            // - padding
+            nav {
+                padding: 2rem;
+
+                @include breakpoint-up(large) {
+                    padding: 1rem 8rem;
+                }
+            }
+            // - formatting
+            .main-nav {
+                .top-logo a {
+                    font-size: $font-med;
+                }
+                a {
+                    position: relative;
+                    font-size: $font-sm;
+                    margin-right: 2rem;
+                    color: rgb(222, 222, 222);
+
+                    &:hover {
+                        color: rgb(255, 255, 255);
+                        transition: color 200ms ease-in-out;
+                    }
+        
+                    &:last-child {
+                        margin-right: 0rem;
+                    }
+                }
+
+                ul {
+                    margin: 0rem;
+                    padding: 0rem;
+                }
+
+                li {
+                    list-style-type: none;
+                }
+            }
+            // - dropdown menu
+            .dropbtn {
+                font-size: $font-sm;
+                margin: 0rem;
+                color: rgb(222, 222, 222);
+                cursor: pointer;
+
+                &:hover {
+                    color: rgb(255, 255, 255);
+                    transition: color 200ms ease-in-out;
+                }
+            }
+            .dropdown {
+                position: relative;
+                display: inline-block;
+
+                p {
+                    padding: 1rem 2rem 1rem 0rem;
+                }
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: rgb(53, 60, 70);
+                min-width: 15rem;
+                border-radius: 2.5px;
+                top: 3.25rem;
+                left: -1rem;
+            }
+            .dropdown-links {
+                position: relative;
+                padding: .75rem;
+            }
+            .dropdown-content a {
+                font-size: $font-sm;
+                text-align: left;
+                padding: .75rem;
+                text-decoration: none;
+                display: block;
+            }
+            .dropdown-content p {
+                font-size: $font-sm;
+                text-align: left;
+                margin: 0rem;
+                padding: .25rem;
+                text-decoration: none;
+                display: block;
+                color: rgb(145, 145, 145);
+            } 
+            .dropdown-content a:hover {
+                background-color: rgb(35, 60, 81);
+                border-radius: 2.5px;
+                transition: background-color 200ms ease-in-out
+            }
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+            .dwn-arrow {
+                margin-left: .25rem;
+            }
+
+        // footer
+
+            footer {
+                //temporary visual fix
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                //
+                display: flex;
+                flex-wrap: wrap;
+                background-color: rgb(29, 32, 37);
+                font-size: $font-xsm;
+                color: rgb(222, 222, 222);
+                padding: 1rem;
+
+                p {
+                    margin: 0rem;
+                }
+
+                a {
+                    color: rgb(222, 222, 222);
+                    &:hover {
+                        color: white;
+                    }
+                }
+
+                .site-map, .legal {
+                    a:not(:last-child) {
+                        margin-right: 1rem;
+                    }
+                    p {
+                        margin-right: 1rem;
+                    }
+                }
+
+                @include breakpoint-up(large) {
+                    height: auto;
+                }
+            }
+
+        // global design
+
+            // header section
+            .header-image {
+                padding: 3rem;
+
+                @include breakpoint-up (large) {
+                    padding: 6rem;
+                }
+            }
+            .header-image-med {
+                padding: 1rem;
+
+                @include breakpoint-up (large) {
+                    padding: 6rem;
+                }
+            }
+            // link - design
+            a, a:visited, a:hover {
+                text-decoration: none;
+                color: rgb(222, 222, 222);
+            }
+            // button - hover state
+            .button-hover {
+                &:hover {
+                    opacity: 85%;
+                    transition: opacity 200ms ease-in-out;
+                }
+                cursor: pointer;
+            } 
+            // drop shadow
+            .shadow-dropdown {
+                box-shadow: 0px 0px 5px rgb(0, 0, 0);
+            }
+            // table cell design
+            .calc_data_available {
+                background-color: rgb(255, 255, 255);
+            }
+            .calc_data_unavailable {
+                background-color: red;
+            }
+            // content - alignment
+            .flex {
+                display: flex;
+                    &-jc-sb {
+                        justify-content: space-between;
+                    }
+                    &-jc-c {
+                        justify-content: center;
+                    }
+                    &-ai-c {
+                        align-items: center;
+                    }
+            }
+            // content - visibility state
+            .hide-for-mobile {
+                @include breakpoint-down(medium) {
+                    display: none;
+                }
+            }
+            .hide-for-desktop {
+                @include breakpoint-up(large) {
+                    display: none;
+                }
+            }
+        }
+}

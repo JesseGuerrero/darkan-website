@@ -1,0 +1,54 @@
+.main-container-calc {
+    h1, h2 {
+        text-align: center;
+        margin-top: 0rem;
+    }
+
+    h3 {
+        font-size: $font-med;
+        margin: 0rem;
+    }
+
+    p {
+        margin: 0rem;
+    }
+
+    h1, h2, h3, h4, p {
+        color: rgb(222, 222, 222);
+    }
+
+    li {
+        list-style-type: none;
+    }
+
+    ul {
+        padding-right: 2.5rem;
+    }
+
+    .sub-container-skills {
+        background-color: black;
+        border-radius: 5px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        flex-wrap: wrap;
+        
+        @include breakpoint-up (medium) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include breakpoint-up (large) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .skill-icon {
+            padding: 1rem;
+        }
+        .skill-title {
+            padding: 1rem 1rem 0rem 1rem;
+        }
+        .skill-description {
+            padding: 0rem 1rem 1rem 1rem;
+        }
+    }
+}

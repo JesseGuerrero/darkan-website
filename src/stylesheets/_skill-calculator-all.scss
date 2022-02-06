@@ -1,0 +1,140 @@
+.main-container-calc-attack {
+
+    .sub-container-calc-attack {
+        min-height: 100vh;
+
+        .sub2-container-calc-data {
+            margin: 2rem 2rem;
+            padding: 1rem;
+            border-radius: 2px;
+            background-color: rgb(116, 116, 116);
+
+            @include breakpoint-up (large) {
+                display: flex;
+                justify-content: center;
+            }
+        }    
+
+        .attack-header {
+            
+            h1, p {
+                display: flex;
+                justify-content: center;
+            }
+
+            h1 {
+                margin: 0rem;
+                color: rgb(222, 222, 222);
+            }
+            p {
+                margin-top: 0rem;
+                margin-bottom: 2rem;
+                font-size: $font-med;
+                color: rgb(222, 222, 222); 
+            }
+            a {
+                font-size: $font-sm;
+                padding: 1rem 3rem;
+                border: 1px solid;
+                border-radius: 2px;
+                border-color: lightgreen;
+                background-color: rgb(29, 32, 37);
+                cursor: pointer;
+            }
+            .skill-icon {
+                position: relative;
+                top: 1.5px;
+                margin-right: .75rem;
+            }
+        }
+
+        // get username stats
+
+        .username-form-container {
+            display: flex;
+            justify-content: center;
+            padding-bottom: .5rem;
+
+            .username-input, .submit-user-button {
+                border: none;
+                border-radius: 2px;
+                font-size: $font-sm;
+                padding: 1rem 2rem;
+            }
+            .submit-user-button {
+                background-color: rgb(222, 222, 222);
+                cursor: pointer;
+            }
+        }
+
+        // data table
+
+        table {
+            padding: .5rem;
+
+            .tbody-result-data {
+                overflow: visible;
+            }
+            th {
+                text-align: left;
+                width: 10rem;
+                padding: .75rem;
+                border-radius: 2px;
+                background-color: black;
+                color: rgb(222, 222, 222);
+            }
+            .th-or {
+                text-align: center;
+                background-color: rgb(116, 116, 116);
+            }
+            .td-data {
+                font-size: $font-sm;
+                padding: .75rem;
+                width: 13rem;
+                border: none;
+                border-radius: 2px;
+            }
+            .required-exp {
+                font-size: $font-med;
+                text-align: center;
+                padding: .5rem;
+                border: 2px solid;
+                border-color: lightgreen;
+                border-radius: 2px;
+                background-color: none;
+                color: rgb(222, 222, 222);
+            }
+            .td-data-result {
+                font-size: $font-sm;
+                padding: .5rem 1rem;
+            }
+        }
+        .table-data-entry {
+            max-height: 22rem;
+        }
+        .result-data-table {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+            
+            @include breakpoint-up(large){
+                margin-top: 0rem;
+                margin-left: 1rem;
+            }
+        }
+        .list-cat {
+            padding: .5rem;
+            border-radius: 2px;
+            
+            h2 {
+                color: rgb(222, 222, 222);
+                margin: 0rem 1rem 0rem 0rem;
+            }
+        }
+        .cat-options {
+            background-color: white;
+            width: 10rem;
+            height: 2rem;
+        }  
+    }
+}

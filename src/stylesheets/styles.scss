@@ -1,0 +1,18 @@
+// Font-awesome
+@import url('https://use.fontawesome.com/releases/v5.0.7/css/all.css');
+
+// Functionality
+@import "src/stylesheets/variables";
+@import "src/stylesheets/mixins";
+
+// Design .scss files
+@import "src/stylesheets/globals";
+@import "src/stylesheets/home";
+@import "src/stylesheets/signup";
+@import "src/stylesheets/login";
+@import "src/stylesheets/download";
+@import "src/stylesheets/terms";
+@import "src/stylesheets/privacy-policy";
+@import "src/stylesheets/skill-calculator";
+@import "src/stylesheets/skill-calculator-all";
+@import "src/stylesheets/highscores";
