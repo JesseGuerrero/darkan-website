@@ -1,15 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-import GlobalHeader from './components/global-header/GlobalHeader';
-import GlobalFooter from "./components/global-footer/GlobalFooter";
-import LandingView from "./components/CentralView/CentralView";
+import GlobalHeader from './components/GlobalHeader/GlobalHeader';
+import GlobalFooter from "./components/GlobalFooter/GlobalFooter";
+import BodyWrapper from "./components/BodyWrapper/BodyWrapper";
+import Landing from "./components/Landing/Landing";
+import Highscores from "./components/Highscores/Highscores";
 
 
 function App(props) {
+    const [view, changeView] = useState(<Landing />)
+    function chooseView(viewName) {
+        if(viewName.localeCompare('Highscores')) {
+            changeView(<Highscores />)
+        }
+    }
   return (
-    <div className='App'>
-        <GlobalHeader />
-        <LandingView />
+    <div>
+        <GlobalHeader onChangeView={chooseView} />
+        <BodyWrapper currentView={view}/>
         <GlobalFooter />
     </div>
   );

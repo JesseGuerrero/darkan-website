@@ -1,10 +1,16 @@
 import "./GlobalHeader.scss"
+import logo from './logo.svg';
+import {useState} from "react";
+import Landing from "../Landing/Landing";
 
-function GlobalHeader() {
+function GlobalHeader(props) {
+  function chooseHighscores() {
+    props.onChangeView("Highscores")
+  }
   return (
       <nav className="main-nav flex flex-ai-c flex-jc-sb">
         <div className="top-logo flex flex-ai-c">
-          <a href="/home">Darkan</a>
+          <a href="/home"><img src={logo} /></a>
         </div>
         <div className="hamburger hide-for-desktop">
           <span className="bar"></span>
@@ -21,7 +27,7 @@ function GlobalHeader() {
               </ul>
             </div>
           </div>
-          <a href="/highscores">Highscores</a>
+          <a onClick={chooseHighscores}>Highscores</a>
           <div className="dropdown">
             <p className="dropbtn flex flex-ai-c">Tools<i className="fas fa-caret-down dwn-arrow"></i></p>
             <div className="dropdown-content">

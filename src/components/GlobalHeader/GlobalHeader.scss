@@ -49,14 +49,16 @@ html {
    padding: 2rem;
 
    @include breakpoint-up(large) {
-    padding: 1rem 8rem;
+    padding: 1rem 1rem;
    }
   }
 
   // - formatting
   .main-nav {
-   .top-logo a {
-    font-size: $font-med;
+   .top-logo a img {
+    //font-size: $font-med;
+    height: 3rem;
+    width: auto;
    }
 
    a {
