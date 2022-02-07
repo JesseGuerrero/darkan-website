@@ -1,38 +1,157 @@
-.logo {
-  float: left;
-  height: 3rem;
-}
+// Font-awesome
+@import url('https://use.fontawesome.com/releases/v5.0.7/css/all.css');
 
-.masthead {
- margin-bottom: 2rem;
-}
+// Functionality
+@import "src/stylesheets/variables";
+@import "src/stylesheets/mixins";
 
-.masthead-brand {
- margin-bottom: 0;
-}
+html {
+ font-size: 100%;
+ width: 100%;
+ box-sizing: border-box;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
 
-.nav-masthead {
- float: right;
-}
+ *, *::before, *::after {
+  box-sizing: inherit;
+ }
 
-.nav-masthead .nav-link {
- padding: .25rem 0;
- font-weight: 700;
- color: rgba(255, 255, 255, .5);
- background-color: transparent;
- border-bottom: .25rem solid transparent;
-}
+ body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  font-size: $font-sm;
+  padding: 0rem;
+  margin: 0rem;
+  background-color: rgb(29, 32, 37);
+  color: black;
+  cursor: auto;
 
-.nav-masthead .nav-link:hover,
-.nav-masthead .nav-link:focus {
- border-bottom-color: rgba(255, 255, 255, .25);
-}
+  // top nav
 
-.nav-masthead .nav-link + .nav-link {
- margin-left: 1rem;
-}
+  // - hamburger menu - (mobile)
+  .hamburger {
+   padding-right: 0rem;
+   cursor: pointer;
+  }
 
-.nav-masthead .active {
- color: #fff;
- border-bottom-color: #fff;
+  .bar {
+   display: block;
+   width: 1.25rem;
+   height: .125rem;
+   margin: .25rem auto;
+   -webkit-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+   background-color: rgb(255, 255, 255);
+  }
+
+  // - padding
+  nav {
+   padding: 2rem;
+
+   @include breakpoint-up(large) {
+    padding: 1rem 8rem;
+   }
+  }
+
+  // - formatting
+  .main-nav {
+   .top-logo a {
+    font-size: $font-med;
+   }
+
+   a {
+    position: relative;
+    font-size: $font-sm;
+    margin-right: 2rem;
+    color: rgb(222, 222, 222);
+
+    &:hover {
+     color: rgb(255, 255, 255);
+     transition: color 200ms ease-in-out;
+    }
+
+    &:last-child {
+     margin-right: 0rem;
+    }
+   }
+
+   ul {
+    margin: 0rem;
+    padding: 0rem;
+   }
+
+   li {
+    list-style-type: none;
+   }
+  }
+
+  // - dropdown menu
+  .dropbtn {
+   font-size: $font-sm;
+   margin: 0rem;
+   color: rgb(222, 222, 222);
+   cursor: pointer;
+
+   &:hover {
+    color: rgb(255, 255, 255);
+    transition: color 200ms ease-in-out;
+   }
+  }
+
+  .dropdown {
+   position: relative;
+   display: inline-block;
+
+   p {
+    padding: 1rem 2rem 1rem 0rem;
+   }
+  }
+
+  .dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: rgb(53, 60, 70);
+   min-width: 15rem;
+   border-radius: 2.5px;
+   top: 3.25rem;
+   left: -1rem;
+  }
+
+  .dropdown-links {
+   position: relative;
+   padding: .75rem;
+  }
+
+  .dropdown-content a {
+   font-size: $font-sm;
+   text-align: left;
+   padding: .75rem;
+   text-decoration: none;
+   display: block;
+  }
+
+  .dropdown-content p {
+   font-size: $font-sm;
+   text-align: left;
+   margin: 0rem;
+   padding: .25rem;
+   text-decoration: none;
+   display: block;
+   color: rgb(145, 145, 145);
+  }
+
+  .dropdown-content a:hover {
+   background-color: rgb(35, 60, 81);
+   border-radius: 2.5px;
+   transition: background-color 200ms ease-in-out
+  }
+
+  .dropdown:hover .dropdown-content {
+   display: block;
+  }
+
+  .dwn-arrow {
+   margin-left: .25rem;
+  }
+ }
 }

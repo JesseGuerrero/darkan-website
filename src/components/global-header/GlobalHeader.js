@@ -1,4 +1,4 @@
-import "../../stylesheets/styles.scss"
+import "./GlobalHeader.scss"
 
 function GlobalHeader() {
   return (
