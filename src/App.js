@@ -8,16 +8,16 @@ import Highscores from "./components/Highscores/Highscores";
 
 
 function App(props) {
-    const [view, changeView] = useState(<Landing />)
+    const [bodyWrapper, changeBodyWrapper] = useState(<Landing />)
     function chooseView(viewName) {
-        if(viewName.localeCompare('Highscores')) {
-            changeView(<Highscores />)
+        if(viewName == "Highscores") {
+            changeBodyWrapper(<BodyWrapper currentView={<Highscores />} />)
         }
     }
   return (
     <div>
         <GlobalHeader onChangeView={chooseView} />
-        <BodyWrapper currentView={view}/>
+        {bodyWrapper/*Eventually we will learn to pass the state down and make this cleaner... I only know up*/}
         <GlobalFooter />
     </div>
   );

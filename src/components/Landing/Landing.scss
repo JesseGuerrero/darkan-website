@@ -1,0 +1,193 @@
+// Font-awesome
+@import url('https://use.fontawesome.com/releases/v5.0.7/css/all.css');
+
+// Functionality
+@import "src/stylesheets/variables";
+@import "src/stylesheets/mixins";
+
+// mobile - only
+.title-mobile {
+  text-align: center;
+}
+
+// desktop
+.land-top-nav {
+  color: white;
+  text-align: right;
+  padding: 1rem;
+
+  .main-page-link {
+    text-align: right;
+  }
+}
+
+.main-container {
+  padding: 4rem 0rem 0rem 0rem;
+  min-height: 100vh;
+
+  @include breakpoint-up(large) {
+    padding: 8rem 0rem;
+  }
+  @include breakpoint-up(xlarge) {
+    padding-top: 12rem;
+  }
+}
+.sub-container {
+  @include breakpoint-up(large) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  // grids 1 & 2
+  .g1-hero {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    h1 {
+      font-size: $font-xlg;
+      color: white;
+      margin: 0rem;
+    }
+    h2 {
+      font-size: $font-med;
+      font-weight: 400;
+      color: rgb(222, 222, 222);
+      margin-top: 0rem;
+      margin-bottom: 2rem;
+      width: auto;
+    }
+
+    // client download buttons
+    .dwn-client {
+      margin-bottom: 1.75rem;
+    }
+    .dwn-btn1, .dwn-btn2 {
+      font-size: $font-sm;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .dwn-btn1 {
+      padding: 1rem;
+      background-color: rgb(38, 62, 82);
+
+      a {
+        color: white;
+      }
+    }
+    .dwn-btn2 {
+      padding: 0.875rem;
+      background: none;
+      border-style: solid;
+      border-width: 2px;
+      border-color: #CCC9DC;
+      position: relative;
+      left: .75rem;
+    }
+    .material-icons {
+      align-items: center;
+    }
+    .pf-icon {
+      margin-left: .5rem;
+      font-size: 16px;
+    }
+
+    @include breakpoint-up(large) {
+      padding-left: 10rem;
+      background-color: transparent;
+      text-align: left;
+
+      h2 {
+        line-height: 1.25;
+        padding: 0rem;
+        font-size: $font-xmed;
+        font-weight: 400;
+      }
+      .dwn-client {
+        margin-bottom: 0rem;
+      }
+    }
+    @include breakpoint-up("xlarge") {
+      padding-left: 25rem;
+    }
+  }
+
+  .g2-form {
+    text-align: center;
+    background-color: rgb(36, 40, 46);
+    width: 22.5rem;
+    height: 21.5rem;
+    border: none;
+    border-radius: 5px;
+    padding: 2rem 1rem;
+    margin-right: auto;
+    margin-bottom: 0rem;
+    margin-left: auto;
+    box-shadow: 0px 0px 50px black;
+
+    a {
+      color: white;
+    }
+
+    @include breakpoint-up(large) {
+      position: relative;
+      left: 7rem;
+      margin: 0rem;
+    }
+
+    // log & pass
+    .log-container, .pass-container {
+      width: 20rem;
+      height: 1rem;
+      padding: 1.5rem;
+      border: 1.25px;
+
+      border-color: transparent;
+      border-radius: 5px;
+      margin-bottom: .75rem;
+      background-color: rgb(27, 29, 34);;
+      color: white;
+
+      font-size: $font-sm;
+    }
+
+    // forget password link
+    .forget-pass {
+      margin: 1rem;
+    }
+
+
+    // buttons
+    .log-in {
+      width: 20rem;
+      padding: 1rem;
+      color: white;
+      background-color: rgb(38, 62, 82);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+      font-size: $font-sm;
+      font-weight: 500;
+    }
+
+    .create-account {
+      width: 10rem;
+      padding: 1rem;
+      background-color: white;
+      border: none;
+      border-radius: 5px;
+      color: black;
+      cursor: pointer;
+
+      font-size: $font-sm;
+      font-weight: 500;
+    }
+
+    .cta-discord {
+      color: white;
+      position: relative;
+      top: 3rem;
+    }
+  }
+}

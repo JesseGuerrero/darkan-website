@@ -68,6 +68,7 @@ html {
     color: rgb(222, 222, 222);
 
     &:hover {
+     cursor: pointer;
      color: rgb(255, 255, 255);
      transition: color 200ms ease-in-out;
     }
