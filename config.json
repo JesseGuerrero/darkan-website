@@ -1,6 +1,0 @@
-{
-	"port": "4040",
-	"https": false,
-	"certPath": "/home/trent/cert.pem",
-	"keyPath": "/home/trent/key.pem"
-}
