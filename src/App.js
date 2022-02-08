@@ -1,15 +1,15 @@
 import React from 'react';
 
-import GlobalHeader from './components/global-header/GlobalHeader';
-import GlobalFooter from "./components/global-footer/GlobalFooter";
-import LandingView from "./components/LandingView/LandingView";
+import PageRoutes from "./pages/PageRoutes";
+import GlobalHeader from "./components/GlobalHeader/GlobalHeader";
+import GlobalFooter from "./components/GlobalFooter/GlobalFooter";
 
 
-function App(props) {
+function App() {
   return (
-    <div className='App'>
+    <div>
         <GlobalHeader />
-        <LandingView />
+        <PageRoutes />
         <GlobalFooter />
     </div>
   );

@@ -1,12 +1,12 @@
-import "../../stylesheets/styles.scss"
+import "./GlobalFooter.scss"
 
 function GlobalFooter() {
     return (
-        <footer class="flex flex-jc-sb flex-ai-c">
-            <div class="site-map flex flex-ai-c flex-jc-c">
-                <p class="hide-for-mobile">Site Map</p>
-                <a href="#" class="hide-for-desktop">Site Map</a>
-                <div class="hide-for-mobile">
+        <footer className="flex flex-jc-sb flex-ai-c">
+            <div className="site-map flex flex-ai-c flex-jc-c">
+                <p className="hide-for-mobile">Site Map</p>
+                <a href="#" className="hide-for-desktop">Site Map</a>
+                <div className="hide-for-mobile">
                     <a href="/home">Home</a>
                     <a href="/create-account">Create account</a>
                     <a href="/login">Log In</a>
@@ -20,7 +20,7 @@ function GlobalFooter() {
             </div>
             <div></div>
             <a href="#">Darkan</a>
-            <div class="legal flex flex-ai-c flex-jc-c">
+            <div className="legal flex flex-ai-c flex-jc-c">
                 <p>No in-game purchases</p>
                 <p>Darkan @ 2022</p>
                 <div>

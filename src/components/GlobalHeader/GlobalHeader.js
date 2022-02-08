@@ -1,10 +1,11 @@
-import "../../stylesheets/styles.scss"
+import React from 'react';
+import "./GlobalHeader.scss"
 
-function GlobalHeader() {
+function GlobalHeader(props) {
   return (
       <nav className="main-nav flex flex-ai-c flex-jc-sb">
         <div className="top-logo flex flex-ai-c">
-          <a href="/home">Darkan</a>
+          <a href="/home"><img src="/logo.svg" /></a>
         </div>
         <div className="hamburger hide-for-desktop">
           <span className="bar"></span>
