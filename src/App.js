@@ -3,15 +3,26 @@ import React from 'react';
 import PageRoutes from "./pages/PageRoutes";
 import GlobalHeader from "./components/GlobalHeader/GlobalHeader";
 import GlobalFooter from "./components/GlobalFooter/GlobalFooter";
+import Container from "react-bootstrap/Container";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 
 
 function App() {
   return (
-    <div>
-        <GlobalHeader />
-        <PageRoutes />
-        <GlobalFooter />
-    </div>
+      <div className='App'>
+          <GlobalHeader />
+          <Container fluid>
+              <div className="row text-center min-vh-100">
+                  <Col md={12}>
+                      <div className='wrapper'>
+                         <PageRoutes />
+                      </div>
+                  </Col>
+              </div>
+          </Container>
+          <GlobalFooter />
+      </div>
   );
 }
 

@@ -24,7 +24,8 @@
     "develop:build-server": "webpack --config webpack.server.js --mode=development -w",
     "develop:start": "nodemon ./server-build/index.js",
     "build": "react-scripts build",
-    "dev": "run-p develop:*"
+    "dev": "run-p develop:*",
+    "test": "npm bin"
   },
   "eslintConfig": {
     "extends": [

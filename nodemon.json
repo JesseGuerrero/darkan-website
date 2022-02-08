@@ -1,0 +1,5 @@
+{
+  "events": {
+    "restart": "react-scripts build"
+  }
+}
