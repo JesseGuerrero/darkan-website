@@ -1,36 +1,57 @@
-import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import './Highscores.scss';
+import "./Highscores.scss"
 
-import agility from './skill-icons/Agility-icon.png'; 
-
-function Highscores(props) {
+function Highscores() {
   return (
-    <Container>
-      <Row>
-        <Col>
-          <p style={{ backgroundImage: `url(${agility})` }}>
-            Holy moly we love Agility. Isn't it the best skill on the planet wow wouldn't that be sick to just
-            keep on doing agility over and over and over again?
-          </p>
-        </Col>
-        <Col>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptates, voluptas. Enim, fuga!
-          </p>
-        </Col>
-        <Col>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto
-            atque hic corrupti.
-          </p>
-        </Col>
-      </Row>
-    </Container>
-  );
+      <div className="main-container-highscores">
+        <div className="sub-container-highscores">
+          <div className="header-highscores">
+            <h1>Highscores</h1>
+            <h2>Track, Compare, Achieve Rank #1</h2>
+          </div>
+          <nav className="flex flex-jc-c flex-ai-c">
+            <a href="#" className="button-hover">All Time</a>
+            <a href="#" className="button-hover">Weekly</a>
+            <a href="#" className="button-hover">Monthly</a>
+          </nav>
+          <div className="sub-header-hs">
+            <h2 id="hs-overall">Overall</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore tenetur beatae repellat delectus
+              incidunt ipsa facere!</p>
+            <div>
+              <select className="filter-skill-hs">
+                <option>Skill</option>
+              </select>
+              <select className="filter-account-hs">
+                <option>All</option>
+                <option>Regular</option>
+                <option>Ironman</option>
+                <option>Hardcore Ironman</option>
+                <option>Ultimate Ironman</option>
+              </select>
+              <input id="search-user-hs" type="text" name="Username" placeholder="Search Username"/>
+            </div>
+          </div>
+          <div className="flex flex-jc-c">
+            <table>
+              <thead>
+              <th id="rank">Rank</th>
+              <th id="player">Player</th>
+              <th id="level">Level</th>
+              <th id="exp">Exp</th>
+              </thead>
+              <tbody>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+  )
 }
 
 export default Highscores;
