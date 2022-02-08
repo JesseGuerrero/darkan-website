@@ -6,7 +6,7 @@ function Landing(props) {
         <div className="sub-container flex-ai-c">
           <div className="g1-hero">
             <h1>Darkan</h1>
-            <h2>Everything you want in a 2012 Runescape remake.</h2>
+            <h2>Everythingsa you want in a 2012 Runescape remake.</h2>
             <div className="dwn-client hide-for-mobile">
               <button className="dwn-btn1">
                 <a href="/assets/uploads/files/Darkan.exe">Download <i className="pf-icon fab fa-windows"></i></a>

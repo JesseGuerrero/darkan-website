@@ -25,7 +25,8 @@
     "develop:start": "nodemon ./server-build/index.js",
     "build": "react-scripts build",
     "dev": "run-p develop:*",
-    "test": "npm bin"
+    "test": "npm bin",
+    "start": "react-scripts start"
   },
   "eslintConfig": {
     "extends": [
