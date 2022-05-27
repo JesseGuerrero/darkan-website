@@ -20,9 +20,10 @@ server.use('/api', api);
 server.use(express.static(path.resolve('./build/')));
 
 server.get('/*', (req, res) => {
+  let baseUrl = req.protocol + "://" + req.headers.host
   const app = ReactDOMServer.renderToString(
     <StaticRouter location={req.url}>
-      <App />
+      <App baseUrl = {baseUrl} />
     </StaticRouter>
   );
   const indexFile = path.resolve('./build/index.html');
@@ -47,3 +48,5 @@ if (config.https) {
 } else {
   server.listen(config.port, '0.0.0.0', () => console.log('HTTP successful on port ' + config.port));
 }
+
+export {config}

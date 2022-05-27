@@ -1,4 +1,4 @@
-import "./GlobalFooter.scss"
+//import "./GlobalFooter.scss"
 
 function GlobalFooter() {
     return (

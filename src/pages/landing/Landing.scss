@@ -4,190 +4,380 @@
 // Functionality
 @import "src/stylesheets/variables";
 @import "src/stylesheets/mixins";
-
-// mobile - only
-.title-mobile {
-	text-align: center;
-}
-
-// desktop
-.land-top-nav {
-	color: white;
-	text-align: right;
-	padding: 1rem;
-
-	.main-page-link {
-		text-align: right;
-	}
-}
-
-.main-container {
-	padding: 4rem 0rem 0rem 0rem;
-	min-height: 100vh;
+.main-container-hero {
+	padding: 10vh 0rem 2rem 0rem;
 
 	@include breakpoint-up(large) {
-		padding: 8rem 0rem;
+		padding-top: 12vh;
+		padding-bottom: 15rem;
 	}
 	@include breakpoint-up(xlarge) {
-		padding-top: 12rem;
+		padding-top: 14vh;
+	}
+
+	.sub-container-hero {
+		height: 75vh;
+		width: 85vw;
+
+		@include breakpoint-up (medium) {
+			height: 80vh;
+		}
+
+		@include breakpoint-up(large) {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			justify-content: center;
+			height: 50vh;
+			width: 65vw;
+		}
+
+		@include breakpoint-up(xlarge) {
+			height: 55vh;
+			width: 65vw;
+		}
+
+		// grids 1 & 2
+
+		.g1-hero {
+			text-align: center;
+
+			@include breakpoint-up(large) {
+				text-align: left;
+			}
+
+			h1 {
+				margin-top: 0rem;
+				margin-bottom: 1rem;
+				font-size: $font-lg;
+				color: white;
+
+				@include breakpoint-up (medium) {
+					font-size: $font-lg;
+				}
+				@include breakpoint-up (xlarge) {
+					font-size: $font-xlg;
+				}
+			}
+			p {
+				font-size: $font-med;
+				font-weight: 400;
+				color: rgb(222, 222, 222);
+				margin-top: 0rem;
+				margin-right: 2rem;
+				margin-left: 2rem;
+
+				@include breakpoint-up (medium) {
+					line-height: 1.25;
+					font-size: $font-xmed;
+					font-weight: 400;
+					margin-right: 15vw;
+					margin-left: 15vw;
+					padding: 0rem;
+				}
+				@include breakpoint-up (large) {
+					margin-right: 0rem;
+					margin-left: 0rem;
+				}
+			}
+			#no-igp {
+				margin-top: 2rem;
+				font-size: $font-sm;
+			}
+
+			// client download buttons
+
+			.dwn-client {
+				margin-top: 3rem;
+				margin-bottom: 2rem;
+			}
+			.dwn-btn {
+				font-size: $font-sm;
+				padding: 1rem 4rem;
+				border: none;
+				border-radius: 2px;
+				background-color: rgb(38, 62, 82);
+
+				a {
+					color: white;
+				}
+			}
+			.material-icons {
+				align-items: center;
+			}
+			.pf-icon {
+				margin-left: .5rem;
+				font-size: 16px;
+			}
+		}
+
+		.g2-hero-img {
+
+		}
 	}
 }
-.sub-container {
-	@include breakpoint-up(large) {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+
+// community data
+
+.comm-data-container {
+	margin-bottom: 5rem;
+
+	@include breakpoint-up (medium) {
+		margin-bottom: 10rem;
 	}
 
-	// grids 1 & 2
-	.g1-hero {
-		width: 100%;
-		height: 100%;
-		text-align: center;
-		h1 {
-			font-size: $font-xlg;
-			color: white;
-			margin: 0rem;
+	.comm-data-wrapper {
+		position: relative;
+		bottom: 2rem;
+
+		margin-right: 10vw;
+		margin-left: 10vw;
+
+		@include breakpoint-up (medium) {
+			margin-right: 0vw;
+			margin-left: 0vw;
 		}
-		h2 {
-			font-size: $font-med;
-			font-weight: 400;
-			color: rgb(222, 222, 222);
-			margin-top: 0rem;
-			margin-bottom: 2rem;
+		@include breakpoint-up (large) {
 			width: auto;
+			margin-right: 5vw;
+			margin-left: 5vw;
 		}
 
-		// client download buttons
-		.dwn-client {
-			margin-bottom: 1.75rem;
-		}
-		.dwn-btn1, .dwn-btn2 {
-			font-size: $font-sm;
-			border: none;
-			border-radius: 5px;
-			cursor: pointer;
-		}
-		.dwn-btn1 {
-			padding: 1rem;
-			background-color: rgb(38, 62, 82);
+		.comm-data {
+			height: fit-content;
+			padding: 1rem 2rem;
+			border-radius: 2px;
+			box-shadow: 0px 5px 15px;
 
-			a {
+			@include breakpoint-up (medium) {
+				margin-right: 5vw;
+				margin-left: 5vw;
+			}
+			@include breakpoint-up (large) {
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				height: auto;
+				margin-right: 5vw;
+				margin-left: 5vw;
+			}
+
+			p {
+				text-align: center;
+				font-size: $font-med;
+				margin: 2rem;
 				color: white;
+
+				@include breakpoint-up (large) {
+					font-size: $font-med;
+				}
+			}
+
+			.comm-info {
+
+				@include breakpoint-up (medium) {
+					&:not(:last-child) {
+						margin-right: 1rem;
+						margin-bottom: auto;
+					}
+				}
 			}
 		}
-		.dwn-btn2 {
-			padding: 0.875rem;
-			background: none;
-			border-style: solid;
-			border-width: 2px;
-			border-color: #CCC9DC;
-			position: relative;
-			left: .75rem;
-		}
-		.material-icons {
-			align-items: center;
-		}
-		.pf-icon {
-			margin-left: .5rem;
-			font-size: 16px;
-		}
+	}
+}
 
-		@include breakpoint-up(large) {
-			padding-left: 10rem;
-			background-color: transparent;
-			text-align: left;
+// Section #
+
+.section-a-container {
+
+	.section-a-wrapper {
+		display: flex;
+		justify-content: center;
+		padding-bottom: .25rem;
+
+		.section-a {
+			width: 95vw;
+			color: white;
 
 			h2 {
-				line-height: 1.25;
-				padding: 0rem;
 				font-size: $font-xmed;
-				font-weight: 400;
+				color: white;
+				margin-top: 4rem;
+				margin-bottom: 1rem;
+				padding: 0rem 2rem;
+
+				@include breakpoint-up (medium) {
+					font-size: $font-lg;
+				}
 			}
-			.dwn-client {
-				margin-bottom: 0rem;
+			p {
+				font-size: $font-med;
+				margin-bottom: 2rem;
+				padding: 0rem 2rem;
+
+				@include breakpoint-up (medium) {
+					padding-right: 5rem;
+					padding-left: 5rem;
+				}
+
+				@include breakpoint-up (large) {
+					font-size: $font-xmed;
+					padding-right: 10rem;
+					padding-left: 10rem;
+				}
+
+				@include breakpoint-up (xlarge) {
+					padding-right: 15rem;
+					padding-left: 15rem;
+				}
 			}
-		}
-		@include breakpoint-up("xlarge") {
-			padding-left: 25rem;
+			h2, p {
+				@include breakpoint-up (medium) {
+					text-align: center;
+				}
+			}
+
+			.game-content-container {
+
+				.game-content-wrapper {
+
+					.game-content {
+						display: grid;
+						grid-template-columns: repeat(1, 1fr);
+						row-gap: .25rem;
+						grid-auto-rows: minmax(50px, auto);
+
+						// containers (individual)
+
+						.content-container2 {
+							border: none;
+							border-radius: 2px;
+							color: white;
+
+							h3 {
+								text-align: left;
+								margin-bottom: 0rem;
+								padding-right: 1rem;
+								padding-left: 1rem;
+
+								@include breakpoint-up (medium) {
+									margin-right: 4rem;
+									margin-left: 4rem;
+									padding: 0rem;
+								}
+								@include breakpoint-up (large) {
+									margin-right: auto;
+									margin-left: auto;
+								}
+							}
+							p {
+								text-align: left;
+								margin-top: 0rem;
+							}
+						}
+						.content-container3 {
+							text-align: center;
+						}
+
+						// containers (grouped)
+
+						.content-container1, .content-container3 {
+							border: none;
+							border-radius: 2px;
+							color: white;
+
+							h3 {
+								@include breakpoint-up (medium) {
+									padding-right: 0rem;
+									padding-left: 0rem;
+								}
+								@include breakpoint-up (large) {
+									margin-right: auto;
+								}
+							}
+						}
+
+						// world-banners (individual)
+
+						.world1-banner {
+							p {
+								text-align: left;
+							}
+							.w1-image {
+								height: 25rem;
+								background-color: purple;
+							}
+						}
+
+						.world2-banner {
+
+							@include breakpoint-up (medium) {
+								p, h4 {
+									text-align: right;
+								}
+							}
+
+							.w2-image {
+								height: 25rem;
+								background-color: purple;
+							}
+						}
+
+						// world-banners (grouped)
+
+						.world1-banner, .world2-banner {
+							padding: 0rem 2rem;
+
+							h4 {
+								font-size: $font-med;
+								margin-top: 2rem;
+								margin-bottom: 1rem;
+
+								@include breakpoint-up (medium) {
+									font-size: $font-xmed;
+								}
+							}
+							p {
+								font-size: $font-med;
+								margin-bottom: 2rem;
+								padding: 0rem;
+							}
+						}
+					}
+				}
+			}
 		}
 	}
+}
 
-	.g2-form {
-		text-align: center;
-		background-color: rgb(36, 40, 46);
-		width: 22.5rem;
-		height: 21.5rem;
-		border: none;
-		border-radius: 5px;
-		padding: 2rem 1rem;
-		margin-right: auto;
-		margin-bottom: 0rem;
-		margin-left: auto;
-		box-shadow: 0px 0px 50px black;
+// CTA banner - create account & discord
 
-		a {
-			color: white;
-		}
+.banner-cta-container {
 
-		@include breakpoint-up(large) {
-			position: relative;
-			left: 7rem;
-			margin: 0rem;
-		}
+	.banner-cta-wrapper {
+		display: flex;
+		justify-content: center;
 
-		// log & pass
-		.log-container, .pass-container {
-			width: 20rem;
-			height: 1rem;
-			padding: 1.5rem;
-			border: 1.25px;
-
-			border-color: transparent;
-			border-radius: 5px;
-			margin-bottom: .75rem;
-			background-color: rgb(27, 29, 34);;
-			color: white;
-
-			font-size: $font-sm;
-		}
-
-		// forget password link
-		.forget-pass {
-			margin: 1rem;
-		}
-
-
-		// buttons
-		.log-in {
-			width: 20rem;
-			padding: 1rem;
-			color: white;
-			background-color: rgb(38, 62, 82);
+		.banner-cta {
+			text-align: center;
 			border: none;
-			border-radius: 5px;
-			cursor: pointer;
-
-			font-size: $font-sm;
-			font-weight: 500;
-		}
-
-		.create-account {
-			width: 10rem;
+			border-radius: 4px;
+			margin-top: 1rem;
 			padding: 1rem;
-			background-color: white;
-			border: none;
-			border-radius: 5px;
-			color: black;
-			cursor: pointer;
+			background-color: lightcyan;
 
-			font-size: $font-sm;
-			font-weight: 500;
-		}
+			.download-btn {
+				font-size: $font-sm;
+				padding: .5rem 1rem;
+				border: 1px solid grey;
+				border-radius: 2px;
+				background-color: transparent;
 
-		.cta-discord {
-			color: white;
-			position: relative;
-			top: 3rem;
+				cursor: pointer;
+
+				a {
+					color: black;
+				}
+			}
 		}
 	}
 }

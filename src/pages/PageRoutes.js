@@ -10,7 +10,7 @@ function PageRoutes(props) {
 		<Routes>
 			<Route exact path='/' element={<Landing />} />
 			<Route path='/download' element={<Download />} />
-			<Route path='/highscores' element={<Highscores />} />
+			<Route path='/highscores' element={<Highscores baseUrl = {props.baseUrl}/>} />
 			{/* <Route path='/account/create' component={SignUp} />
           <Route path='/skillcalc/:skill' component={SkillCalculator} /> */}
 		</Routes>

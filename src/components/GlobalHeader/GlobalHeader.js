@@ -1,5 +1,5 @@
 import React from 'react';
-import "./GlobalHeader.scss"
+//import "./GlobalHeader.scss"
 
 function GlobalHeader(props) {
   return (
