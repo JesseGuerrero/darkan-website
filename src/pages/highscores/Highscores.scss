@@ -158,7 +158,9 @@
 				bottom: .05rem;
 				padding: .5rem .75rem;
 				cursor: pointer;
-
+				a {
+					border: none;
+				}
 				&:hover {
 					opacity: 70%;
 					transition: opacity 200ms ease-in-out;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
 import Landing from './landing/Landing';
 import Download from './download/Download';
@@ -10,7 +10,8 @@ function PageRoutes(props) {
 		<Routes>
 			<Route exact path='/' element={<Landing />} />
 			<Route path='/download' element={<Download />} />
-			<Route path='/highscores' element={<Highscores baseUrl = {props.baseUrl}/>} />
+			<Route path='/highscores' element={<Navigate to="/highscores/1"/>} />
+			<Route path='/highscores/:page' element={<Highscores baseUrl = {props.baseUrl}/>} />
 			{/* <Route path='/account/create' component={SignUp} />
           <Route path='/skillcalc/:skill' component={SkillCalculator} /> */}
 		</Routes>

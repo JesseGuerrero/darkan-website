@@ -30,7 +30,7 @@ function GlobalHeader(props) {
                 <li><a href="/ge-tracker">GE Tracker</a></li>
                 <li><a href="/skill-calculator">Skill Calculator</a></li>
                 <li><a href="/bug-reporter">Bug Reporter</a></li>
-                <li><a href="/world-map">World Map</a></li>
+                <li><a href="https://darkan.org/worldmap.html">World Map</a></li>
                 <li><a href="/api">API Documents</a></li>
               </ul>
             </div>

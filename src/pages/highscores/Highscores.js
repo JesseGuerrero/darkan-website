@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { useParams } from 'react-router-dom'
 import "./Highscores.scss"
 import fetch from "node-fetch";
 
 
 
 function Highscores(props) {
+    const { page } = useParams()
     const [userData, setUserData] = useState([]);
     useEffect(() => {
         getGitHubUserWithFetch();
@@ -26,7 +28,6 @@ function Highscores(props) {
             return 0
         })
         jsonData.sort();
-        console.log(jsonData)
         setUserData(jsonData);
     };
 
@@ -35,8 +36,8 @@ function Highscores(props) {
           <header className="App-header">
               <div className="main-container-highscores">
                   <div className="sub-container-highscores">
-                      <div className="header-highscores header-image">
-                          <h1>Highscores</h1>
+                      <div className="header-highscores">
+                          <h1>Highscores {page}</h1>
                           <h2>Track, Compare, Achieve Rank #1</h2>
                       </div>
                       <div className="sub-header-hs">
@@ -97,7 +98,7 @@ function Highscores(props) {
                           <table>
                               {userData.map(
                                   (user) => {
-                                      if(userData.indexOf(user) + 1 < 16)
+                                      if(userData.indexOf(user) >= 15 * (page-1) && userData.indexOf(user) < 15 * page) //get page rank range
                                           return <thead>
                                           <th id="rank">{userData.indexOf(user) + 1}</th>
                                           <th id="player">{user.username}</th>
@@ -111,13 +112,17 @@ function Highscores(props) {
                       <div className="pagination-container flex flex-jc-c">
                           <div>
                               <ul className="flex flex-ai-c">
-                                  <li className="prev-next"><i className="fas fa-arrow-left"></i></li>
-                                  <li><a href="#" className="pagination-link">1</a></li>
+                                  {parseInt(page) <= 1 ? (
+                                      <li style={{visibility:"hidden"}} className="prev-next"><i className="fas fa-arrow-left"></i></li>
+                                  ) : (
+                                      <li className="prev-next"><a href={"/highscores/" + (parseInt(page) - 1)}><i className="fas fa-arrow-left"></i></a></li>
+                                  )}
+                                  <li><a href="#" className="pagination-link active">1</a></li>
                                   <li><a href="#" className="pagination-link">2</a></li>
-                                  <li><a href="#" className="pagination-link active">3</a></li>
+                                  <li><a href="#" className="pagination-link">3</a></li>
                                   <li className="page-dots">...</li>
                                   <li><a href="#" className="pagination-link">10</a></li>
-                                  <li className="prev-next"><i className="fas fa-arrow-right"></i></li>
+                                  <li className="prev-next"><a href={"/highscores/" + (parseInt(page) + 1)}><i className="fas fa-arrow-right"></i></a></li>
                               </ul>
                           </div>
                       </div>

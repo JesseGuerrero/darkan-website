@@ -9,7 +9,7 @@ function Landing(props) {
               <h1>Darkan</h1>
               <p>A Runescape remake of the 2012 era built with game content for all types of players.</p>
               <div class="dwn-client">
-                <a href="/download" class="dwn-btn">Download Client</a>
+                <a href='Darkan.jar' class="dwn-btn" download>Download Client</a>
               </div>
               <p id="no-igp">No in-game purchases</p>
             </div>
