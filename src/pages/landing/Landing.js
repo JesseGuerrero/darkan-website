@@ -81,7 +81,7 @@ function Landing(props) {
             <div class="banner-cta">
               <h2>Start your adventure</h2>
               <button class="download-btn">
-                <a href="/download">Download Darkan</a>
+                <a href='Darkan.jar' download>Download Darkan</a>
               </button>
             </div>
           </div>

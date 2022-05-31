@@ -5,7 +5,7 @@ function GlobalHeader(props) {
   return (
       <nav className="main-nav flex flex-ai-c flex-jc-sb">
         <div className="top-logo flex flex-ai-c">
-          <a href="/home"><img src="/logo.svg" /></a>
+          <a href="/"><img src="/logo.svg" /></a>
         </div>
         <div className="hamburger hide-for-desktop">
           <span className="bar"></span>
@@ -22,7 +22,7 @@ function GlobalHeader(props) {
               </ul>
             </div>
           </div>
-          <a href="/highscores">Highscores</a>
+          <a href="/highscores/all/1">Highscores</a>
           <div className="dropdown">
             <p className="dropbtn flex flex-ai-c">Tools<i className="fas fa-caret-down dwn-arrow"></i></p>
             <div className="dropdown-content">

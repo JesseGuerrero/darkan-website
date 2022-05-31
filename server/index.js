@@ -20,10 +20,9 @@ server.use('/api', api);
 server.use(express.static(path.resolve('./build/')));
 
 server.get('/*', (req, res) => {
-  let baseUrl = req.protocol + "://" + req.headers.host
   const app = ReactDOMServer.renderToString(
     <StaticRouter location={req.url}>
-      <App baseUrl = {baseUrl} />
+      <App props={req} />
     </StaticRouter>
   );
   const indexFile = path.resolve('./build/index.html');

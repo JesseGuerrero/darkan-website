@@ -7,7 +7,6 @@
 
 .main-container-highscores {
 	.sub-container-highscores {
-
 		color: rgb(222, 222, 222);
 
 		h1 {
@@ -113,8 +112,11 @@
 			@include breakpoint-up (medium) {
 				width: 95vw;
 			}
-
 			th {
+				.iron-icon {
+					height: 1rem;
+					width: auto;
+				}
 				height: 3rem;
 				padding: .75rem;
 				background-color: rgb(44, 44, 44);
@@ -124,6 +126,9 @@
 				text-align: right;
 				padding: .5rem;
 				background-color: rgb(70, 70, 70);
+			}
+			.highlight {
+				background-color: rgb(30, 30, 30);
 			}
 			#rank {
 				width: 5rem;

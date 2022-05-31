@@ -7,11 +7,11 @@ function GlobalFooter() {
                 <p className="hide-for-mobile">Site Map</p>
                 <a href="#" className="hide-for-desktop">Site Map</a>
                 <div className="hide-for-mobile">
-                    <a href="/home">Home</a>
+                    <a href="/">Home</a>
                     <a href="/create-account">Create account</a>
                     <a href="/login">Log In</a>
                     <a href="/download">Download</a>
-                    <a href="/highscores">Highscores</a>
+                    <a href="/highscores/all/1">Highscores</a>
                     <a href="/tools">Tools</a>
                     <a href="/discord">Discord</a>
                     <a href="/developers">Developers</a>

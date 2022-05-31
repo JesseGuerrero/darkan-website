@@ -9,7 +9,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
 
-function App(props) {
+function App({props}) {
   return (
       <div className='App'>
           <GlobalHeader />
@@ -17,7 +17,7 @@ function App(props) {
               <div className="row text-center min-vh-100">
                   <Col md={12}>
                       <div className='wrapper'>
-                         <PageRoutes baseUrl = {props.baseUrl} />
+                         <PageRoutes props={props} />
                       </div>
                   </Col>
               </div>
