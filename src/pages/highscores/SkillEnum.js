@@ -6,21 +6,16 @@ function getSkillNameByID(id) {
 function getSkillIDByName(name) {
     return SKILL_NAME.indexOf(name.charAt(0).toUpperCase() + name.slice(1).toLowerCase())
 }
-function getSkillLevelByXP(targetXp) { //Binary Search
-    let low = 0;
-    let high = SKILL_XP.length - 2;
-    while (low <= high) {
-        let mid = low + Math.floor((high - low) / 2);
-        if (SKILL_XP[mid] <= targetXp && SKILL_XP[mid+1] > targetXp)
-            return mid+1;
-        if (targetXp <= SKILL_XP[mid]) {
-            high = mid - 1;
-            continue
-        }
-        low = mid + 1;
-    }
-    return -1;
+
+function getSkillLevelByXP(targetXp, skillID) { //Binary Search
+    let top = 99;
+    if(skillID == 24)
+        top = 120
+    for (let i = top;i > 0; i--)
+        if (targetXp > SKILL_XP[i])
+            return i;
 }
 module.exports.getSkillNameByID = getSkillNameByID;
 module.exports.getSkillIDByName = getSkillIDByName
 module.exports.getSkillLevelByXP = getSkillLevelByXP;
+module.exports.SKILL_NAME = SKILL_NAME;

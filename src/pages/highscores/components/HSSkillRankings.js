@@ -14,7 +14,7 @@ function HSSkillRankings({pageState, userData, skillID, usernameHighlight}) {
                                 id="player">{user.username}{(user.ironman == true ? (
                                 <img className="iron-icon" src="/ironman_icon.png"/>) : (""))}</th>
                             <th className={(user.username.includes(usernameHighlight) && usernameHighlight != "") ? "highlight" : ""}
-                                id="level">{getSkillLevelByXP(user.xp[skillID])}</th>
+                                id="level">{getSkillLevelByXP(user.xp[skillID], skillID)}</th>
                             <th className={(user.username.includes(usernameHighlight) && usernameHighlight != "") ? "highlight" : ""}
                                 id="exp">{user.xp[skillID]}</th>
                             </thead>)

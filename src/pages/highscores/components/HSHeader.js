@@ -17,6 +17,13 @@ function HSHeader({ props, page, userData, searchUser, setPageState, isIronHS, p
             setPageState(pageChange)
         searchUser(username)
     }
+    const submitPlayerSearch = event => {//username search
+        if(event.key === 'Enter') {
+            let username = event.target.value.replace(" ", "+")
+            if (typeof window !== 'undefined')
+                window.location = "/highscores/player/" + username
+        }
+    }
     const goBetweenAccountTypes = event => {
         if(typeof window !== 'undefined') {
             if(event.target.value.includes("iron")) {
@@ -118,7 +125,7 @@ function HSHeader({ props, page, userData, searchUser, setPageState, isIronHS, p
                 </div>
                 <div className="flex flex-jc-c">
                     <input id="search-user-hs" type="text" placeholder="Search Username" defaultValue=""
-                           onChange={onChangeHandler}/>
+                           onChange={onChangeHandler} onKeyPress={submitPlayerSearch}/>
                 </div>
             </div>
         </div>
