@@ -13,31 +13,11 @@ function GlobalHeader(props) {
           <span className="bar"></span>
         </div>
         <div className="flex flex-ai-c hide-for-mobile">
-          <div className="dropdown">
-            <p className="dropbtn flex flex-ai-c">Explore<i className="fas fa-caret-down dwn-arrow"></i></p>
-            <div className="dropdown-content">
-              <ul className="dropdown-links">
-                <li><a href="/features">Features</a></li>
-                <li><a href="/guides">Guides</a></li>
-              </ul>
-            </div>
-          </div>
-          <a href="/highscores/all/1">Highscores</a>
-          <div className="dropdown">
-            <p className="dropbtn flex flex-ai-c">Tools<i className="fas fa-caret-down dwn-arrow"></i></p>
-            <div className="dropdown-content">
-              <ul className="dropdown-links">
-                <li><a href="/ge-tracker">GE Tracker</a></li>
-                <li><a href="/skill-calculator">Skill Calculator</a></li>
-                <li><a href="/bug-reporter">Bug Reporter</a></li>
-                <li><a href="https://darkan.org/worldmap.html">World Map</a></li>
-                <li><a href="/api">API Documents</a></li>
-              </ul>
-            </div>
-          </div>
-          <a href="/create-account">Create account</a>
-          <a href="/login">Login</a>
-          <a href="/assets/uploads/files/Darkan.exe" className="cta-dwnl">Download</a>
+            <a href="/highscores/all/1">Highscores</a>
+            <a href="/grandexchange">GE Tracker</a>
+            <a href="https://darkan.org/worldmap.html">World Map</a>
+            <a href="https://darkan.fandom.com/wiki/Darkan_Wiki">Guides</a>
+            <a href="Darkan.jar" className="cta-dwnl" download>Download</a>
         </div>
       </nav>
   );
