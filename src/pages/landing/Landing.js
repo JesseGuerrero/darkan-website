@@ -1,4 +1,5 @@
 import './Landing.scss';
+import {useEffect, useRef} from "react";
 
 function Landing(props) {
   return (
@@ -49,12 +50,12 @@ function Landing(props) {
                         <div class="world1-banner">
                           <h4>World 1, the Runescape Remake</h4>
                           <p>Play Runescape exactly as it was in 2012, with additional QOL updates.</p>
-                          <div class="w1-image"></div>
+                          <video poster="w1_banner.jpg" onMouseOver={e => e.target.play()} onMouseOut={ e => e.target.load()} src="w1_banner.mp4"/>
                         </div>
                         <div class="world2-banner">
                           <h4>World 2, the RSPS</h4>
                           <p>A RSPS feel with 25x Exp rates, Edgeville home, and more!</p>
-                          <div class="w2-image"></div>
+                          <img src="w2_banner.jpg"/>
                         </div>
                       </div>
                     </div>
