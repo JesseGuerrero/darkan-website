@@ -3,6 +3,7 @@ import {getMongoDocs} from "./MongoDB";
 let MongoClient = require('mongodb').MongoClient;
 let url = "mongodb://localhost:27017/";
 const item_names = require("./item_names.json")
+const item_ids = require("./item_ids.json")
 
 const router = Router();
 
@@ -39,6 +40,18 @@ router.get('/grand-exchange/item-name/:item_name', async (req, res) => {
 router.get('/grand-exchange/item-id/:item_id', async (req, res) => {
 	res.header("Content-Type",'application/json');
 	let json = await getMongoDocs("grandexchange", { itemId: parseInt(req.params.item_id) })
+	res.send(JSON.stringify(json, null, 3))
+});
+
+router.get('/grand-exchange/map/item-name/:item_name', async (req, res) => {
+	res.header("Content-Type",'application/json');
+	let json = { itemId: item_names[req.params.item_name] }
+	res.send(JSON.stringify(json, null, 3))
+});
+
+router.get('/grand-exchange/map/item-id/:item_id', async (req, res) => {
+	res.header("Content-Type",'application/json');
+	let json = { itemName: item_ids[String(req.params.item_id)] }
 	res.send(JSON.stringify(json, null, 3))
 });
 
