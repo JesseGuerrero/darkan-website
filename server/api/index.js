@@ -51,8 +51,10 @@ router.get('/grand-exchange/map/item-name/:item_name', async (req, res) => {
 
 router.get('/grand-exchange/map/item-id/:item_id', async (req, res) => {
 	res.header("Content-Type",'application/json');
-	let json = { itemName: item_ids[String(req.params.item_id)] }
-	res.send(JSON.stringify(json, null, 3))
+	let item_name = item_ids[String(req.params.item_id)]
+	item_name = item_name.replace("_", " ")
+	item_name = item_name.replace("_", " ")
+	res.send(item_name)
 });
 
 router.get('/grand-exchange/buy', async (req, res) => {

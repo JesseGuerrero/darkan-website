@@ -16,8 +16,8 @@ function GrandExchange({props}) {
         for(let i = 0; i < buyJSON.length; i++) {
             let offer = {}
             response = await fetch(window.location.origin + "/api/grand-exchange/map/item-id/" + buyJSON[i].itemId);
-            let name = await response.json().itemName
-            offer.name = name
+            offer.name = await response.text()
+            offer.itemid = buyJSON[i].itemId
             offer.amount = (buyJSON[i].amount - buyJSON[i].completedAmount)
             offer.price = buyJSON[i].price
             offer.total = offer.amount * offer.price
@@ -26,8 +26,8 @@ function GrandExchange({props}) {
         for(let i = 0; i < sellJSON.length; i++) {
             let offer = {}
             response = await fetch(window.location.origin + "/api/grand-exchange/map/item-id/" + sellJSON[i].itemId);
-            let name = await response.json().itemName
-            offer.name = name
+            offer.name = await response.text()
+            offer.itemid = sellJSON[i].itemId
             offer.amount = (sellJSON[i].amount - sellJSON[i].completedAmount)
             offer.price = sellJSON[i].price
             offer.total = offer.amount * offer.price
@@ -55,11 +55,23 @@ function GrandExchange({props}) {
                                 {geSellData.map(
                                     (offer) => {
                                             return (<thead>
-                                            <th id="name">{offer.name}</th>
+                                            <th id="type">To Sell</th>
+                                            <th id="name"><img src={"ge_icons/" + offer.itemid + ".png"}/>{offer.name}</th>
                                             <th id="amount-left">{offer.amount}</th>
                                             <th id="price-per-item">{offer.price}</th>
                                             <th id="price-for-rest">{offer.total}</th>
                                             </thead>)
+                                    }
+                                )}
+                                {geBuyData.map(
+                                    (offer) => {
+                                        return (<thead>
+                                        <th id="type">Purchasable</th>
+                                        <th id="name"><img src={"ge_icons/" + offer.itemid + ".png"}/>{offer.name}</th>
+                                        <th id="amount-left">{offer.amount}</th>
+                                        <th id="price-per-item">{offer.price}</th>
+                                        <th id="price-for-rest">{offer.total}</th>
+                                        </thead>)
                                     }
                                 )}
                             </table>

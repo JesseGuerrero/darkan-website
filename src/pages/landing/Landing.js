@@ -26,7 +26,7 @@ function Landing(props) {
                 <p>2012 Runescape</p>
               </div>
               <div class="comm-info">
-                <p>3 World Servers</p>
+                <p>2 World Servers</p>
               </div>
               <div class="comm-info">
                 <p>Growing Community</p>
