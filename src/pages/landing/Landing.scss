@@ -1,193 +1,385 @@
 // Font-awesome
 @import url('https://use.fontawesome.com/releases/v5.0.7/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
 // Functionality
 @import "src/stylesheets/variables";
 @import "src/stylesheets/mixins";
-
-// mobile - only
-.title-mobile {
-	text-align: center;
+.top-container {
+	height: 100vh
 }
-
-// desktop
-.land-top-nav {
-	color: white;
-	text-align: right;
-	padding: 1rem;
-
-	.main-page-link {
-		text-align: right;
+.main-container-hero {
+	padding-top: 20vh;
+	@include breakpoint-up (medium) {
+		padding-top: 15vh;
 	}
-}
-
-.main-container {
-	padding: 4rem 0rem 0rem 0rem;
-	min-height: 100vh;
-
-	@include breakpoint-up(large) {
-		padding: 8rem 0rem;
+	@include breakpoint-up (xlarge) {
+		padding-top: 17.5vh;
 	}
-	@include breakpoint-up(xlarge) {
-		padding-top: 12rem;
-	}
-}
-.sub-container {
-	@include breakpoint-up(large) {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-	}
-
-	// grids 1 & 2
-	.g1-hero {
-		width: 100%;
+	.hero-img {
+		position: absolute;
+		top: 0px;
+		bottom: 0px;
+		left: 0px;
+		z-index: -1;
+		opacity: .1;
 		height: 100%;
-		text-align: center;
-		h1 {
-			font-size: $font-xlg;
-			color: white;
-			margin: 0rem;
+		width: 100%;
+		object-fit: cover;
+		@include breakpoint-up (large) {
+			width: 100%;
+			object-fit: cover;
 		}
-		h2 {
-			font-size: $font-med;
-			font-weight: 400;
-			color: rgb(222, 222, 222);
-			margin-top: 0rem;
-			margin-bottom: 2rem;
-			width: auto;
-		}
-
-		// client download buttons
-		.dwn-client {
-			margin-bottom: 1.75rem;
-		}
-		.dwn-btn1, .dwn-btn2 {
-			font-size: $font-sm;
-			border: none;
-			border-radius: 5px;
-			cursor: pointer;
-		}
-		.dwn-btn1 {
-			padding: 1rem;
-			background-color: rgb(38, 62, 82);
-
-			a {
+	}
+	.sub-container-hero {
+		// grids 1 & 2
+		.hero {
+			text-align: center;
+			h1 {
+				margin-top: 0rem;
+				margin-bottom: 0rem;
+				font-size: $font-lg;
 				color: white;
+				@include breakpoint-up (medium) {
+					font-size: $font-lg;
+				}
+				@include breakpoint-up (xlarge) {
+					font-size: $font-xlg;
+				}
+			}
+			p {
+				font-size: $font-xmed;
+				font-weight: 600;
+				color: rgb(222, 222, 222);
+				margin-top: 0rem;
+				padding-left: 20vw;
+				padding-right: 20vw;
+				@include breakpoint-up (medium) {
+					line-height: 1.25;
+					font-size: $font-xmed;
+					font-weight: 600;
+					padding-left: 30vw;
+					padding-right: 30vw;
+					margin-bottom: 2rem;
+				}
+				@include breakpoint-up (large) {
+					padding-left: 35vw;
+					padding-right: 35vw;
+				}
+				@include breakpoint-up (xlarge) {
+					font-size: $font-xmed;
+					padding-left: 40vw;
+					padding-right: 40vw;
+				}
+			}
+			#no-igp {
+				margin-top: 2.5rem;
+				font-size: $font-sm;
+			}
+			// client download buttons
+			.dwn-client {
+				margin-top: 0rem;
+			}
+			.dwn-btn {
+				font-size: $font-sm;
+				color: rgb(255, 163, 92);
+				margin: 40px auto;
+				background-color: rgba(255, 255, 255, 0.06);
+				border: 1px solid rgba(255,255,255,0.1);
+				border-radius: 5px;
+				padding: 1rem 2.5rem;
+				backdrop-filter: blur(10px);
+				@include breakpoint-up (large) {
+					font-size: $font-med;
+				}
 			}
 		}
-		.dwn-btn2 {
-			padding: 0.875rem;
-			background: none;
-			border-style: solid;
-			border-width: 2px;
-			border-color: #CCC9DC;
-			position: relative;
-			left: .75rem;
-		}
-		.material-icons {
-			align-items: center;
-		}
-		.pf-icon {
-			margin-left: .5rem;
-			font-size: 16px;
-		}
+	}
+}
 
-		@include breakpoint-up(large) {
-			padding-left: 10rem;
-			background-color: transparent;
-			text-align: left;
+// Section #
+
+.section-a-container {
+	.section-a-wrapper {
+		display: flex;
+		justify-content: center;
+
+		.section-a {
+			width: 100vw;
+			color: rgb(222, 222, 222);
 
 			h2 {
-				line-height: 1.25;
-				padding: 0rem;
-				font-size: $font-xmed;
-				font-weight: 400;
+				margin-right: 5vw;
+				margin-left: 5vw;
 			}
-			.dwn-client {
-				margin-bottom: 0rem;
+
+			a, a:visited, a:hover {
+				text-decoration: none;
+				color: rgb(255, 163, 92);
 			}
-		}
-		@include breakpoint-up("xlarge") {
-			padding-left: 25rem;
-		}
-	}
 
-	.g2-form {
-		text-align: center;
-		background-color: rgb(36, 40, 46);
-		width: 22.5rem;
-		height: 21.5rem;
-		border: none;
-		border-radius: 5px;
-		padding: 2rem 1rem;
-		margin-right: auto;
-		margin-bottom: 0rem;
-		margin-left: auto;
-		box-shadow: 0px 0px 50px black;
+			.game-content-header {
+				text-align: center;
+				padding: 5rem 2.5rem;
+				padding-bottom: 2.5rem;
+				@include breakpoint-up(medium) {
+					padding: 7.5rem 22.5vw;
+					padding-bottom: 7.5rem;
+				}
+				@include breakpoint-up(large) {
+					padding: 10rem 20vw 8rem 20vw;
+				}
+				@include breakpoint-up(xlarge) {
+					padding: 10rem 25vw 9rem 25vw;
+				}
 
-		a {
-			color: white;
-		}
+				h2 {
+					font-size: $font-xmed;
+					@include breakpoint-up(large) {
+						font-size: $font-lg;
+					}
+				}
+			}
 
-		@include breakpoint-up(large) {
-			position: relative;
-			left: 7rem;
-			margin: 0rem;
-		}
+			.game-content-container {
+				.game-content-wrapper {
+					.game-content {
+						// containers (individual)
+						.content-container1 {
 
-		// log & pass
-		.log-container, .pass-container {
-			width: 20rem;
-			height: 1rem;
-			padding: 1.5rem;
-			border: 1.25px;
+						}
 
-			border-color: transparent;
-			border-radius: 5px;
-			margin-bottom: .75rem;
-			background-color: rgb(27, 29, 34);;
-			color: white;
+						.content-container2 {
+							background-color: rgba(79, 79, 79, 0.06);
+							padding: 5rem 5vw;
+							padding-bottom: 7.5rem;
+							@include breakpoint-up(medium) {
+								padding: 10rem 12.5vw;
+							}
+							@include breakpoint-up(large) {
+								padding: 10rem 2.5rem;
+							}
+							@include breakpoint-up(xlarge) {
+								padding-top: 15rem;
+								padding-right: 2.5rem;
+								padding-bottom: 15rem;
+								padding-left: 2.5rem;
+							}
 
-			font-size: $font-sm;
-		}
+							h2 {
+								margin-bottom: 0rem;
+							}
 
-		// forget password link
-		.forget-pass {
-			margin: 1rem;
-		}
+							p {
+								text-align: center;
+								font-size: $font-med;
+								padding: 0rem 5vw;
+								margin-bottom: 0rem;
+								@include breakpoint-up(medium) {
+									padding: 0vh 10vw;
+								}
+								@include breakpoint-up(large) {
+									padding: 0vh 25vw;
+								}
+								@include breakpoint-up(xlarge) {
+									padding: 0vh 30vw;
+								}
+							}
+						}
 
+						.content-container3 {
+							text-align: center;
 
-		// buttons
-		.log-in {
-			width: 20rem;
-			padding: 1rem;
-			color: white;
-			background-color: rgb(38, 62, 82);
-			border: none;
-			border-radius: 5px;
-			cursor: pointer;
+							.cta-container {
+								padding: 7.5rem 0rem;
+								font-size: $font-xmed;
+								@include breakpoint-up(medium) {
+									padding: 7.5rem;
+								}
+								@include breakpoint-up(large) {
+									padding: 10rem;
+								}
+								@include breakpoint-up(xlarge) {
+									padding: 15rem;
+								}
 
-			font-size: $font-sm;
-			font-weight: 500;
-		}
+								.material-symbols-outlined {
+									font-size: 75px;
+									font-weight: 200 !important;
+									color: rgb(240, 202, 138);
+									transition: transform 1s;
+									@include breakpoint-up(large) {
+										font-size: 100px;
+									}
+								}
 
-		.create-account {
-			width: 10rem;
-			padding: 1rem;
-			background-color: white;
-			border: none;
-			border-radius: 5px;
-			color: black;
-			cursor: pointer;
+								.material-symbols-outlined:hover {
+									transform: rotate(1turn);
+								}
 
-			font-size: $font-sm;
-			font-weight: 500;
-		}
+								h2 {
+									margin: 1rem;
+								}
+							}
+						}
 
-		.cta-discord {
-			color: white;
-			position: relative;
-			top: 3rem;
+						// containers (grouped)
+						.content-container2, .content-container3 {
+							h2 {
+								text-align: center;
+								font-size: $font-xmed;
+								@include breakpoint-up(medium) {
+									margin-top: 0rem;
+								}
+								@include breakpoint-up(large) {
+									font-size: $font-lg;
+								}
+								@include breakpoint-up(xlarge) {
+									margin: 0rem 30vw;
+								}
+							}
+						}
+
+						// world-container
+						.world-container {
+							h3 {
+								text-align: center;
+								font-size: $font-xmed;
+								color: rgb(240, 202, 138);
+								@include breakpoint-up(medium) {
+									margin-top: 0rem;
+								}
+							}
+
+							p {
+								text-align: center;
+								font-size: $font-med;
+								padding: 0rem 10vw 0rem 10vw;
+								margin-bottom: 0rem;
+								@include breakpoint-up(medium) {
+									padding: 0rem 20vw 0rem 20vw;
+								}
+								@include breakpoint-up(large) {
+									padding: 0rem;
+								}
+							}
+
+							@include breakpoint-up(large) {
+								margin-bottom: 5rem;
+								margin-left: 0rem;
+								h3 {
+									font-size: $font-lg;
+									margin-top: 0rem;
+								}
+								p {
+									margin-right: 25vw;
+									margin-left: 25vw;
+								}
+							}
+							@include breakpoint-up(xlarge) {
+								p {
+									font-size: $font-med;
+									margin-right: 32.5vw;
+									margin-left: 32.5vw;
+								}
+							}
+						}
+
+						// world - text - container
+						.world1-text-container {
+							display: grid;
+							grid-template-columns: repeat(1, 2fr);
+							position: absolute;
+							top: 105rem;
+							left: 5vw;
+							width: 20rem;
+
+							h3 {
+								font-size: $font-lg;
+								color: rgb(240, 202, 138);
+								margin-bottom: 0rem;
+							}
+
+							@include breakpoint-up(xlarge) {
+								top: 115rem;
+							}
+						}
+
+						.world2-text-container {
+							display: grid;
+							grid-template-columns: repeat(1, 2fr);
+							position: absolute;
+							top: 168.5rem;
+							left: 5vw;
+							width: 20rem;
+
+							h3 {
+								font-size: $font-lg;
+								color: rgb(240, 202, 138);
+								margin-bottom: 0rem;
+							}
+
+							@include breakpoint-up(xlarge) {
+								top: 185rem;
+							}
+						}
+
+						// world-lists (grouped)
+						.world1-list, .world2-list {
+							font-size: $font-med;
+							list-style-type: none;
+							text-align: center;
+							padding: 0rem;
+							margin-top: 5rem;
+							margin-bottom: 5rem;
+							@include breakpoint-up(medium) {
+								margin-top: 1rem;
+							}
+							@include breakpoint-up(large) {
+								display: flex;
+								justify-content: center;
+								margin: 7.5rem 10vw;
+							}
+							@include breakpoint-up(xlarge) {
+								margin: 10rem 20vw;
+							}
+
+							li {
+								font-size: $font-med;
+
+								&:not(:last-child) {
+									margin-bottom: .5rem;
+								}
+
+								@include breakpoint-up(large) {
+									font-size: $font-xmed;
+									margin: 1rem !important;
+								}
+							}
+						}
+
+						// world-images
+						.w1-image, .w2-image {
+							margin-top: 2.5rem;
+							@include breakpoint-up(medium) {
+								margin-top: 0rem;
+							}
+
+							video {
+								height: 100%;
+								width: 100%;
+								z-index: -1;
+								@include breakpoint-up(medium) {
+									aspect-ratio: 4/3;
+								}
+								@include breakpoint-up(large) {
+									aspect-ratio: 16/9;
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }

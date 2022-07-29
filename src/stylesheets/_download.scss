@@ -1,96 +1,66 @@
 .download-main-container {
-    padding: 2rem 0rem 0rem 0rem;
-    min-height: 100vh;
+    height: 100vh;
+    text-align: center;
     h1 {
-        text-align: center;
-        color: white;
+        font-size: $font-xmed;
+        padding: 15vh 20vw 2.5rem 20vw;
+        @include breakpoint-up (medium) {
+            font-size: $font-xmed;
+            padding: 15vh 37.5vw 2.5rem 37.5vw;
+        }
+        @include breakpoint-up (large) {
+            font-size: $font-lg;
+        }
+        @include breakpoint-up (xlarge) {
+            padding: 15vh 40vw 2.5rem 40vw;
+        }
     }
-    h2 {
-        margin-top: 0rem;
-        color: rgb(222, 222, 222);
+    .hero-img {
+        position: absolute;
+        left: 0;
+        opacity: .1;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        @include breakpoint-up (large) {
+            width: 100%;
+            object-fit: cover;
+        }
     }
-
-    @include breakpoint-up(large) {
-        padding: 2rem 0rem;
-    }
-    @include breakpoint-up(xlarge) {
-        padding-top: 6rem;
-    }
-}
-.download-sub-container {
-    text-align: center;
-    margin-top: 3rem;
-
-    .download-client1, .download-client2 {
-        text-align: center;
-        background-color: rgb(36, 40, 46);
-        width: 30rem;
-        height: 20rem;
-        border: none;
-        border-radius: 5px;
-        padding: 2rem 1rem;
-        margin-bottom: 2rem;
-        box-shadow: 0px 0px 50px black;
-        font-size: $font-med;
-
+    .button-container {
         a {
-            color: white;
+            color: rgb(255, 163, 92);
         }
-    }
-
-    @include breakpoint-up (medium) {
-
-        .download-client1, .download-client2 {
-            text-align: center;
-            background-color: rgb(36, 40, 46);
-            width: 30rem;
-            height: 20rem;
-            border: none;
+        @include breakpoint-up (medium) {
+            display: flex;
+            justify-content: center;
+        }
+        .download-client1, .download-client2, .download-client3 {
+            font-size: $font-sm;
+            padding: .5rem 2rem;
+            width: 75vw;
+            background-color: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255,255,255,0.1);
             border-radius: 5px;
-            padding: 2rem 1rem;
-            margin-bottom: 2rem;
-            box-shadow: 0px 0px 50px black;
-    
-            a {
-                color: white;
+            backdrop-filter: blur(10px);
+            @include breakpoint-up (medium) {
+                width: 10rem;
+                &:not(last-child) {
+                    margin-right: 1rem;
+                }
+            }
+            @include breakpoint-up (large) {
+                width: 15rem;
             }
         }
-    }
-
-    @include breakpoint-up (large) {
-
-        display: flex;
-        justify-content: center;
-
-        .download-client1 {
-            margin-right: 6.5rem;
-        }
-
         .download-client1, .download-client2 {
-            text-align: center;
-            background-color: rgb(36, 40, 46);
-            width: 25rem;
-            height: 20rem;
-            border: none;
-            border-radius: 5px;
-            padding: 2rem 1rem;
-            margin-bottom: 2rem;
-            box-shadow: 0px 0px 50px black;
-    
-            a {
-                color: white;
+            margin-bottom: 1rem;
+            @include breakpoint-up (large) {
+                margin-bottom: 0rem;
             }
         }
-    }
-}
-.usr-agree {
-    text-align: center;
-    font-size: $font-xsm;
-    color: rgb(222, 222, 222);
-    margin-bottom: 1rem;
+        .download-client3 {
 
-    @include breakpoint-up (large) {
-        position: relative;
-        top: 2rem;
+        }
     }
 }

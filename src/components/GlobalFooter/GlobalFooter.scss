@@ -1,5 +1,6 @@
 // Font-awesome
 @import url('https://use.fontawesome.com/releases/v5.0.7/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
 // Functionality
 @import "src/stylesheets/variables";
@@ -8,96 +9,61 @@ html {
   body {
   // footer
     footer {
-     //temporary visual fix
-     position: fixed;
-     bottom: 0;
-     width: 100%;
-     //
-     display: flex;
-     flex-wrap: wrap;
-     background-color: rgb(29, 32, 37);
-     font-size: $font-xsm;
-     color: rgb(222, 222, 222);
-     padding: 1rem;
-
-     p {
-      margin: 0rem;
-     }
-
-     a {
+      font-size: $font-sm;
+      background-color: rgb(13, 13, 13);
+      padding: 5vh 10vw;
       color: rgb(222, 222, 222);
-      &:hover {
-       color: white;
+      @include breakpoint-up (large) {
+        font-size: $font-sm;
+        padding: 2.5vh 5vw;
       }
-     }
-
-     .site-map, .legal {
-      a:not(:last-child) {
-       margin-right: 1rem;
+      a {
+        &:hover {
+          color: white;
+        }
       }
-      p {
-       margin-right: 1rem;
+      .site-map {
+        @include breakpoint-up (medium) {
+          display: flex;
+          justify-content: center;
+          text-align: center;
+        }
+        a, p {
+          margin-right: 0rem;
+          @include breakpoint-up (large) {
+            margin-right: 2.5rem;
+          }
+        }
+        .f-link:not(:last-child) {
+          margin-bottom: .5rem;
+          @include breakpoint-up (large) {
+            margin-bottom: 0rem;
+          }
+        }
+        .f-link-container {
+          @include breakpoint-up (large) {
+            display: flex;
+            justify-content: space-around;
+          }
+        }
       }
-     }
+      .f-link {
+        padding: .25rem;
+      }
 
-     @include breakpoint-up(large) {
-      height: auto;
-     }
-    }
+      .f-link a {
+        margin-right: 0rem;
+        @include breakpoint-up (large) {
+          margin-right: 2.5rem;
+        }
+      }
 
-    // global design
-
-    // header section
-    .header-image {
-     padding: 3rem;
-
-     @include breakpoint-up (large) {
-      padding: 6rem;
-     }
-    }
-    .header-image-med {
-     padding: 1rem;
-
-     @include breakpoint-up (large) {
-      padding: 6rem;
-     }
-    }
-    // link - design
-    a, a:visited, a:hover {
-     text-decoration: none;
-     color: rgb(222, 222, 222);
-    }
-    // button - hover state
-    .button-hover {
-     &:hover {
-      opacity: 85%;
-      transition: opacity 200ms ease-in-out;
-     }
-     cursor: pointer;
-    }
-    // drop shadow
-    .shadow-dropdown {
-     box-shadow: 0px 0px 5px rgb(0, 0, 0);
-    }
-    // table cell design
-    .calc_data_available {
-     background-color: rgb(255, 255, 255);
-    }
-    .calc_data_unavailable {
-     background-color: red;
-    }
-    // content - alignment
-    .flex {
-     display: flex;
-     &-jc-sb {
-      justify-content: space-between;
-     }
-     &-jc-c {
-      justify-content: center;
-     }
-     &-ai-c {
-      align-items: center;
-     }
+      .f-link p {
+        margin-right: 0rem;
+        @include breakpoint-up (large) {
+          margin-right: 2.5rem;
+        }
+      }
     }
     // content - visibility state
     .hide-for-mobile {
