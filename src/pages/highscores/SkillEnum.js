@@ -14,6 +14,7 @@ function getSkillLevelByXP(targetXp, skillID) { //Binary Search
     for (let i = top;i > 0; i--)
         if (targetXp > SKILL_XP[i])
             return i;
+    return 1
 }
 module.exports.getSkillNameByID = getSkillNameByID;
 module.exports.getSkillIDByName = getSkillIDByName

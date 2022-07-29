@@ -6,11 +6,8 @@
 @import "src/stylesheets/mixins";
 
 .main-container-highscores-player {
-
   .sub-container-highscores-player {
-
     color: rgb(222, 222, 222);
-
     h1 {
       font-size: $font-lg;
       margin-top: 0rem;
@@ -29,7 +26,7 @@
     #hs-overall {
       font-size: $font-xmed;
       text-align: center;
-
+      color: rgb(240, 202, 138);
       @include breakpoint-up (large) {
         margin-bottom: 0rem;
       }
@@ -40,6 +37,7 @@
     }
     .header-highscores-player {
       text-align: center;
+      padding: 7.5rem 2.5rem;
 
       #player-rank::before {
         content: "Rank #";
@@ -112,26 +110,28 @@
     }
 
     // highscores table
-
     table {
+      box-shadow: 5px 0px 30px rgb(0, 0, 0);
       text-align: right;
       border-spacing: 1px;
-
-      @include breakpoint-up (medium) {
-        width: 95vw;
-      }
-
+      width: 85vw;
+      margin-bottom: 2rem;
       th {
         height: 3rem;
         padding: .75rem;
-        background-color: rgb(44, 44, 44);
+        background-color: rgb(13, 24, 28);
+        color: rgb(240, 202, 138);
+        cursor: default;
       }
       td {
         height: 3rem;
         text-align: right;
         padding: .5rem;
-        background-color: rgb(70, 70, 70);
-
+        background-color: rgb(31, 43, 49);
+        cursor: default;
+        #player-skill-rank {
+          margin-right: 1rem;
+        }
         img {
           margin-right: 1rem;
         }

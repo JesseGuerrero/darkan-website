@@ -11,8 +11,8 @@ function GlobalFooter() {
                     <div className="f-link"><a href="/#">Discord</a></div>
                     <div className="f-link"><a href="https://github.com/orgs/DarkanRS/repositories" target="_blank"
                                                rel="noopener noreferrer" className="cta-developers">Developers</a></div>
-                    <div className="f-link"><p>No in-game purchases</p></div>
-                    <div className="f-link"><p>Darkan @ 2022</p></div>
+                    <div className="f-link"><a>No in-game purchases</a></div>
+                    <div className="f-link"><a>Darkan @ 2022</a></div>
                 </div>
             </div>
         </footer>

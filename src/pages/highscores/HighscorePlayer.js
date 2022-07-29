@@ -5,22 +5,23 @@ import {getSkillLevelByXP, getSkillNameByID, SKILL_NAME} from "./SkillEnum";
 import fetch from "node-fetch";
 
 function HighscoresPlayer({props}) {
-    let { username } = useParams()
+    let { displayName } = useParams()
     const [skillXP, setSkillXP] = useState([]);
     const [skillRanks, setSkillRanks] = useState([]);
     const [totalRank, setTotalRank] = useState();
 
-    username.replace("+", " ")
+    displayName = displayName.replace("+", " ")
     const fetchSkills = async () => {
-        const response = await fetch(window.location.origin + "/api/highscores");
+        const response = await fetch("https://darkan.org:8443/v1/highscores?limit=9999999");
         let playerData = await response.json();
         let skillXPArr = []
         let skillRankArr = []
         let rank = -1;
         for(let i = 0; i < playerData.length; i++) {
-            if(playerData[i].username.toLowerCase() === username.toLowerCase()) {
+            if(playerData[i].displayName === displayName) {
                 for(let skillI = 0; skillI < 25; skillI++)
                     skillXPArr.push(playerData[i].xp[skillI])
+                break
             }
         }
         function sortSkill(skillI) {
@@ -50,30 +51,31 @@ function HighscoresPlayer({props}) {
         for(let i = 0; i < 25; i++) {
             playerData.sort(sortSkill(i));
             for(let j = 0; j < playerData.length; j++) {
-                if(playerData[j].username.toLowerCase() === username.toLowerCase()) {
+                if(playerData[j].displayName === displayName) {
                     skillRankArr.push(j+1)
                 }
             }
         }
         playerData.sort(sortSkill(-1))
         for(let i = 0; i < playerData.length; i++) {
-            if(playerData[i].username.toLowerCase() === username.toLowerCase()) {
+            if(playerData[i].displayName === displayName) {
                 rank = i+1;
             }
         }
+        console.log(skillXPArr)
         setSkillXP(skillXPArr)
         setSkillRanks(skillRankArr)
         setTotalRank(rank)
     };
     useEffect(() => {
         fetchSkills();
-    }, [username]);
+    }, [displayName]);
 
     const submitPlayerSearch = event => {//username search
         if(event.key === 'Enter') {
-            let username = event.target.value.replace(" ", "+")
+            let displayName = event.target.value.replace(" ", "+")
             if (typeof window !== 'undefined')
-                window.location = "/highscores/player/" + username
+                window.location = "/highscores/player/" + displayName
         }
     }
 
@@ -83,7 +85,7 @@ function HighscoresPlayer({props}) {
                 <div className="main-container-highscores-player">
                     <div className="sub-container-highscores-player">
                         <div className="header-highscores-player">
-                            <h1><span id="player-id">{username}</span></h1>
+                            <h1><span id="player-id">{displayName}</span></h1>
                             <div><h2><span id="player-rank">{totalRank}</span></h2></div>
                         </div>
                         <div className="sub-header-hs">
@@ -98,7 +100,7 @@ function HighscoresPlayer({props}) {
                                     <th id="rank">Rank</th>
                                     <th id="player">Skill</th>
                                     <th id="level">Level</th>
-                                    <th id="exp">Total Exp</th>
+                                    <th id="exp">Experience</th>
                                 </thead>
                                 {
                                     SKILL_NAME.map(
@@ -106,12 +108,12 @@ function HighscoresPlayer({props}) {
                                             return (
                                                 <tbody>
                                                     <tr className="row-hover1">
-                                                        <td>{skillRanks[skillIndex]}</td>
+                                                        <td>{skillRanks[skillIndex] == undefined ? undefined : skillRanks[skillIndex].toLocaleString("en-US")}</td>
                                                         <td id="player">
                                                             <div className="flex flex-ai-c"><img className="skill-icon" src={"/skill_icons/" + skill + ".png"}/>{skill}</div>
                                                         </td>
                                                         <td>{getSkillLevelByXP(skillXP[skillIndex], skillIndex)}</td>
-                                                        <td>{skillXP[skillIndex]}</td>
+                                                        <td>{skillXP[skillIndex] == undefined ? undefined : skillXP[skillIndex].toLocaleString("en-US")}</td>
                                                     </tr>
                                                 </tbody>
                                             )

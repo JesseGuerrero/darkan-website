@@ -1,21 +1,26 @@
 import React from "react";
 import "../Highscores.scss"
 import {getSkillIDByName} from "../SkillEnum";
+import fetch from "node-fetch";
 
 
-function HSHeader({ props, page, userData, searchUser, setPageState, isIronHS, pathHS}) {
-    const onChangeHandler = event => {//username search
-        let username = event.target.value
+function HSHeader({ props, page, userData, searchUser, setPageState, isIronHS, pathHS, limit}) {
+    const onChangeHandler = async(event) => {//username search
+        let displayName = event.target.value
         let pageChange = undefined
-        if(username != undefined)
-            for(let i = 0; i < userData.length; i++)
-                if(userData[i].username == username)
-                    pageChange = Math.ceil(i/15.0)
+        if(displayName != undefined) {
+            const response = await fetch("https://darkan.org:8443/v1/highscores?limit=9999999");
+            let playerData = await response.json();
+            for(let i = 0; i < playerData.length; i++)
+                if(playerData[i].displayName == displayName) {
+                    pageChange = Math.ceil(i / limit)
+                }
+        }
         if(pageChange == undefined)
             setPageState(page)
         if(pageChange != undefined)
             setPageState(pageChange)
-        searchUser(username)
+        searchUser(displayName)
     }
     const submitPlayerSearch = event => {//username search
         if(event.key === 'Enter') {
@@ -74,53 +79,53 @@ function HSHeader({ props, page, userData, searchUser, setPageState, isIronHS, p
                 <h2>Track, Compare, Achieve Rank #1</h2>
             </div>
             <div className="sub-header-hs">
-                <h2 id="hs-overall">{getSelectedSkill()}</h2>
-                <div className="flex flex-jc-c">
-                    <div className="select-hs flex">
-                        <select className="filter-time-hs">
-                            <optgroup label="Time period"></optgroup>
-                            <option>All-time</option>
-                            <option>Monthly</option>
-                            <option>Weekly</option>
-                            <option>Daily</option>
-                        </select>
-                        <select onChange={goBetweenAccountTypes} className="filter-account-hs">
-                            <optgroup label="Account type"></optgroup>
-                            <option value="all">All types</option>
-                            {/*<option value="">Regular</option>*/}
-                            <option value="iron" selected={isIronHS}>Ironman</option>
-                            {/*<option>Hardcore Ironman</option>*/}
-                            {/*<option>Ultimate Ironman</option>*/}
-                        </select>
-                        <select defaultValue={getSkillIDByName(getSelectedSkill())} onChange={goToSelectSkill} className="filter-skill-hs">
-                            <optgroup label="Skill"></optgroup>
-                            <option value={-1}>All</option>
-                            <option value={0}>Attack</option>
-                            <option value={1}>Defence</option>
-                            <option value={2}>Strength</option>
-                            <option value={3}>Constitution</option>
-                            <option value={4}>Ranged</option>
-                            <option value={5}>Prayer</option>
-                            <option value={6}>Magic</option>
-                            <option value={7}>Cooking</option>
-                            <option value={8}>Woodcutting</option>
-                            <option value={9}>Fletching</option>
-                            <option value={10}>Fishing</option>
-                            <option value={11}>Firemaking</option>
-                            <option value={12}>Crafting</option>
-                            <option value={13}>Smithing</option>
-                            <option value={14}>Mining</option>
-                            <option value={15}>Herblore</option>
-                            <option value={16}>Agility</option>
-                            <option value={17}>Thieving</option>
-                            <option value={18}>Slayer</option>
-                            <option value={19}>Farming</option>
-                            <option value={20}>Runecrafting</option>
-                            <option value={21}>Hunter</option>
-                            <option value={22}>Construction</option>
-                            <option value={23}>Summoning</option>
-                            <option value={24}>Dungeoneering</option>
-                        </select>
+                <h3 className="hide-for-mobile" id="hs-overall">{getSelectedSkill()}</h3>
+                <div className="filter-container">
+                    <div className="select-hs-container">
+                        <div className="select-hs">
+                            <select className="filter-time-hs">
+                                <optgroup label="Time period"></optgroup>
+                                <option>All time</option>
+                                <option>Monthly</option>
+                                <option>Weekly</option>
+                                <option>Daily</option>
+                            </select>
+                            <select onChange={goBetweenAccountTypes} className="filter-account-hs">
+                                <optgroup label="Account type"></optgroup>
+                                <option value="all">All accounts</option>
+                                {/*<option>Regular</option>*/}
+                                <option value="iron" selected={isIronHS}>Ironman</option>
+                            </select>
+                            <select defaultValue={getSkillIDByName(getSelectedSkill())} onChange={goToSelectSkill} className="filter-skill-hs">
+                                <optgroup label="Skill"></optgroup>
+                                <option value={-1}>All Skills</option>
+                                <option value={0}>Attack</option>
+                                <option value={1}>Defence</option>
+                                <option value={2}>Strength</option>
+                                <option value={3}>Constitution</option>
+                                <option value={4}>Ranged</option>
+                                <option value={5}>Prayer</option>
+                                <option value={6}>Magic</option>
+                                <option value={7}>Cooking</option>
+                                <option value={8}>Woodcutting</option>
+                                <option value={9}>Fletching</option>
+                                <option value={10}>Fishing</option>
+                                <option value={11}>Firemaking</option>
+                                <option value={12}>Crafting</option>
+                                <option value={13}>Smithing</option>
+                                <option value={14}>Mining</option>
+                                <option value={15}>Herblore</option>
+                                <option value={16}>Agility</option>
+                                <option value={17}>Thieving</option>
+                                <option value={18}>Slayer</option>
+                                <option value={19}>Farming</option>
+                                <option value={20}>Runecrafting</option>
+                                <option value={21}>Hunter</option>
+                                <option value={22}>Construction</option>
+                                <option value={23}>Summoning</option>
+                                <option value={24}>Dungeoneering</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
                 <div className="flex flex-jc-c">

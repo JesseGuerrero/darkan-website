@@ -7,6 +7,7 @@ import HSNav from "./components/HSNav";
 import HSRankings from "./components/HSRankings";
 
 function Highscores({props}) {
+    let limit = 999
     let { page } = useParams()
     page = parseInt(page)
     const [userData, setUserData] = useState([]);
@@ -21,28 +22,9 @@ function Highscores({props}) {
 
     let pathHS= typeof window !== 'undefined' ? window.location.pathname.replace(/\d+/g, "") : props.path.replace(/\d+/g, "")
     const fetchHighscoreJSON = async () => {
-        const response = await fetch(window.location.origin + "/api/highscores");
+        let gamemode = isIronHS ? "ironman" : "all"
+        const response = await fetch("https://darkan.org:8443/v1/highscores?page="+ page + "&limit=" + limit + "&gamemode=" + gamemode);
         let playerData = await response.json();
-        playerData.sort(function (user1, user2) {
-            if(user1.totalLevel < user2.totalLevel)
-                return 1
-            else if(user1.totalLevel > user2.totalLevel)
-                return -1
-            else if(user1.totalLevel == user2.totalLevel)
-                if(user1.totalXp < user2.totalXp)
-                    return 1
-                else if(user1.totalXp > user2.totalXp)
-                    return -1
-            return 0
-        })
-        playerData.sort();
-        if(isIronHS) {
-            let ironData = []
-            for(let i = 0; i < playerData.length; i++)
-                if(playerData[i].ironman == true)
-                    ironData.push(playerData[i])
-            playerData = ironData
-        }
         setUserData(playerData);
     };
 
@@ -55,8 +37,8 @@ function Highscores({props}) {
           <header className="App-header">
               <div className="main-container-highscores">
                   <div className="sub-container-highscores">
-                     <HSHeader props={props} page={page} userData={userData} searchUser={searchUser} setPageState={setPageState} isIronHS={isIronHS} pathHS={pathHS}/>
-                     <HSRankings pageState={pageState} userData={userData} usernameHighlight={usernameHighlight}/>
+                     <HSHeader props={props} page={page} userData={userData} searchUser={searchUser} setPageState={setPageState} isIronHS={isIronHS} pathHS={pathHS} limit={limit}/>
+                     <HSRankings pageState={pageState} userData={userData} usernameHighlight={usernameHighlight} limit={limit}/>
                      <HSNav pageState={pageState} pathHS={pathHS}/>
                   </div>
               </div>

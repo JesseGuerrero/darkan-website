@@ -1,5 +1,6 @@
 // Font-awesome
 @import url('https://use.fontawesome.com/releases/v5.0.7/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
 // Functionality
 @import "src/stylesheets/variables";
@@ -8,13 +9,32 @@
 .main-container-highscores {
 	.sub-container-highscores {
 		color: rgb(222, 222, 222);
-
 		h1 {
 			font-size: $font-xmed;
-			margin-top: 0rem;
+			margin: 0rem;
+			margin-bottom: 1rem;
+			@include breakpoint-up (large) {
+				font-size: $font-lg;
+			}
 		}
 		h2 {
 			margin-top: 0rem;
+			@include breakpoint-up (large) {
+				font-size: $font-med;
+			}
+			@include breakpoint-up (xlarge) {
+				font-size: $font-xmed;
+			}
+		}
+		h3 {
+			margin-top: 0rem;
+		}
+		.header-highscores {
+			text-align: center;
+			padding: 5rem 2.5rem;
+			@include breakpoint-up (large) {
+				padding: 7.5rem 2.5rem;
+			}
 		}
 		a:hover {
 			color: white;
@@ -25,7 +45,7 @@
 		#hs-overall {
 			font-size: $font-xmed;
 			text-align: center;
-
+			color: rgb(240, 202, 138);
 			@include breakpoint-up (large) {
 				margin-bottom: 0rem;
 			}
@@ -34,13 +54,10 @@
 				font-size: $font-xmed;
 			}
 		}
-		.header-highscores {
-			text-align: center;
-		}
 		.sub-header-hs {
-			padding: 0rem 1rem;
-			margin-bottom: 2rem;
-
+			margin-right: 5vw;
+			margin-left: 5vw;
+			margin-bottom: 2.5rem;
 			@include breakpoint-up (large) {
 				display: flex;
 				justify-content: space-around;
@@ -51,19 +68,19 @@
 			height: 75px;
 		}
 		.filter-skill-hs, .filter-account-hs, .filter-time-hs {
+			display: flex;
 			font-size: $font-sm;
 			background-color: white;
 			height: 2.75rem;
 			width: 10rem;
 			cursor: pointer;
-
 			&:not(:last-child) {
-				margin-right: .25rem;
+				@include breakpoint-up (medium) {
+					margin-right: .5rem;
+				}
 			}
-
 			@include breakpoint-up (large) {
-				position: relative;
-				left: 3rem;
+				margin-bottom: 0rem;
 			}
 		}
 		select {
@@ -71,89 +88,131 @@
 			background-color: transparent;
 			border: none;
 			border-radius: 2px;
-			padding: 0rem 1rem;
-			margin: 0;
+			padding: 0rem 1.85rem;
+			margin-bottom: 1rem;
 			width: 100%;
 			font-family: inherit;
 			font-size: inherit;
 			cursor: inherit;
 			line-height: inherit;
 			outline: none;
+			text-align: center;
+			@include breakpoint-up (medium) {
+				padding: 0rem 2rem;
+			}
+		}
+		.select-hs {
+			@include breakpoint-up (medium) {
+				display: flex;
+			}
+		}
+		.select-hs-container {
+			display: flex;
+			justify-content: center;
+		}
+		.filter-container {
+			@include breakpoint-up (large) {
+				position: relative;
+				left: 2rem;
+			}
 		}
 		.filter-option-container {
-			display:none;
-			position:absolute;
+			display: none;
+			position: absolute;
 			top:100%;
 			right:0;
 			left:0;
 			z-index:999;
 		}
 		#search-user-hs {
-			width: 30.4rem;
 			font-size: $font-sm;
-			margin-top: .25rem;
 			padding: .75rem;
+			width: 10rem;
 			border: none;
 			border-radius: 2px;
 			outline: none;
-
 			@include breakpoint-up (large) {
 				margin-top: auto;
-				width: auto;
 			}
 		}
 
 		// highscores table
-
-		table {
-			text-align: right;
-			border-spacing: 1px;
-
-			@include breakpoint-up (medium) {
-				width: 95vw;
-			}
-			th {
-				.iron-icon {
-					height: 1rem;
-					width: auto;
-				}
-				height: 3rem;
-				padding: .75rem;
-				background-color: rgb(44, 44, 44);
-			}
-			td {
-				height: 3rem;
+		.hs-table {
+			table {
+				width: 85vw;
+				box-shadow: 5px 0px 30px rgb(0, 0, 0);
 				text-align: right;
-				padding: .5rem;
-				background-color: rgb(70, 70, 70);
-			}
-			.highlight {
-				background-color: rgb(30, 30, 30);
-			}
-			#rank {
-				width: 5rem;
-			}
-			#player, #level, #exp {
-				width: 10rem;
-			}
-			#player {
-				text-align: left;
-				padding-left: 1rem;
-
+				border-spacing: 1px;
 				@include breakpoint-up (medium) {
-					padding-left: 2rem;
+					width: 85vw;
 				}
-			}
-			.player-hs {
-				text-align: right;
+				th {
+					height: 3rem;
+					padding: .75rem;
+					background-color: rgb(13, 24, 28);
+					color: rgb(240, 202, 138);
+				}
+				.highlight {
+					background-color: rgb(25, 41, 47);
+				}
+				td {
+					.iron-icon {
+						height: 1rem;
+						width: auto;
+					}
+					height: 3rem;
+					text-align: right;
+					padding: .5rem;
+					background-color: rgb(31, 43, 49);
+					p {
+						margin: 0rem;
+					}
+				}
+				#rank {
+					width: 5rem;
+				}
+				#player, #level, #exp {
+					width: 10rem;
+				}
+				#player {
+					text-align: left;
+					padding-left: 1rem;
+					@include breakpoint-up (medium) {
+						padding-left: 2rem;
+					}
+				}
+				#player-rank {
+					margin-right: 1rem;
+					cursor: default;
+				}
+				#player-data-ttl, #player-data-exp {
+					cursor: default;
+				}
+				#player-data-exp {
+
+				}
+				.player-hs {
+					text-align: right;
+				}
 			}
 		}
 
 		// footer pagination nav
-
 		.pagination-container {
-			margin-top: 1rem;
+			padding: 1rem 0rem;
+			a {
+				background-color: none;
+				background-color: rgba(255, 255, 255, 0.06);
+				border: 1px solid rgba(255,255,255,0.1);
+				border-radius: 2px;
+				padding: .5rem .75rem;
 
+				&:hover {
+					background-color: rgba(60, 60, 60, 0.198);
+					border-radius: 2px;
+					transition: background-color 200ms ease-in-out;
+				}
+			}
 			ul {
 				padding-left: 0rem;
 				list-style: none;
@@ -163,30 +222,16 @@
 				bottom: .05rem;
 				padding: .5rem .75rem;
 				cursor: pointer;
-				a {
-					border: none;
-				}
+
 				&:hover {
 					opacity: 70%;
 					transition: opacity 200ms ease-in-out;
 				}
 				cursor: pointer;
 			}
-			a {
-				background-color: transparent;
-				border: solid 1px;
-				border-color: grey;
-				border-radius: 2px;
-				padding: .5rem .75rem;
-
-				&:hover {
-					background-color: rgb(121, 121, 121);
-					border-radius: 2px;
-					transition: background-color 200ms ease-in-out;
-				}
-			}
 			.active {
-				background-color: rgb(0, 38, 255);
+				background-color: rgba(19, 19, 19, 0.06);
+				border: 1px solid rgba(255,255,255,0.1);
 			}
 			.page-dots {
 				padding: .3525rem .55rem;
