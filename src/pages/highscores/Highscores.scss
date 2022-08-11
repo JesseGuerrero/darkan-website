@@ -5,9 +5,12 @@
 // Functionality
 @import "src/stylesheets/variables";
 @import "src/stylesheets/mixins";
-
 .main-container-highscores {
 	.sub-container-highscores {
+		.iron-icon {
+			height: 1rem;
+			width: auto;
+		}
 		color: rgb(222, 222, 222);
 		h1 {
 			font-size: $font-xmed;
@@ -33,7 +36,7 @@
 			text-align: center;
 			padding: 5rem 2.5rem;
 			@include breakpoint-up (large) {
-				padding: 7.5rem 2.5rem;
+				padding: 2.5rem 2.5rem;
 			}
 		}
 		a:hover {
@@ -70,7 +73,10 @@
 		.filter-skill-hs, .filter-account-hs, .filter-time-hs {
 			display: flex;
 			font-size: $font-sm;
-			background-color: white;
+			color: rgb(222, 222, 222);
+			background-color: rgb(20, 30, 40);
+			border: 1px solid rgba(255,255,255,0.1);
+			border-radius: 5px;
 			height: 2.75rem;
 			width: 10rem;
 			cursor: pointer;
@@ -88,7 +94,7 @@
 			background-color: transparent;
 			border: none;
 			border-radius: 2px;
-			padding: 0rem 1.85rem;
+			padding: 0rem 1rem;
 			margin-bottom: 1rem;
 			width: 100%;
 			font-family: inherit;
@@ -96,10 +102,7 @@
 			cursor: inherit;
 			line-height: inherit;
 			outline: none;
-			text-align: center;
-			@include breakpoint-up (medium) {
-				padding: 0rem 2rem;
-			}
+			text-align: left;
 		}
 		.select-hs {
 			@include breakpoint-up (medium) {
@@ -126,12 +129,18 @@
 		}
 		#search-user-hs {
 			font-size: $font-sm;
+			color: rgb(222, 222, 222);
 			padding: .75rem;
 			width: 10rem;
-			border: none;
-			border-radius: 2px;
+			background-color: rgb(5, 10, 20);
+			border: 1px solid rgba(255,255,255,0.1);
+			border-radius: 5px;
 			outline: none;
+			@include breakpoint-up (medium) {
+				min-width: 31rem;
+			}
 			@include breakpoint-up (large) {
+				min-width: 12.5rem;
 				margin-top: auto;
 			}
 		}
@@ -149,21 +158,14 @@
 				th {
 					height: 3rem;
 					padding: .75rem;
-					background-color: rgb(13, 24, 28);
+					background-color: rgb(10, 20, 30);
 					color: rgb(240, 202, 138);
 				}
-				.highlight {
-					background-color: rgb(25, 41, 47);
-				}
 				td {
-					.iron-icon {
-						height: 1rem;
-						width: auto;
-					}
 					height: 3rem;
 					text-align: right;
 					padding: .5rem;
-					background-color: rgb(31, 43, 49);
+					background-color: rgb(20, 30, 40);
 					p {
 						margin: 0rem;
 					}
@@ -182,7 +184,7 @@
 					}
 				}
 				#player-rank {
-					margin-right: 1rem;
+					margin-right: 0rem;
 					cursor: default;
 				}
 				#player-data-ttl, #player-data-exp {
@@ -208,7 +210,7 @@
 				padding: .5rem .75rem;
 
 				&:hover {
-					background-color: rgba(60, 60, 60, 0.198);
+					background-color: rgba(50, 60, 70, 0.75);
 					border-radius: 2px;
 					transition: background-color 200ms ease-in-out;
 				}
@@ -230,7 +232,7 @@
 				cursor: pointer;
 			}
 			.active {
-				background-color: rgba(19, 19, 19, 0.06);
+				background-color: rgb(50, 60, 70);
 				border: 1px solid rgba(255,255,255,0.1);
 			}
 			.page-dots {

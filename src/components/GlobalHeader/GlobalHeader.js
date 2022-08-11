@@ -1,20 +1,32 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import "./GlobalHeader.scss"
+import {useParams} from "react-router-dom";
+import fetch from "node-fetch";
 
 function GlobalHeader(props) {
-  return (
+    const [countState, setPlayerCount] = useState(0);
+    const fetchPlayerCount = async () => {
+        const response = await fetch("http://prod.darkan.org:4040/api/playersonline");
+        let count = await response.text()
+        console.log(count)
+        setPlayerCount(count);
+    };
+    useEffect(() => {
+        fetchPlayerCount();
+    }, [countState]);
+    return (
       <nav className="nav-wrapper">
           <div className="nav-container">
               <a href="/">
               <div className="player-count-container flex flex-ai-c">
-                  <span id="player-count"><strong>100</strong></span>
+                  <span id="player-count"><strong>{countState}</strong></span>
                   <p>Players Online</p>
               </div>
               </a>
               <div className="nav-links flex flex-ai-c">
                   <div className="dropdown">
                       <p className="dropbtn flex flex-ai-c">Explore<i className="fas fa-caret-down dwn-arrow"></i></p>
-                      <div className="dropdown-content">d
+                      <div className="dropdown-content">
                           <ul className="dropdown-links">
                               <li><a href="https://discord.gg/RWZt5YN7H4">Discord</a></li>
                               <li><a href="https://github.com/orgs/DarkanRS/repositories" target="_blank"
