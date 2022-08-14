@@ -44,7 +44,7 @@ function GlobalHeader(props) {
                           </ul>
                       </div>
                   </div>
-                  <a href="/assets/uploads/files/Darkan.exe" className="cta-dwnl">Download</a>
+                  <a href="https://github.com/DarkanRS/client-loader/releases/tag/1.0.1" className="cta-dwnl">Download</a>
               </div>
           </div>
       </nav>

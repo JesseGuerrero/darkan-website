@@ -7,7 +7,7 @@ import HSNav from "./components/HSNav";
 import HSRankings from "./components/HSRankings";
 
 function Highscores({props}) {
-    let limit = 999
+    let limit = 15
     let { page } = useParams()
     page = parseInt(page)
     const [userData, setUserData] = useState([]);

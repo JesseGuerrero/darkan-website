@@ -10,12 +10,14 @@ html {
   // footer
     footer {
       font-size: $font-sm;
-      background-color: rgb(13, 13, 13);
+      background-color: rgb(0, 0, 0);
       padding: 5vh 10vw;
       color: rgb(222, 222, 222);
       @include breakpoint-up (large) {
-        font-size: $font-sm;
         padding: 2.5vh 5vw;
+      }
+      @include breakpoint-up (xxlarge) {
+        font-size: $font-med;
       }
       a {
         &:hover {
@@ -49,20 +51,6 @@ html {
       }
       .f-link {
         padding: .25rem;
-      }
-
-      .f-link a {
-        margin-right: 0rem;
-        @include breakpoint-up (large) {
-          margin-right: 2.5rem;
-        }
-      }
-
-      .f-link p {
-        margin-right: 0rem;
-        @include breakpoint-up (large) {
-          margin-right: 2.5rem;
-        }
       }
     }
     // content - visibility state

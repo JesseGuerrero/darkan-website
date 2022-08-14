@@ -8,12 +8,8 @@ import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
-//TODO: Fix skills page showing wrong skill level sometimes
-//TODO: Remove 'd' in explore
-//TODO: Add ability to click skill HS from Player
-//TODO: Add ability to click Player HS from skills
-//TODO: Move HS header up a little
-//TODO: Add players online
+//TODO: Add pagination to skills HS
+//TODO: Add pagination limits based on available players.
 
 
 function App({props}) {

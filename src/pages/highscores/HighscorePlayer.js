@@ -110,7 +110,7 @@ function HighscoresPlayer({props}) {
                                                     <tr className="row-hover1">
                                                         <td>{skillRanks[skillIndex] == undefined ? undefined : skillRanks[skillIndex].toLocaleString("en-US")}</td>
                                                         <td id="player">
-                                                            <div className="flex flex-ai-c"><img className="skill-icon" src={"/skill_icons/" + skill + ".png"}/>{skill}</div>
+                                                            <div className="flex flex-ai-c"><img className="skill-icon" src={"/skill_icons/" + skill + ".png"}/><a href={("/highscores/skill/" + skill + "/1")}>{skill}</a></div>
                                                         </td>
                                                         <td>{getSkillLevelByXP(skillXP[skillIndex], skillIndex)}</td>
                                                         <td>{skillXP[skillIndex] == undefined ? undefined : skillXP[skillIndex].toLocaleString("en-US")}</td>
