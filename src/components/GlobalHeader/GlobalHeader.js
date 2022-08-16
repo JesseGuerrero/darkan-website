@@ -4,16 +4,15 @@ import {useParams} from "react-router-dom";
 import fetch from "node-fetch";
 
 function GlobalHeader(props) {
-    const [countState, setPlayerCount] = useState(0);
+    const [countState, setPlayerCount] = useState();
     const fetchPlayerCount = async () => {
-        const response = await fetch("http://prod.darkan.org:4040/api/playersonline");
-        let count = await response.text()
-        console.log(count)
-        setPlayerCount(count);
+        const response = await fetch("https://web.darkan.org:8443/v1/players/online-count");
+        let countData = await response.json()
+        setPlayerCount(countData.count);
     };
     useEffect(() => {
-        fetchPlayerCount();
-    }, [countState]);
+        fetchPlayerCount()
+    }, []);
     return (
       <nav className="nav-wrapper">
           <div className="nav-container">
