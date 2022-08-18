@@ -4,30 +4,77 @@ import {getSkillIDByName} from "../SkillEnum";
 import fetch from "node-fetch";
 
 
-function HSHeader({ props, page, userData, searchUser, setPageState, isIronHS, pathHS, limit}) {
+function HSHeader({ props, page, userData, searchUser, setPageState, setTimePeriod, timePeriod, isIronHS, pathHS, limit, skillID}) {
     const onChangeHandler = async(event) => {//username search
         let displayName = event.target.value
         let pageChange = undefined
+        let foundPlayer = false
+        let foundPlayers = false
         if(displayName != undefined) {
             const response = await fetch("https://darkan.org:8443/v1/highscores?limit=9999999");
             let playerData = await response.json();
-            for(let i = 0; i < playerData.length; i++)
-                if(playerData[i].displayName == displayName) {
-                    pageChange = Math.ceil(i / limit)
+            if(skillID !== null) {
+                playerData.sort(function (user1, user2) {
+                    if(user1.xp[skillID] < user2.xp[skillID])
+                        return 1
+                    else if(user1.xp[skillID] > user2.xp[skillID])
+                        return -1
+                    else if(user1.xp[skillID] == user2.xp[skillID])
+                        if(user1.xp[skillID] < user2.xp[skillID])
+                            return 1
+                        else if(user1.xp[skillID] > user2.xp[skillID])
+                            return -1
+                    return 0
+                })
+                playerData.sort()
+            }
+            for(let i = 0; i < playerData.length; i++) {
+                if (playerData[i].displayName == displayName) {
+                    pageChange = Math.ceil((i+1) / limit)
+                    foundPlayer = true
+                    foundPlayers = false
+                    break
                 }
+                if (playerData[i].displayName.includes(displayName)) {
+                    pageChange = Math.ceil((i+1) / limit)
+                    foundPlayers = true
+                }
+            }
         }
+        event.target.classList.remove("valid")
+        event.target.classList.remove("invalid")
+        event.target.classList.remove("multiple-valid")
+        if(foundPlayer)
+            event.target.classList.add("valid")
+        if(foundPlayers && displayName != "")
+            event.target.classList.add("multiple-valid")
+        if(!foundPlayer && !foundPlayers)
+            event.target.classList.add("invalid")
+
         if(pageChange == undefined)
             setPageState(page)
         if(pageChange != undefined)
             setPageState(pageChange)
         searchUser(displayName)
     }
-    const submitPlayerSearch = event => {//username search
-        if(event.key === 'Enter') {
-            let username = event.target.value.replace(" ", "+")
+    const submitPlayerSearch = async(event) => {//username search
+        let displayName = event.target.value
+        const response = await fetch("https://darkan.org:8443/v1/highscores?limit=9999999");
+        let playerData = await response.json();
+        let foundPlayer = false
+        for(let i = 0; i < playerData.length; i++)
+            if(playerData[i].displayName == displayName) {
+                foundPlayer = true
+                break
+            }
+        if(foundPlayer && event.key === 'Enter') {
+            displayName = event.target.value.replace(" ", "+")
             if (typeof window !== 'undefined')
-                window.location = "/highscores/player/" + username
+                window.location = "/highscores/player/" + displayName
         }
+    }
+    const goBetweenTimePeriods = event => {
+        setTimePeriod(event.target.value)
     }
     const goBetweenAccountTypes = event => {
         if(typeof window !== 'undefined') {
@@ -71,7 +118,6 @@ function HSHeader({ props, page, userData, searchUser, setPageState, isIronHS, p
             return url
         }
     }
-
     return (
         <div>
             <div className="header-highscores">
@@ -83,12 +129,12 @@ function HSHeader({ props, page, userData, searchUser, setPageState, isIronHS, p
                 <div className="filter-container">
                     <div className="select-hs-container">
                         <div className="select-hs">
-                            <select className="filter-time-hs">
+                            <select value={timePeriod} onChange={goBetweenTimePeriods} className="filter-time-hs">
                                 <optgroup label="Time period"></optgroup>
-                                <option>All time</option>
-                                <option>Monthly</option>
-                                <option>Weekly</option>
-                                <option>Daily</option>
+                                <option value="All">All time</option>
+                                <option value="30">Monthly</option>
+                                <option value="7">Weekly</option>
+                                <option value="1">Daily</option>
                             </select>
                             <select onChange={goBetweenAccountTypes} className="filter-account-hs">
                                 <optgroup label="Account type"></optgroup>

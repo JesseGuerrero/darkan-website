@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect, useLayoutEffect} from "react";
 import { useParams } from 'react-router-dom'
 import "./Highscores.scss"
 import fetch from "node-fetch";
@@ -11,6 +11,7 @@ function Highscores({props}) {
     let { page } = useParams()
     page = parseInt(page)
     const [userData, setUserData] = useState([]);
+    const [timePeriod, setTimePeriod] = useState('All');
     const [usernameHighlight, searchUser] = useState('');
     const [pageState, setPageState] = useState(page);
 
@@ -23,22 +24,31 @@ function Highscores({props}) {
     let pathHS= typeof window !== 'undefined' ? window.location.pathname.replace(/\d+/g, "") : props.path.replace(/\d+/g, "")
     const fetchHighscoreJSON = async () => {
         let gamemode = isIronHS ? "ironman" : "all"
-        const response = await fetch("https://darkan.org:8443/v1/highscores?page="+ page + "&limit=" + limit + "&gamemode=" + gamemode);
+        const response = await fetch("https://darkan.org:8443/v1/highscores?page="+ pageState + "&limit=" + limit + "&gamemode=" + gamemode);
         let playerData = await response.json();
         setUserData(playerData);
     };
 
+    useLayoutEffect(() => {
+        if (sessionStorage.getItem('timePeriod')) {
+            setTimePeriod(sessionStorage.getItem('timePeriod'))
+        } else {
+            sessionStorage.setItem('timePeriod', timePeriod)
+        }
+    }, [])
+
     useEffect(() => {
         fetchHighscoreJSON();
-    }, [usernameHighlight, isIronHS, pageState]);
+        sessionStorage.setItem("timePeriod", timePeriod);
+    }, [usernameHighlight, isIronHS, pageState, timePeriod]);
 
   return (
       <div className="App">
           <header className="App-header">
               <div className="main-container-highscores">
                   <div className="sub-container-highscores">
-                     <HSHeader props={props} page={page} userData={userData} searchUser={searchUser} setPageState={setPageState} isIronHS={isIronHS} pathHS={pathHS} limit={limit}/>
-                     <HSRankings pageState={pageState} userData={userData} usernameHighlight={usernameHighlight} limit={limit}/>
+                     <HSHeader props={props} page={page} userData={userData} searchUser={searchUser} setPageState={setPageState} setTimePeriod={setTimePeriod} timePeriod={timePeriod} isIronHS={isIronHS} pathHS={pathHS} limit={limit} skillID={null}/>
+                     <HSRankings pageState={pageState} userData={userData} timePeriod={timePeriod} usernameHighlight={usernameHighlight} limit={limit}/>
                      <HSNav pageState={pageState} pathHS={pathHS}/>
                   </div>
               </div>

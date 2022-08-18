@@ -8,6 +8,53 @@
 .main-container-highscores-player {
   .sub-container-highscores-player {
     color: rgb(222, 222, 222);
+
+    .highlight {
+      background-color: rgb(16, 26, 36) !important;
+    }
+    .invalid {
+      border-color: rgb(255, 114, 118) !important;
+    }
+    .valid {
+      border-color: green !important;
+    }
+    .multiple-valid {
+      border-color: yellow !important;
+    }
+    .green {
+      margin-left: 0.4em;
+      color: green !important;
+    }
+    .grey {
+      margin-left: 0.4em;
+      color: grey !important;
+    }
+    .none {
+      display: None;
+    }
+
+    .time-filter {
+      position: absolute;
+      font-size: $font-sm;
+      color: rgb(222, 222, 222);
+      background-color: rgb(20, 30, 40);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+      height: 2.75rem;
+      width: 10rem;
+      cursor: pointer;
+
+      &:not(:last-child) {
+        @include breakpoint-up(medium) {
+          margin-right: .5rem;
+        }
+      }
+
+      @include breakpoint-up(large) {
+        margin-bottom: 0rem;
+      }
+    }
+
     h1 {
       font-size: $font-lg;
       margin-top: 0rem;

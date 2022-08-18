@@ -8,7 +8,7 @@ import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
-//TODO: Add pagination to skills HS
+//TODO: Add experienced gained ability
 //TODO: Add pagination limits based on available players.
 
 

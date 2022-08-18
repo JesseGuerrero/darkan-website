@@ -1,12 +1,14 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useLayoutEffect, useState} from "react";
 import "./HighscorePlayer.scss"
 import {useParams} from "react-router-dom";
 import {getSkillLevelByXP, getSkillNameByID, SKILL_NAME} from "./SkillEnum";
 import fetch from "node-fetch";
+import timeHSSkill from "./components/timeHSSkill.json";
 
 function HighscoresPlayer({props}) {
     let { displayName } = useParams()
     const [skillXP, setSkillXP] = useState([]);
+    const [timePeriod, setTimePeriod] = useState('All');
     const [skillRanks, setSkillRanks] = useState([]);
     const [totalRank, setTotalRank] = useState();
 
@@ -62,14 +64,22 @@ function HighscoresPlayer({props}) {
                 rank = i+1;
             }
         }
-        console.log(skillXPArr)
         setSkillXP(skillXPArr)
         setSkillRanks(skillRankArr)
         setTotalRank(rank)
     };
+    useLayoutEffect(() => {
+        if (sessionStorage.getItem('timePeriod')) {
+            setTimePeriod(sessionStorage.getItem('timePeriod'))
+        } else {
+            sessionStorage.setItem('timePeriod', timePeriod)
+        }
+    }, [])
+
     useEffect(() => {
         fetchSkills();
-    }, [displayName]);
+        sessionStorage.setItem("timePeriod", timePeriod);
+    }, [displayName, timePeriod]);
 
     const submitPlayerSearch = event => {//username search
         if(event.key === 'Enter') {
@@ -77,6 +87,26 @@ function HighscoresPlayer({props}) {
             if (typeof window !== 'undefined')
                 window.location = "/highscores/player/" + displayName
         }
+    }
+
+    const goBetweenTimePeriods = event => {
+        setTimePeriod(event.target.value)
+    }
+
+    function getXP(username, skillID) {
+        if(timePeriod == "All")
+            return 0
+        let user = timeHSSkill[username]
+        if(user == undefined || user[timePeriod] == -1)
+            return -1
+        return user[timePeriod][skillID]
+    }
+    function colorGain(username, skillID) {
+        if(timePeriod == "All" || getXP(username) < 0)
+            return "none"
+        if(getXP(username, skillID) == 0)
+            return "grey"
+        return "green"
     }
 
     return (
@@ -90,6 +120,13 @@ function HighscoresPlayer({props}) {
                         </div>
                         <div className="sub-header-hs">
                             <h2 id="hs-overall">Overall Stats</h2>
+                            <select value={timePeriod} onChange={goBetweenTimePeriods} className="time-filter">
+                                <optgroup label="Time period"></optgroup>
+                                <option value="All">All time</option>
+                                <option value="30">Monthly</option>
+                                <option value="7">Weekly</option>
+                                <option value="1">Daily</option>
+                            </select>
                             <div className="flex flex-jc-c">
                                 <input id="search-user-hs" type="text" name="Username" placeholder="Search Username" defaultValue="" onKeyPress={submitPlayerSearch}/>
                             </div>
@@ -110,7 +147,7 @@ function HighscoresPlayer({props}) {
                                                     <tr className="row-hover1">
                                                         <td>{skillRanks[skillIndex] == undefined ? undefined : skillRanks[skillIndex].toLocaleString("en-US")}</td>
                                                         <td id="player">
-                                                            <div className="flex flex-ai-c"><img className="skill-icon" src={"/skill_icons/" + skill + ".png"}/><a href={("/highscores/skill/" + skill + "/1")}>{skill}</a></div>
+                                                            <div className="flex flex-ai-c"><img className="skill-icon" src={"/skill_icons/" + skill + ".png"}/><a href={("/highscores/skill/" + skill + "/1")}>{skill}</a><i><span className={colorGain(displayName, skillIndex)}> {((getXP(displayName, skillIndex)).toLocaleString("en-US") + "+")}</span></i></div>
                                                         </td>
                                                         <td>{getSkillLevelByXP(skillXP[skillIndex], skillIndex)}</td>
                                                         <td>{skillXP[skillIndex] == undefined ? undefined : skillXP[skillIndex].toLocaleString("en-US")}</td>

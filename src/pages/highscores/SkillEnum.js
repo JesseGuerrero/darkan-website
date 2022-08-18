@@ -11,8 +11,6 @@ function getSkillLevelByXP(targetXp, skillID) { //Binary Search
     let top = 99;
     if(skillID == 24)
         top = 120
-    for (let i = 99;i > 0; i--)
-        console.log(i + " " + SKILL_XP[i])
     for (let i = top;i > 0; i--)
         if (targetXp > SKILL_XP[i])
             return i;
