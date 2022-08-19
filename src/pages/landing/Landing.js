@@ -12,7 +12,7 @@ function Landing(props) {
                   <h1>Darkan</h1>
                   <p>Play Runescape in 2012</p>
                   <div className="dwn-client">
-                    <a href="/download" className="dwn-btn button-hover">Play Now</a>
+                    <a href="https://github.com/DarkanRS/client-loader/releases/tag/1.0.1" className="dwn-btn button-hover">Play Now</a>
                   </div>
                   <p id="no-igp">No in-game purchases, ever.</p>
                 </div>
@@ -42,7 +42,7 @@ function Landing(props) {
                             <div className="world-container">
                               <h3>World 1</h3>
                               <h4>2012 Remake</h4>
-                              <p>As a complete remake, players are able to <a href="/download">play through</a> a
+                              <p>As a complete remake, players are able to <a href="https://github.com/DarkanRS/client-loader/releases/tag/1.0.1">play through</a> a
                                 variety of beginner to expert level skills, tasks, quests, and more exactly as it was in
                                 2012.</p>
                             </div>
@@ -65,7 +65,7 @@ function Landing(props) {
                         </div>
                         <div className="mid-cta-banner">
                           <h2>Rank from noob to #1</h2>
-                          <p>If you're all about EXP, then spectate the <a href="/highscores">highscores</a> to see
+                          <p>If you're all about EXP, then spectate the <a href="/highscores/all/1">highscores</a> to see
                             who's not EXP wasting.</p>
                         </div>
                         <div className="world2-banner">
@@ -97,7 +97,7 @@ function Landing(props) {
                     <div className="content-container2">
                       <div className="section-header">
                         <h2>A community project</h2>
-                        <p>Darkan is an <a href="https://github.com/orgs/DarkanRS/repositories" target="_blank"
+                        <p>Darkan is an <a href="https://github.com/DarkanRS" target="_blank"
                                            rel="noopener noreferrer" className="cta-developers">open source
                           project</a> with a communuity dedicated to bring back RuneScape in 2012.</p>
                       </div>
@@ -105,7 +105,7 @@ function Landing(props) {
                     <div className="content-container3">
                       <div className="cta-container">
                         <h2>Play Now!</h2>
-                        <a href="/download"><span
+                        <a href="https://github.com/DarkanRS/client-loader/releases/tag/1.0.1"><span
                             className="material-symbols-outlined button-hover">download_for_offline</span></a>
                       </div>
                     </div>
