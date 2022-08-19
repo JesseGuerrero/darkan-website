@@ -1,6 +1,6 @@
 import React from "react";
 import {getSkillLevelByXP, getSkillNameByID} from "../SkillEnum";
-import timeHSSkill from "./timeHSSkill.json";
+//import timeHSSkill from "./timeHSSkill.json";
 
 function HSSkillRankings({pageState, userData, timePeriod, skillID, usernameHighlight, limit}) {
     function getXP(user) {
@@ -30,7 +30,7 @@ function HSSkillRankings({pageState, userData, timePeriod, skillID, usernameHigh
                 </thead>
                 <tbody>
                     {
-                        timePeriod == "All" ?
+                        //timePeriod == "All" ?
                             userData.map(function(user, index) {
                                     return (<tr className="row-hover1">
                                         <td className={(user.displayName.includes(usernameHighlight) && usernameHighlight != "") ? "highlight" : ""}
@@ -44,16 +44,17 @@ function HSSkillRankings({pageState, userData, timePeriod, skillID, usernameHigh
                                             id="exp">{user.xp[skillID].toLocaleString("en-US")}</td>
                                     </tr>)
                                 }
-                            ) : timeHSSkill[timePeriod][getSkillNameByID(skillID)].map(function(user, index) {
-                                return(<tr className="row-hover1">
-                                    <td className={(user.displayName.includes(usernameHighlight) && usernameHighlight != "") ? "highlight" : ""}
-                                        id="rank">{index + 1 + limit*(pageState-1).toLocaleString("en-US")}</td>
-                                    <td className={(user.displayName.includes(usernameHighlight) && usernameHighlight != "") ? "highlight" : ""} id="player"><a href={"/highscores/player/"+user.displayName.replace(" ", "+")}>{user.displayName}</a></td>
-                                    <td className={(user.displayName.includes(usernameHighlight) && usernameHighlight != "") ? "highlight" : ""}
-                                        id="level"></td>
-                                    <td className={(user.displayName.includes(usernameHighlight) && usernameHighlight != "") ? "highlight" : ""}><p id="player-data-exp"></p><i><span className={colorGain(getXP(user))}> {getXP(user).toLocaleString("en-US") + "+"}</span></i></td>
-                                </tr>)
-                            })
+                            ) 
+                            // : timeHSSkill[timePeriod][getSkillNameByID(skillID)].map(function(user, index) {
+                            //     return(<tr className="row-hover1">
+                            //         <td className={(user.displayName.includes(usernameHighlight) && usernameHighlight != "") ? "highlight" : ""}
+                            //             id="rank">{index + 1 + limit*(pageState-1).toLocaleString("en-US")}</td>
+                            //         <td className={(user.displayName.includes(usernameHighlight) && usernameHighlight != "") ? "highlight" : ""} id="player"><a href={"/highscores/player/"+user.displayName.replace(" ", "+")}>{user.displayName}</a></td>
+                            //         <td className={(user.displayName.includes(usernameHighlight) && usernameHighlight != "") ? "highlight" : ""}
+                            //             id="level"></td>
+                            //         <td className={(user.displayName.includes(usernameHighlight) && usernameHighlight != "") ? "highlight" : ""}><p id="player-data-exp"></p><i><span className={colorGain(getXP(user))}> {getXP(user).toLocaleString("en-US") + "+"}</span></i></td>
+                            //     </tr>)
+                            // })
                     }
                 </tbody>
             </table>

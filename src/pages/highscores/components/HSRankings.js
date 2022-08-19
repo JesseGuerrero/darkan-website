@@ -1,5 +1,4 @@
 import React from "react";
-import timeHS from "./timeHS"
 
 function HSRankings({pageState, userData, timePeriod, usernameHighlight, limit}) {
     function getXP(user) {
@@ -28,7 +27,7 @@ function HSRankings({pageState, userData, timePeriod, usernameHighlight, limit})
                 </thead>
                 <tbody>
                 {
-                    timePeriod == "All" ?
+                    //timePeriod == "All" ?
                         userData.map(function(user, index) {
                                 return(<tr className="row-hover1">
                                     <td className={(user.displayName.includes(usernameHighlight) && usernameHighlight != "") ? "highlight" : ""}><span id="player-rank">{userData.indexOf(user) + 1 + limit*(pageState-1)}</span></td>
@@ -38,14 +37,15 @@ function HSRankings({pageState, userData, timePeriod, usernameHighlight, limit})
                                     <td className={(user.displayName.includes(usernameHighlight) && usernameHighlight != "") ? "highlight" : ""}><p id="player-data-exp">{user.totalXp.toLocaleString("en-US")}</p></td>
                                 </tr>)
                             }
-                        ) : timeHS[timePeriod].map(function(user, index) {
-                                return(<tr className="row-hover1">
-                                    <td className={(user.displayName.includes(usernameHighlight) && usernameHighlight != "") ? "highlight" : ""}><span id="player-rank">{index + 1 + limit*(pageState-1)}</span></td>
-                                    <td className={(user.displayName.includes(usernameHighlight) && usernameHighlight != "") ? "highlight" : ""} id="player"><a href={"/highscores/player/"+user.displayName.replace(" ", "+")}>{user.displayName}</a></td>
-                                    <td className={(user.displayName.includes(usernameHighlight) && usernameHighlight != "") ? "highlight" : ""}><p id="player-data-ttl">{}</p></td>
-                                    <td className={(user.displayName.includes(usernameHighlight) && usernameHighlight != "") ? "highlight" : ""}><p id="player-data-exp"></p><i><span className={colorGain(getXP(user))}> {getXP(user).toLocaleString("en-US") + "+"}</span></i></td>
-                                </tr>)
-                        })
+                        ) 
+                        // : timeHS[timePeriod].map(function(user, index) {
+                        //         return(<tr className="row-hover1">
+                        //             <td className={(user.displayName.includes(usernameHighlight) && usernameHighlight != "") ? "highlight" : ""}><span id="player-rank">{index + 1 + limit*(pageState-1)}</span></td>
+                        //             <td className={(user.displayName.includes(usernameHighlight) && usernameHighlight != "") ? "highlight" : ""} id="player"><a href={"/highscores/player/"+user.displayName.replace(" ", "+")}>{user.displayName}</a></td>
+                        //             <td className={(user.displayName.includes(usernameHighlight) && usernameHighlight != "") ? "highlight" : ""}><p id="player-data-ttl">{}</p></td>
+                        //             <td className={(user.displayName.includes(usernameHighlight) && usernameHighlight != "") ? "highlight" : ""}><p id="player-data-exp"></p><i><span className={colorGain(getXP(user))}> {getXP(user).toLocaleString("en-US") + "+"}</span></i></td>
+                        //         </tr>)
+                        // })
                 }
 
 

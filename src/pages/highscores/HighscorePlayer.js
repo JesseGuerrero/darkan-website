@@ -3,7 +3,7 @@ import "./HighscorePlayer.scss"
 import {useParams} from "react-router-dom";
 import {getSkillLevelByXP, getSkillNameByID, SKILL_NAME} from "./SkillEnum";
 import fetch from "node-fetch";
-import timeHSSkill from "./components/timeHSSkill.json";
+//import timeHSSkill from "./components/timeHSSkill.json";
 
 function HighscoresPlayer({props}) {
     let { displayName } = useParams()
@@ -94,12 +94,12 @@ function HighscoresPlayer({props}) {
     }
 
     function getXP(username, skillID) {
-        if(timePeriod == "All")
-            return 0
-        let user = timeHSSkill[username]
-        if(user == undefined || user[timePeriod] == -1)
-            return -1
-        return user[timePeriod][skillID]
+        if(/*timePeriod == "All"*/ true)
+            return 0;
+        // let user = timeHSSkill[username]
+        // if(user == undefined || user[timePeriod] == -1)
+        //     return -1
+        // return user[timePeriod][skillID]
     }
     function colorGain(username, skillID) {
         if(timePeriod == "All" || getXP(username) < 0)
