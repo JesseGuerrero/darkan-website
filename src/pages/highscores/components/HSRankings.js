@@ -8,7 +8,6 @@ function HSRankings({pageState, userData, timePeriod, usernameHighlight, limit})
             timeIndex = 1
         if(timePeriod == "30")
             timeIndex = 2
-        console.log(timePeriod + " " + user.displayName + " " + user.times[timeIndex])
         return user.times[timeIndex]
     }
     function colorGain(xp) {
