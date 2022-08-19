@@ -14,8 +14,8 @@ import App from '../src/App';
 
 const server = express();
 
-import api from './api/index.js';
-server.use('/api', api);
+// import api from './api/index.js';
+// server.use('/api', api);
 
 server.use(express.static(path.resolve('./build/')));
 
