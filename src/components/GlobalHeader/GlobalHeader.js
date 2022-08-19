@@ -38,7 +38,7 @@ function GlobalHeader(props) {
                       <p className="dropbtn flex flex-ai-c">Tools<i className="fas fa-caret-down dwn-arrow"></i></p>
                       <div className="dropdown-content">
                           <ul className="dropdown-links">
-                              <li><a href="https://darkan.org/worldmap.html">World Map</a></li>
+                              <li><a href="#">World Map</a></li>
                               <li><a href="https://github.com/DarkanRS/api">API Documents</a></li>
                           </ul>
                       </div>
