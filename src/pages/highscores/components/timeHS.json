@@ -1,1 +1,608 @@
-{"0":{"1":0,"7":-1,"30":-1},"Lady Celeste":{"1":0,"7":-1,"30":-1},"Garlic Pork":{"1":25553,"7":-1,"30":-1},"Jiren":{"1":107014,"7":-1,"30":-1},"Nostalgic":{"1":0,"7":-1,"30":-1},"Jawarrior1":{"1":81195,"7":-1,"30":-1},"Xexani":{"1":0,"7":-1,"30":-1},"Kijanerino":{"1":0,"7":-1,"30":-1},"Ady":{"1":0,"7":-1,"30":-1},"Krethis":{"1":0,"7":-1,"30":-1},"Zemouregal":{"1":3380,"7":-1,"30":-1},"Ducky":{"1":0,"7":-1,"30":-1},"Yum525":{"1":0,"7":-1,"30":-1},"Devourment":{"1":0,"7":-1,"30":-1},"Dispvm":{"1":0,"7":-1,"30":-1},"Eventest":{"1":0,"7":-1,"30":-1},"Rusted":{"1":0,"7":-1,"30":-1},"Paka":{"1":0,"7":-1,"30":-1},"Diskid":{"1":0,"7":-1,"30":-1},"Makaska":{"1":0,"7":-1,"30":-1},"Disskill":{"1":0,"7":-1,"30":-1},"Wizard":{"1":0,"7":-1,"30":-1},"Easymac":{"1":0,"7":-1,"30":-1},"Tyhiihf2p":{"1":0,"7":-1,"30":-1},"Jawarrior":{"1":0,"7":-1,"30":-1}}
+{
+  "1": [
+    {
+      "displayName": "Jawarrior1",
+      "times": [
+        56339,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Zemouregal",
+      "times": [
+        8780,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Jiren",
+      "times": [
+        6832,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Lady Celeste",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Garlic Pork",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Nostalgic",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Xexani",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Kijanerino",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Ady",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Krethis",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Ducky",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Yum525",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Devourment",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Dispvm",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Eventest",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Rusted",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Paka",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Diskid",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Makaska",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "0",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Disskill",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Wizard",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Easymac",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Tyhiihf2p",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Jawarrior",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    }
+  ],
+  "7": [
+    {
+      "displayName": "Jawarrior1",
+      "times": [
+        56339,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Zemouregal",
+      "times": [
+        8780,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Jiren",
+      "times": [
+        6832,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Lady Celeste",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Garlic Pork",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Nostalgic",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Xexani",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Kijanerino",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Ady",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Krethis",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Ducky",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Yum525",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Devourment",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Dispvm",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Eventest",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Rusted",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Paka",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Diskid",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Makaska",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "0",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Disskill",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Wizard",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Easymac",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Tyhiihf2p",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Jawarrior",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    }
+  ],
+  "30": [
+    {
+      "displayName": "Jawarrior1",
+      "times": [
+        56339,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Zemouregal",
+      "times": [
+        8780,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Jiren",
+      "times": [
+        6832,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Lady Celeste",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Garlic Pork",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Nostalgic",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Xexani",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Kijanerino",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Ady",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Krethis",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Ducky",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Yum525",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Devourment",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Dispvm",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Eventest",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Rusted",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Paka",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Diskid",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Makaska",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "0",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Disskill",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Wizard",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Easymac",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Tyhiihf2p",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "displayName": "Jawarrior",
+      "times": [
+        0,
+        -1,
+        -1
+      ]
+    }
+  ]
+}
