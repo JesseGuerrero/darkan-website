@@ -33,7 +33,7 @@ function HSSkillRankings({pageState, userData, timePeriod, skillID, usernameHigh
                                 id="rank">{(userData.indexOf(user) + 1 + limit*(pageState-1)).toLocaleString("en-US")}</td>
                             <td className={(user.displayName.includes(usernameHighlight) && usernameHighlight != "") ? "highlight" : ""}
                                 id="player"><a href={"/highscores/player/"+user.displayName.replace(" ", "+")}>{(user.ironman == true ? (
-                                <img className="iron-icon" src="/ironman_icon.png"/>) : (""))}{user.displayName}</a><i><span className={colorGain(user.displayName)}> {(getXP(user.displayName)).toLocaleString("en-US") + "+"}</span></i></td>
+                                <img className="iron-icon" src="/ironman_icon.png"/>) : (""))}{user.displayName}</a></td>
                             <td className={(user.displayName.includes(usernameHighlight) && usernameHighlight != "") ? "highlight" : ""}
                                 id="level">{getSkillLevelByXP(user.xp[skillID], skillID)}</td>
                             <td className={(user.displayName.includes(usernameHighlight) && usernameHighlight != "") ? "highlight" : ""}

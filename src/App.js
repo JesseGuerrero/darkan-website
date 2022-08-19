@@ -8,9 +8,10 @@ import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
+//TODO: Player page, make match with front end
 //TODO: Add experienced gained ability
 //TODO: Add pagination limits based on available players.
-
+//TODO: Rank by exp gained as well
 
 function App({props}) {
   return (
