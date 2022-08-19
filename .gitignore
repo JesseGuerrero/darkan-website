@@ -11,9 +11,6 @@
 # production
 /build
 /server-build
-/public/recordedHS.json
-/src/pages/highscores/components/timeHS.json
-/src/pages/highscores/components/timeHSSkill.json
 
 # misc
 .DS_Store
