@@ -6,10 +6,7 @@
 @import "src/stylesheets/variables";
 @import "src/stylesheets/mixins";
 .top-container {
-	height: 95vh;
-	@include breakpoint-up (large) {
-		height: 100vh;
-	}
+	height: 85vh;
 }
 .main-container-hero {
 	padding-top: 20vh;
@@ -122,17 +119,10 @@
 				color: rgb(240, 202, 138);
 			}
 			.game-content-header {
-				background-color: rgb(5, 5, 5);
 				text-align: center;
-				padding: 7.5rem 5vw;
+				padding: 5rem 5vw;
 				@include breakpoint-up (medium) {
-					padding: 7.5rem 1vw;
-				}
-				@include breakpoint-up (large) {
-					padding: 10rem 1vw;
-				}
-				@include breakpoint-up (xlarge) {
-					padding: 10rem 1vw;
+					padding: 7.5rem 5vw;
 				}
 				h2 {
 					font-size: $font-xmed;
@@ -157,15 +147,22 @@
 					}
 				}
 			}
+			.client-image, .img-gradient {
+				@include breakpoint-up (medium) {
+					max-width: 50rem;
+					margin-right: auto;
+					margin-left: auto;
+				}
+				@include breakpoint-up (xlarge) {
+					max-width: 65rem;
+					margin-right: auto;
+					margin-left: auto;
+				}
+			}
 			.client-image {
 				height: 100%;
 				width: 100%;
-				@include breakpoint-up (medium) {
-					width: 85%;
-				}
-				@include breakpoint-up (large) {
-					width: 65%;
-				}
+				box-shadow: 0px -25px 75px rgb(0, 0, 0)
 			}
 			.img-gradient {
 				position:relative;
@@ -174,21 +171,36 @@
 				content: '';
 				position: absolute;
 				left: 0; top: 0;
-				width: 100%; height: 100%;
+				width: 100%; 
+				height: 100%;
 				background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 98%, rgba(0,0,0,1) 100%);
 			}
 			.link-discord {
+				font-size: $font-med;
 				margin-top: 5rem;
 				a {
-					color: rgb(144, 151, 255);
+					color: rgb(108, 118, 255);
+				}
+				@include breakpoint-up (medium) {
+					margin-top: 7.5rem;
 				}
 				@include breakpoint-up (large) {
-					font-size: $font-med;
 					margin-right: 25vw;
 					margin-left: 25vw;
 				}
-				@include breakpoint-up (xxlarge) {
+				@include breakpoint-up (xlarge) {
 					font-size: $font-xmed;
+				}
+			}
+			.social-link-icons {
+				max-width: 20rem;
+				margin: 0rem auto;
+
+				.social-icons {
+					height: 50px;
+					width: 50px;
+					font-size: $font-med;
+					color: white;
 				}
 			}
 			.game-content-container {
@@ -196,7 +208,6 @@
 					.game-content {
 						// containers (individual)
 						.content-container2 {
-							background-color: rgb(10, 20, 30);
 							padding: 5rem 5vw;
 							padding-bottom: 7.5rem;
 							@include breakpoint-up (medium) {
@@ -241,6 +252,7 @@
 							}
 						}
 						.content-container3 {
+							background-color: rgb(25, 25, 25);
 							text-align: center;
 							.cta-container {
 								padding: 7.5rem 0rem;
@@ -350,9 +362,15 @@
 								}
 							}
 						}
+						// world - banner
+						.world1-container, .world2-container {
+							background-color: rgb(5, 5, 5);
+							padding-bottom: 5.75rem;
+						}
 						// world - text - container (grouped)
 						.world1-list-container, .world2-list-container {
-							padding: 5rem;
+							background-color: rgb(5, 5, 5);
+							padding: 0rem 5rem 5rem 5rem;
 							@include breakpoint-up (xxlarge) {
 								padding: 10rem;
 							}
@@ -396,9 +414,7 @@
 							list-style-type: none;
 							text-align: center;
 							padding: 0rem;
-							@include breakpoint-up (medium) {
-								margin-top: 1rem;
-							}
+							margin-top: 0rem;
 							@include breakpoint-up (large) {
 								display: flex;
 								justify-content: center;
@@ -431,9 +447,15 @@
 						}
 						// mid-cta-banner
 						.mid-cta-banner {
+							background-color: rgb(20, 20, 20);
 							text-align: center;
 							padding: 5rem 2.5rem;
-							background-color: rgba(255, 255, 255, 0.05);
+							@include breakpoint-up (xlarge) {
+								padding: 10rem 5rem;
+							}
+							@include breakpoint-up (xxlarge) {
+								padding: 15rem 5rem;
+							}
 							h2 {
 								margin-top: 0rem;
 								font-size: $font-xmed;

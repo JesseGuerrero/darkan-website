@@ -22,8 +22,7 @@ html {
   font-weight: 600;
   padding: 0rem;
   margin: 0rem;
-  background: rgb(13,24,28);
-  background: linear-gradient(0deg, rgba(13,13,13,1) 0%, rgb(21, 31, 36) 51%, rgba(13,13,13,1) 100%);
+  background: linear-gradient(rgb(10, 10, 10), rgb(20, 20, 20));
   color: rgb(222, 222, 222);
   cursor: default;
 
@@ -71,14 +70,14 @@ html {
    li {
     list-style-type: none;
    }
-
+   
    @include breakpoint-down (x-small) {
     display: none;
    }
   }
   .nav-container {
    display: flex;
-   justify-content: center;
+   justify-content: space-around;
    p, a {
     font-size: $font-sm;
    }
@@ -114,8 +113,8 @@ html {
   .dropdown-content {
    display: none;
    position: absolute;
-   background-color: rgba(255, 255, 255, 0.08);
-   border: 1px solid rgba(255,255,255,0.1);
+   background-color: rgb(35, 35, 35);
+   border: 1px solid rgba(255, 255, 255, 0.056);
    min-width: 11rem;
    border-radius: 2.5px;
    top: 3.25rem;
@@ -140,7 +139,7 @@ html {
    display: block;
   }
   .dropdown-content a:hover {
-   background-color: rgb(22, 29, 32);
+   background-color: rgba(10, 10, 10, 0.569);
    border-radius: 2.5px;
    transition: background-color 200ms ease-in-out
   }
