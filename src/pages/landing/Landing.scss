@@ -141,8 +141,8 @@
 						font-size: $font-lg;
 					}
 					@include breakpoint-up (xxlarge) {
-						margin-right: 32.5vw;
-						margin-left: 32.5vw;
+						margin-right: 27.5vw;
+						margin-left: 27.5vw;
 						font-size: $font-xlg;
 					}
 				}
@@ -256,7 +256,7 @@
 								}
 								@include breakpoint-up (xxlarge) {
 									font-size: $font-xmed;
-									padding: 0vh 35vw;
+									padding: 0vh 30vw;
 								}
 							}
 						}
@@ -311,7 +311,7 @@
 								}
 								@include breakpoint-up (xxlarge) {
 									font-size: $font-xlg;
-									margin: 0rem 35vw;
+									margin: 0rem 30vw;
 								}
 							}
 						}
@@ -375,6 +375,9 @@
 						.world1-container, .world2-container {
 							background-color: rgb(5, 5, 5);
 							padding-bottom: 5.75rem;
+							@include breakpoint-up (xxlarge) {
+								padding-bottom: 0rem;
+							}
 						}
 						// world - text - container (grouped)
 						.world1-list-container, .world2-list-container {
@@ -450,7 +453,10 @@
 								z-index: -1;
 								aspect-ratio: 16/9;
 								@include breakpoint-up (large) {
-									aspect-ratio: 16/8;
+									aspect-ratio: 16/9;
+								}
+								@include breakpoint-up (xlarge) {
+									aspect-ratio: 16/7;
 								}
 							}
 						}
