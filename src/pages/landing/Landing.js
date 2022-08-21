@@ -31,10 +31,11 @@ function Landing(props) {
                   <p>Stay connected with our community!</p>
                 </div>
                 <div className="flex flex-jc-sa social-link-icons">
-                  <a href="#"><img src="public/discord-brands.svg" className="social-icons"/></a>
-                  <a href="#"><img src="public/discord-brands.svg" className="social-icons"/></a>
-                  <a href="#"><img src="public/discord-brands.svg" className="social-icons"/></a>
-                  <a href="#"><img src="public/discord-brands.svg" className="social-icons"/></a>
+                  <a href="https://discordapp.com/invite/Z32ggEB" target="_blank" rel="noopener noreferrer"><img src="/social/discord-brands.svg" className="social-icons discord-icon"/></a>
+                  <a href="#" target="_blank" rel="noopener noreferrer"><img src="/social/instagram-brands.svg" className="social-icons insta-icon"/></a>
+                  <a href="https://www.facebook.com/events/546672149317559/" target="_blank" rel="noopener noreferrer"><img src="/social/facebook-brands.svg" className="social-icons fb-icon"/></a>
+                  <a href="#" target="_blank" rel="noopener noreferrer"><img src="/social/twitter-brands.svg" className="social-icons twitter-icon"/></a>
+                  <a href="https://www.reddit.com/r/2012scape?utm_medium=android_app&utm_source=share" target="_blank" rel="noopener noreferrer"><img src="/social/reddit-brands.svg" className="social-icons twitter-icon"/></a>
                 </div>
               </div>
               <div className="game-content-container">
@@ -102,16 +103,13 @@ function Landing(props) {
                     <div className="content-container2">
                       <div className="section-header">
                         <h2>A community project</h2>
-                        <p>Darkan is an <a href="https://github.com/DarkanRS" target="_blank"
-                                           rel="noopener noreferrer" className="cta-developers">open source
-                          project</a> with a communuity dedicated to bring back RuneScape in 2012.</p>
+                        <p>Darkan is an <a href="https://github.com/DarkanRS" target="_blank" rel="noopener noreferrer" className="cta-developers">open source project</a> with a communuity dedicated to bring back RuneScape in 2012.</p>
                       </div>
                     </div>
                     <div className="content-container3">
                       <div className="cta-container">
                         <h2>Play Now!</h2>
-                        <a href="https://github.com/DarkanRS/client-loader/releases/tag/1.0.1"><span
-                            className="material-symbols-outlined button-hover">download_for_offline</span></a>
+                        <a href="https://github.com/DarkanRS/client-loader/releases/tag/1.0.1" target="_blank" rel="noopener noreferrer"><span className="material-symbols-outlined button-hover">download_for_offline</span></a>
                       </div>
                     </div>
                   </div>

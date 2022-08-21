@@ -120,13 +120,10 @@ function HighscoresPlayer({props}) {
                         </div>
                         <div className="sub-header-hs">
                             <h2 id="hs-overall">Overall Stats</h2>
-                            <select value={timePeriod} onChange={goBetweenTimePeriods} className="time-filter">
-                                <optgroup label="Time period"></optgroup>
-                                <option value="All">All time</option>
-                                <option value="30">Monthly</option>
-                                <option value="7">Weekly</option>
-                                <option value="1">Daily</option>
-                            </select>
+                            <div class="backto-hs flex flex-ai-c flex-jc-c">
+                                <span class="material-symbols-outlined return-arrow">keyboard_return</span>
+                                <a href="/highscores/all/1">back to highscores</a>
+                            </div>
                             <div className="flex flex-jc-c">
                                 <input id="search-user-hs" type="text" name="Username" placeholder="Search Username" defaultValue="" onKeyPress={submitPlayerSearch}/>
                             </div>

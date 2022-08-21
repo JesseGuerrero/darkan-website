@@ -7,8 +7,10 @@
 @import "src/stylesheets/mixins";
 .main-container-highscores {
 	.sub-container-highscores {
+		color: rgb(222, 222, 222);
+		// search box function colors
 		.highlight {
-			background-color: rgb(16, 26, 36) !important;
+			background-color: rgba(222, 222, 222, .1) !important;
 		}
 		.invalid {
 			border-color: rgb(255, 114, 118) !important;
@@ -28,12 +30,15 @@
 		.none {
 			display: None;
 		}
+		
+		// ironman icon
 		.iron-icon {
 			height: 1rem;
 			width: auto;
-			margin-right: 0.25rem;
+			margin-right: 1rem;
 		}
-		color: rgb(222, 222, 222);
+
+		//general design
 		h1 {
 			font-size: $font-xmed;
 			margin: 0rem;
@@ -45,9 +50,6 @@
 		h2 {
 			margin-top: 0rem;
 			@include breakpoint-up (large) {
-				font-size: $font-med;
-			}
-			@include breakpoint-up (xlarge) {
 				font-size: $font-xmed;
 			}
 		}
@@ -58,7 +60,7 @@
 			text-align: center;
 			padding: 5rem 2.5rem;
 			@include breakpoint-up (large) {
-				padding: 2.5rem 2.5rem;
+				padding: 7.5rem 2.5rem;
 			}
 		}
 		a:hover {
@@ -96,7 +98,7 @@
 			display: flex;
 			font-size: $font-sm;
 			color: rgb(222, 222, 222);
-			background-color: rgb(20, 30, 40);
+			background-color: rgb(20, 20, 20);
 			border: 1px solid rgba(255,255,255,0.1);
 			border-radius: 5px;
 			height: 2.75rem;
@@ -154,7 +156,7 @@
 			color: rgb(222, 222, 222);
 			padding: .75rem;
 			width: 10rem;
-			background-color: rgb(5, 10, 20);
+			background-color: rgb(5, 5, 5);
 			border: 1px solid rgba(255,255,255,0.1);
 			border-radius: 5px;
 			outline: none;
@@ -180,14 +182,14 @@
 				th {
 					height: 3rem;
 					padding: .75rem;
-					background-color: rgb(10, 20, 30);
+					background-color: rgb(10, 10, 10);
 					color: rgb(240, 202, 138);
 				}
 				td {
 					height: 3rem;
 					text-align: right;
 					padding: .5rem;
-					background-color: rgb(20, 30, 40);
+					background-color: rgb(20, 20, 20);
 					p {
 						margin: 0rem;
 					}
@@ -202,7 +204,7 @@
 					text-align: left;
 					padding-left: 1rem;
 					@include breakpoint-up (medium) {
-						padding-left: 2rem;
+						padding-left: 1rem;
 					}
 				}
 				#player-rank {
@@ -232,7 +234,7 @@
 				padding: .5rem .75rem;
 
 				&:hover {
-					background-color: rgba(50, 60, 70, 0.75);
+					background-color: rgb(55, 55, 55);
 					border-radius: 2px;
 					transition: background-color 200ms ease-in-out;
 				}
@@ -248,13 +250,12 @@
 				cursor: pointer;
 
 				&:hover {
-					opacity: 70%;
 					transition: opacity 200ms ease-in-out;
 				}
 				cursor: pointer;
 			}
 			.active {
-				background-color: rgb(50, 60, 70);
+				background-color: rgb(20, 20, 20);
 				border: 1px solid rgba(255,255,255,0.1);
 			}
 			.page-dots {

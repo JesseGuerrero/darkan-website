@@ -40,6 +40,10 @@ html {
   }
   // nav - formatting
   .nav-wrapper {
+    @include breakpoint-down (x-small) {
+        display: none;
+    }
+
    .top-logo a {
     font-size: $font-med;
    }
@@ -57,10 +61,23 @@ html {
      margin-right: 0rem;
     }
    }
-   p, #player-count {
+   .player-count-container {
+    background-color: rgba(198, 198, 198, 0.087);
+    border: 1px solid rgba(255, 255, 255, 0.056);
+    border-radius: 5px;
+    padding: 0rem 1rem;
+   }
+   p {
     color: rgb(222, 222, 222);
    }
-   #player-count {
+   #p-online, #player-count {
+    color: rgb(222, 222, 222);
+   }
+   #p-online {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+   }
+   #players-icon {
     margin-right: .5rem;
    }
    ul {
@@ -69,10 +86,6 @@ html {
    }
    li {
     list-style-type: none;
-   }
-   
-   @include breakpoint-down (x-small) {
-    display: none;
    }
   }
   .nav-container {
@@ -86,10 +99,7 @@ html {
    }
   }
   .nav-links {
-   margin-left: 2rem;
-   @include breakpoint-up (medium) {
-    margin-left: 4rem;
-   }
+   padding-left: .75rem;
   }
   // dropdown - menu
   .dropbtn {
@@ -113,7 +123,7 @@ html {
   .dropdown-content {
    display: none;
    position: absolute;
-   background-color: rgb(35, 35, 35);
+   background-color: rgba(198, 198, 198, 0.087);
    border: 1px solid rgba(255, 255, 255, 0.056);
    min-width: 11rem;
    border-radius: 2.5px;
@@ -139,7 +149,7 @@ html {
    display: block;
   }
   .dropdown-content a:hover {
-   background-color: rgba(10, 10, 10, 0.569);
+   background-color: rgba(222, 222, 222, .1);
    border-radius: 2.5px;
    transition: background-color 200ms ease-in-out
   }

@@ -193,14 +193,25 @@
 				}
 			}
 			.social-link-icons {
-				max-width: 20rem;
+				max-width: 17.5rem;
 				margin: 0rem auto;
+				@include breakpoint-up (medium) {
+					max-width: 25rem;
+				}
 
 				.social-icons {
-					height: 50px;
-					width: 50px;
-					font-size: $font-med;
-					color: white;
+					height: 37.5px;
+					width: 37.5px;
+					filter: invert(1);
+					@include breakpoint-up (large) {
+						height: 50px;
+						width: 50px;
+					}
+
+					&:hover {
+						transform: translateY(-10px);
+					}
+					transition: transform .25s ease-in-out;
 				}
 			}
 			.game-content-container {

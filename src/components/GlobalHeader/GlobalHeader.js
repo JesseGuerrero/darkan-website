@@ -32,6 +32,10 @@ function GlobalHeader(props) {
             <a href="/highscores/all/1">Highscores</a>
             <a href="https://github.com/DarkanRS/client-loader/releases/tag/1.0.1" target="_blank" rel="noopener noreferrer" className="cta-dwnl">Download</a>
             </div>
+            <div className="player-count-container flex flex-ai-c">
+            <p id="p-online" className='flex flex-ai-c'><span class="material-symbols-outlined" id="players-icon">diversity_3</span></p>
+            <span id="player-count"><strong>{countState}</strong></span>
+        </div>
         </div>
     </nav>
   );
