@@ -1,0 +1,156 @@
+// Font-awesome
+@import url('https://use.fontawesome.com/releases/v5.0.7/css/all.css');
+// Functionality
+@import 'src/stylesheets/variables';
+@import 'src/stylesheets/mixins';
+html {
+    font-size: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+    }
+    body {
+        font-family: Aeonik, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        line-height: 1.5;
+        font-size: $font-sm;
+        font-weight: 600;
+        padding: 0rem;
+        margin: 0rem;
+        background: linear-gradient(rgb(10, 10, 10), rgb(20, 20, 20));
+        color: rgb(222, 222, 222);
+        cursor: default;
+        // top nav
+        // nav - padding
+        nav {
+            padding: 1rem;
+            @include breakpoint-up(medium) {
+                padding: 1rem 2.5rem;
+            }
+            @include breakpoint-up(xlarge) {
+                padding: 2rem 5rem;
+            }
+        }
+        .logo-img {
+            width: 10rem;
+            height: 5rem;
+        }
+        // nav - formatting
+        .nav-wrapper {
+            .top-logo a {
+                font-size: $font-med;
+            }
+            a {
+                position: relative;
+                font-size: $font-sm;
+                margin-right: 2rem;
+                text-decoration: none;
+                color: rgb(200, 200, 200);
+                &:hover {
+                    color: rgb(255, 255, 255);
+                    transition: color 200ms ease-in-out;
+                    text-decoration: underline;
+                }
+                &:last-child {
+                    margin-right: 0rem;
+                }
+            }
+            p,
+            #player-count {
+                color: rgb(222, 222, 222);
+            }
+            #player-count {
+                margin-right: 0.5rem;
+            }
+            ul {
+                margin: 0rem;
+                padding: 0rem;
+            }
+            li {
+                list-style-type: none;
+            }
+            @include breakpoint-down(x-small) {
+                display: none;
+            }
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-around;
+            p,
+            a {
+                font-size: $font-sm;
+            }
+            @include breakpoint-up(medium) {
+                justify-content: space-between;
+            }
+        }
+        .nav-links {
+            margin-left: 2rem;
+            @include breakpoint-up(medium) {
+                margin-left: 4rem;
+            }
+        }
+        // dropdown - menu
+        .dropbtn {
+            font-size: $font-sm;
+            margin: 0rem;
+            color: rgb(222, 222, 222);
+            cursor: pointer;
+            &:hover {
+                color: rgb(255, 255, 255);
+                transition: color 200ms ease-in-out;
+            }
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            p {
+                padding: 1rem 2rem 1rem 0rem;
+            }
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgb(35, 35, 35);
+            border: 1px solid rgba(255, 255, 255, 0.056);
+            min-width: 11rem;
+            border-radius: 2.5px;
+            top: 3.25rem;
+            left: -1rem;
+        }
+        .dropdown-links {
+            position: relative;
+            padding: 0.75rem;
+        }
+        .dropdown-content a {
+            font-size: $font-sm;
+            text-align: left;
+            padding: 0.75rem;
+            display: block;
+        }
+        .dropdown-content p {
+            font-size: $font-sm;
+            text-align: left;
+            margin: 0rem;
+            padding: 0.25rem;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: rgba(10, 10, 10, 0.569);
+            border-radius: 2.5px;
+            transition: background-color 200ms ease-in-out;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dwn-arrow {
+            margin-left: 0.375rem;
+            margin-top: 0.2rem;
+        }
+    }
+}

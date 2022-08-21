@@ -1,0 +1,30 @@
+const skills = {
+    "overall": "All Skills",
+    "attack": "Attack",
+    "defence": "Defence",
+    "strength": "Strength",
+    "constitution": "Constitution",
+    "ranged": "Ranged",
+    "prayer": "Prayer",
+    "magic": "Magic",
+    "cooking": "Cooking",
+    "woodcutting": "Woodcutting",
+    "fletching": "Fletching",
+    "fishing": "Fishing",
+    "firemaking": "Firemaking",
+    "crafting": "Crafting",
+    "smithing": "Smithing",
+    "mining": "Mining",
+    "herblore": "Herblore",
+    "agility": "Agility",
+    "thieving": "Thieving",
+    "slayer": "Slayer",
+    "farming": "Farming",
+    "runecrafting": "Runecrafting",
+    "hunter": "Hunter",
+    "construction": "Construction",
+    "summoning": "Summoning",
+    "dungeoneering": "Dungeoneering"
+}
+
+export { skills }

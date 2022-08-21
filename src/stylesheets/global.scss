@@ -1,0 +1,84 @@
+// Font-awesome
+@import url('https://use.fontawesome.com/releases/v5.0.7/css/all.css');
+// Functionality
+@import "src/stylesheets/variables";
+@import "src/stylesheets/mixins";
+html {
+    font-size: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+    }
+    body {
+        // global design
+        // link - design
+        a,
+        a:visited,
+        a:hover {
+            text-decoration: none;
+            color: rgb(222, 222, 222);
+        }
+        // button & row - hover state
+        .button-hover,
+        .row-hover {
+            &:hover {
+                opacity: 85%;
+                transition: opacity 200ms ease-in-out;
+            }
+            cursor: pointer;
+        }
+        // button & row - hover state (arrow cursor)
+        .button-hover1,
+        .row-hover1 {
+            &:hover {
+                opacity: 85%;
+                transition: opacity 200ms ease-in-out;
+            }
+            cursor: auto;
+        }
+        // drop shadow
+        .shadow-dropdown {
+            box-shadow: 0px 0px 5px rgb(0, 0, 0);
+        }
+        // table cell design
+        .calc_data_available {
+            color: lightgreen;
+        }
+        .calc_data_unavailable {
+            color: lightsalmon;
+        }
+        // utility
+        // content - alignment
+        .flex {
+            display: flex;
+            &-jc-sb {
+                justify-content: space-between;
+            }
+            &-jc-sa {
+                justify-content: space-around;
+            }
+            &-jc-c {
+                justify-content: center;
+            }
+            &-ai-c {
+                align-items: center;
+            }
+        }
+        // content - visibility state
+        .hide-for-mobile {
+            @include breakpoint-down(medium) {
+                display: none;
+            }
+        }
+        .hide-for-desktop {
+            @include breakpoint-up(large) {
+                display: none;
+            }
+        }
+    }
+}
