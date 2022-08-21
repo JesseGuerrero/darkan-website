@@ -195,7 +195,7 @@
 			.social-link-icons {
 				max-width: 17.5rem;
 				margin: 0rem auto;
-				@include breakpoint-up (medium) {
+				@include breakpoint-up (large) {
 					max-width: 25rem;
 				}
 
