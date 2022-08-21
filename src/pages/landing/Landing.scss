@@ -185,11 +185,9 @@
 					margin-top: 7.5rem;
 				}
 				@include breakpoint-up (large) {
-					margin-right: 25vw;
-					margin-left: 25vw;
-				}
-				@include breakpoint-up (xlarge) {
 					font-size: $font-xmed;
+					margin-right: 20vw;
+					margin-left: 20vw;
 				}
 			}
 			.social-link-icons {
