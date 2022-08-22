@@ -22,7 +22,7 @@
   },
   "scripts": {
     "develop:build-client": "BROWSER=none react-scripts start",
-    "develop:build-server": "webpack --config webpack.server.js --mode=development -w",
+    "develop:build-server": "webpack --config webpack.server.js --mode=development",
     "develop:start": "nodemon ./server-build/index.js",
     "build": "react-scripts build",
     "dev": "run-p develop:*",
