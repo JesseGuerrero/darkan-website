@@ -116,7 +116,7 @@ function HSHeader({ props, page, userData, searchUser, setPageState, isIronHS, p
                 <div className="filter-container">
                     <div className="select-hs-container">
                         <div className="select-hs">
-                            <select value={} onChange={} className="filter-time-hs">
+                            <select className="filter-time-hs">
                                 <optgroup label="Time period"></optgroup>
                                 <option value="All">All time</option>
                             </select>
