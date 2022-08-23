@@ -4,30 +4,20 @@ import {getSkillIDByName} from "../SkillEnum";
 import fetch from "node-fetch";
 
 
-function HSHeader({ props, page, userData, searchUser, setPageState, setTimePeriod, timePeriod, isIronHS, pathHS, limit, skillID}) {
+function HSHeader({ props, page, userData, searchUser, setPageState, isIronHS, pathHS, limit, skillID}) {
     const onChangeHandler = async(event) => {//username search
         let displayName = event.target.value
         let pageChange = undefined
         let foundPlayer = false
         let foundPlayers = false
         if(displayName != undefined) {
-            const response = await fetch("https://darkan.org:8443/v1/highscores?limit=9999999");
+            let response = undefined
+            if(skillID === null)
+                response = await fetch("https://darkan.org:8443/v1/highscores?limit=9999999");
+            if(skillID !== null)
+                response = await fetch("https://darkan.org:8443/v1/highscores?limit=9999999&skill=" + skillID);
             let playerData = await response.json();
-            if(skillID !== null) {
-                playerData.sort(function (user1, user2) {
-                    if(user1.xp[skillID] < user2.xp[skillID])
-                        return 1
-                    else if(user1.xp[skillID] > user2.xp[skillID])
-                        return -1
-                    else if(user1.xp[skillID] == user2.xp[skillID])
-                        if(user1.xp[skillID] < user2.xp[skillID])
-                            return 1
-                        else if(user1.xp[skillID] > user2.xp[skillID])
-                            return -1
-                    return 0
-                })
-                playerData.sort()
-            }
+
             for(let i = 0; i < playerData.length; i++) {
                 if (playerData[i].displayName == displayName) {
                     pageChange = Math.ceil((i+1) / limit)
@@ -72,9 +62,6 @@ function HSHeader({ props, page, userData, searchUser, setPageState, setTimePeri
             if (typeof window !== 'undefined')
                 window.location = "/highscores/player/" + displayName
         }
-    }
-    const goBetweenTimePeriods = event => {
-        setTimePeriod(event.target.value)
     }
     const goBetweenAccountTypes = event => {
         if(typeof window !== 'undefined') {
@@ -129,12 +116,9 @@ function HSHeader({ props, page, userData, searchUser, setPageState, setTimePeri
                 <div className="filter-container">
                     <div className="select-hs-container">
                         <div className="select-hs">
-                            <select value={timePeriod} onChange={goBetweenTimePeriods} className="filter-time-hs">
+                            <select value={} onChange={} className="filter-time-hs">
                                 <optgroup label="Time period"></optgroup>
                                 <option value="All">All time</option>
-                                <option value="30">Monthly</option>
-                                <option value="7">Weekly</option>
-                                <option value="1">Daily</option>
                             </select>
                             <select onChange={goBetweenAccountTypes} className="filter-account-hs">
                                 <optgroup label="Account type"></optgroup>

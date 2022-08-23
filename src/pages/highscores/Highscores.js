@@ -11,7 +11,6 @@ function Highscores({props}) {
     let { page } = useParams()
     page = parseInt(page)
     const [userData, setUserData] = useState([]);
-    const [timePeriod, setTimePeriod] = useState('All');
     const [usernameHighlight, searchUser] = useState('');
     const [pageState, setPageState] = useState(page);
 
@@ -29,26 +28,17 @@ function Highscores({props}) {
         setUserData(playerData);
     };
 
-    useLayoutEffect(() => {
-        if (sessionStorage.getItem('timePeriod')) {
-            setTimePeriod(sessionStorage.getItem('timePeriod'))
-        } else {
-            sessionStorage.setItem('timePeriod', timePeriod)
-        }
-    }, [])
-
     useEffect(() => {
         fetchHighscoreJSON();
-        sessionStorage.setItem("timePeriod", timePeriod);
-    }, [usernameHighlight, isIronHS, pageState, timePeriod]);
+    }, [usernameHighlight, isIronHS, pageState]);
 
   return (
       <div className="App">
           <header className="App-header">
               <div className="main-container-highscores">
                   <div className="sub-container-highscores">
-                     <HSHeader props={props} page={page} userData={userData} searchUser={searchUser} setPageState={setPageState} setTimePeriod={setTimePeriod} timePeriod={timePeriod} isIronHS={isIronHS} pathHS={pathHS} limit={limit} skillID={null}/>
-                     <HSRankings pageState={pageState} userData={userData} timePeriod={timePeriod} usernameHighlight={usernameHighlight} limit={limit}/>
+                     <HSHeader props={props} page={page} userData={userData} searchUser={searchUser} setPageState={setPageState} isIronHS={isIronHS} pathHS={pathHS} limit={limit} skillID={null}/>
+                     <HSRankings pageState={pageState} userData={userData} usernameHighlight={usernameHighlight} limit={limit}/>
                      <HSNav pageState={pageState} pathHS={pathHS}/>
                   </div>
               </div>
