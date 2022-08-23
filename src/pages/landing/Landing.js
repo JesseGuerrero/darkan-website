@@ -33,7 +33,7 @@ function Landing(props) {
                 <div className="flex flex-jc-sa social-link-icons">
                   <a href="https://discordapp.com/invite/Z32ggEB" target="_blank" rel="noopener noreferrer"><img src="/social/discord-brands.svg" className="social-icons discord-icon"/></a>
                   <a href="https://www.instagram.com/darkanrsps/" target="_blank" rel="noopener noreferrer"><img src="/social/instagram-brands.svg" className="social-icons insta-icon"/></a>
-                  <a href="https://www.facebook.com/events/546672149317559/" target="_blank" rel="noopener noreferrer"><img src="/social/facebook-brands.svg" className="social-icons fb-icon"/></a>
+                  <a href="https://www.facebook.com/darkanrsps/" target="_blank" rel="noopener noreferrer"><img src="/social/facebook-brands.svg" className="social-icons fb-icon"/></a>
                   <a href="https://mobile.twitter.com/darkanrsps" target="_blank" rel="noopener noreferrer"><img src="/social/twitter-brands.svg" className="social-icons twitter-icon"/></a>
                   <a href="https://www.reddit.com/r/2012scape?utm_medium=android_app&utm_source=share" target="_blank" rel="noopener noreferrer"><img src="/social/reddit-brands.svg" className="social-icons twitter-icon"/></a>
                 </div>

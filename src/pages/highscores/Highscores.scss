@@ -58,9 +58,9 @@
 		}
 		.header-highscores {
 			text-align: center;
-			padding: 5rem 2.5rem;
+			padding: 1rem 2.5rem;
 			@include breakpoint-up (large) {
-				padding: 7.5rem 2.5rem;
+				padding: 2rem 2.5rem;
 			}
 		}
 		a:hover {
