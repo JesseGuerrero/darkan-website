@@ -22,8 +22,7 @@ html {
   font-weight: 600;
   padding: 0rem;
   margin: 0rem;
-  background: rgb(13,24,28);
-  background: linear-gradient(0deg, rgba(13,13,13,1) 0%, rgb(21, 31, 36) 51%, rgba(13,13,13,1) 100%);
+  background: linear-gradient(rgb(10, 10, 10), rgb(20, 20, 20));
   color: rgb(222, 222, 222);
   cursor: default;
 
@@ -41,56 +40,71 @@ html {
   }
   // nav - formatting
   .nav-wrapper {
-   .top-logo a {
-    font-size: $font-med;
-   }
-   a {
-    position: relative;
-    font-size: $font-sm;
-    margin-right: 2rem;
-
-    &:hover {
-     color: rgb(255, 255, 255);
-     transition: color 200ms ease-in-out;
+    @include breakpoint-down (x-small) {
+      display: none;
     }
-
-    &:last-child {
-     margin-right: 0rem;
+    .top-logo a {
+      font-size: $font-med;
     }
-   }
-   p, #player-count {
-    color: rgb(222, 222, 222);
-   }
-   #player-count {
-    margin-right: .5rem;
-   }
-   ul {
-    margin: 0rem;
-    padding: 0rem;
-   }
-   li {
-    list-style-type: none;
-   }
+    a {
+      position: relative;
+      font-size: $font-sm;
+      margin-right: 2rem;
+      @include breakpoint-up (xxlarge) {
+        margin-right: 3rem;
+      }
 
-   @include breakpoint-down (x-small) {
-    display: none;
-   }
+      &:hover {
+      color: rgb(255, 255, 255);
+      transition: color 200ms ease-in-out;
+      }
+
+      &:last-child {
+      margin-right: 0rem;
+      }
+    }
+    .player-count-container {
+      background-color: rgba(198, 198, 198, 0.087);
+      border: 1px solid rgba(255, 255, 255, 0.056);
+      border-radius: 5px;
+      padding: 0rem 1rem;
+    }
+    p {
+      color: rgb(222, 222, 222);
+    }
+    #p-online, #player-count {
+      color: rgb(222, 222, 222);
+    }
+    #p-online {
+      margin-top: 0rem;
+      margin-bottom: 0rem;
+    }
+    #players-icon {
+      margin-right: .5rem;
+    }
+    ul {
+      margin: 0rem;
+      padding: 0rem;
+    }
+    li {
+      list-style-type: none;
+    }
   }
   .nav-container {
    display: flex;
-   justify-content: center;
+   justify-content: space-around;
    p, a {
     font-size: $font-sm;
+    @include breakpoint-up (xxlarge) {
+      font-size: $font-med;
+    }
    }
    @include breakpoint-up (medium) {
     justify-content: space-between;
    }
   }
   .nav-links {
-   margin-left: 2rem;
-   @include breakpoint-up (medium) {
-    margin-left: 4rem;
-   }
+   padding-left: .75rem;
   }
   // dropdown - menu
   .dropbtn {
@@ -109,17 +123,24 @@ html {
    display: inline-block;
    p {
     padding: 1rem 2rem 1rem 0rem;
+    @include breakpoint-up (xxlarge) {
+      padding-right: 3rem;
+    }
    }
   }
   .dropdown-content {
    display: none;
    position: absolute;
-   background-color: rgba(255, 255, 255, 0.08);
-   border: 1px solid rgba(255,255,255,0.1);
-   min-width: 11rem;
+   background-color: rgba(198, 198, 198, 0.087);
+   border: 1px solid rgba(255, 255, 255, 0.056);
+   min-width: 10rem;
    border-radius: 2.5px;
    top: 3.25rem;
    left: -1rem;
+   @include breakpoint-up (xxlarge) {
+    top: 4rem;
+    min-width: 12.5rem;
+   }
   }
   .dropdown-links {
    position: relative;
@@ -139,8 +160,13 @@ html {
    text-decoration: none;
    display: block;
   }
+  .dropdown-content a, .dropdown-content p {
+    @include breakpoint-up (xxlarge) {
+      font-size: $font-med;
+    }
+  }
   .dropdown-content a:hover {
-   background-color: rgb(22, 29, 32);
+   background-color: rgba(222, 222, 222, .1);
    border-radius: 2.5px;
    transition: background-color 200ms ease-in-out
   }

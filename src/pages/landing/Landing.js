@@ -6,13 +6,13 @@ function Landing(props) {
       <div>
         <div className="top-container">
           <div className="main-container-hero flex flex-jc-c">
-            <img src="/lumbridge-lg.png" alt="runescape_2012" className="hero-img"/>
+          <img src="/lumbridge-lg.png" alt="runescape_2012" class="hero-img"/>
               <div className="sub-container-hero">
                 <div className="hero">
                   <h1>Darkan</h1>
                   <p>Play Runescape in 2012</p>
                   <div className="dwn-client">
-                    <a href="https://github.com/DarkanRS/client-loader/releases/tag/1.0.1" className="dwn-btn button-hover">Play Now</a>
+                    <a href="https://github.com/DarkanRS/client-loader/releases/tag/1.0.1" target="_blank" rel="noopener noreferrer" className="dwn-btn button-hover">Play Now</a>
                   </div>
                   <p id="no-igp">No in-game purchases, ever.</p>
                 </div>
@@ -28,8 +28,14 @@ function Landing(props) {
                   <img src="/worlds.png" className="client-image"/>
                 </div>
                 <div className="link-discord flex flex-jc-sa">
-                  <p><a href="https://discordapp.com/invite/Z32ggEB" target="_blank" rel="noopener noreferrer">Join our
-                    Discord</a> to learn more about Darkan!</p>
+                  <p>Stay connected with our community!</p>
+                </div>
+                <div className="flex flex-jc-sa social-link-icons">
+                  <a href="https://discordapp.com/invite/Z32ggEB" target="_blank" rel="noopener noreferrer"><img src="/social/discord-brands.svg" className="social-icons discord-icon"/></a>
+                  <a href="https://www.instagram.com/darkanrsps/" target="_blank" rel="noopener noreferrer"><img src="/social/instagram-brands.svg" className="social-icons insta-icon"/></a>
+                  <a href="https://www.facebook.com/events/546672149317559/" target="_blank" rel="noopener noreferrer"><img src="/social/facebook-brands.svg" className="social-icons fb-icon"/></a>
+                  <a href="https://mobile.twitter.com/darkanrsps" target="_blank" rel="noopener noreferrer"><img src="/social/twitter-brands.svg" className="social-icons twitter-icon"/></a>
+                  <a href="https://www.reddit.com/r/2012scape?utm_medium=android_app&utm_source=share" target="_blank" rel="noopener noreferrer"><img src="/social/reddit-brands.svg" className="social-icons twitter-icon"/></a>
                 </div>
               </div>
               <div className="game-content-container">
@@ -73,7 +79,7 @@ function Landing(props) {
                             <div className="world-container">
                               <h3>World 2</h3>
                               <h4>Darkan RSPS</h4>
-                              <p>What happens when you take World 1's base content and add custom game features? You get
+                              <p>What happens when you add 25x EXP rates and custom content to World 1? You get
                                 World 2.</p>
                             </div>
                             <div className="w2-image">
@@ -97,16 +103,13 @@ function Landing(props) {
                     <div className="content-container2">
                       <div className="section-header">
                         <h2>A community project</h2>
-                        <p>Darkan is an <a href="https://github.com/DarkanRS" target="_blank"
-                                           rel="noopener noreferrer" className="cta-developers">open source
-                          project</a> with a communuity dedicated to bring back RuneScape in 2012.</p>
+                        <p>Darkan is an <a href="https://github.com/DarkanRS" target="_blank" rel="noopener noreferrer" className="cta-developers">open source project</a> with a communuity dedicated to bring back RuneScape in 2012.</p>
                       </div>
                     </div>
                     <div className="content-container3">
                       <div className="cta-container">
                         <h2>Play Now!</h2>
-                        <a href="https://github.com/DarkanRS/client-loader/releases/tag/1.0.1"><span
-                            className="material-symbols-outlined button-hover">download_for_offline</span></a>
+                        <a href="https://github.com/DarkanRS/client-loader/releases/tag/1.0.1" target="_blank" rel="noopener noreferrer"><span className="material-symbols-outlined button-hover">download_for_offline</span></a>
                       </div>
                     </div>
                   </div>

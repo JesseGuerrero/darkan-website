@@ -9,6 +9,7 @@
   .sub-container-highscores-player {
     color: rgb(222, 222, 222);
 
+    // search box warning
     .highlight {
       background-color: rgb(16, 26, 36) !important;
     }
@@ -33,11 +34,12 @@
       display: None;
     }
 
+    // filter
     .time-filter {
       position: absolute;
       font-size: $font-sm;
       color: rgb(222, 222, 222);
-      background-color: rgb(20, 30, 40);
+      background-color: rgb(20, 20, 20);
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 5px;
       height: 2.75rem;
@@ -55,6 +57,7 @@
       }
     }
 
+    // general design
     h1 {
       font-size: $font-lg;
       margin-top: 0rem;
@@ -85,6 +88,9 @@
     .header-highscores-player {
       text-align: center;
       padding: 2.5rem 2.5rem;
+      @include breakpoint-up (medium) {
+        padding: 7.5rem 2.5rem;
+      }
       #player-rank::before {
         content: "Rank #";
       }
@@ -143,7 +149,7 @@
       color: rgb(222, 222, 222);
       margin-top: .25rem;
       padding: .75rem;
-      background-color: rgb(5, 10, 20);
+      background-color: rgb(5, 5, 5);
       border: 1px solid rgba(255,255,255,0.1);
       border-radius: 5px;
       outline: none;
@@ -163,7 +169,7 @@
       margin-right: .5rem;
     }
 
-    // highscores table
+    // table design
     table {
       box-shadow: 5px 0px 30px rgb(0, 0, 0);
       text-align: right;
@@ -173,7 +179,7 @@
       th {
         height: 3rem;
         padding: .75rem;
-        background-color: rgb(10, 20, 30);
+        background-color: rgb(10, 10, 10);
         color: rgb(240, 202, 138);
         cursor: default;
       }
@@ -181,7 +187,7 @@
         height: 3rem;
         text-align: right;
         padding: .5rem;
-        background-color: rgb(20, 30, 40);
+        background-color: rgb(20, 20, 20);
         cursor: default;
         img {
           margin-left: 0rem;
