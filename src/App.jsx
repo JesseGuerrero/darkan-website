@@ -1,10 +1,10 @@
 import React from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
-import Footer from './components/defaults/Footer';
-import Header from './components/defaults/Header';
-import HighscoresPage from './pages/HighscoresPage';
-import IndexPage from './pages/IndexPage';
+import Footer from './components/defaults/Footer.jsx';
+import Header from './components/defaults/Header.jsx';
+import HighscoresPage from './pages/HighscoresPage.jsx';
+import IndexPage from './pages/IndexPage.jsx';
 
 import "./stylesheets/global.scss"
 
