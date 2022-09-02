@@ -10,7 +10,7 @@ import ReactDOMServer from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom/server';
 import express from 'express';
 
-import App from '../src/App';
+import App from '../src/App.jsx';
 
 const server = express();
 

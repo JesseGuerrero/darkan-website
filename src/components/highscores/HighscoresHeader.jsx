@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 
-import HighscoresContext from '../../utils/contexts/HighscoresContext';
+import HighscoresContext from '../../utils/contexts/HighscoresContext.js';
 
-import { skills } from '../../utils/constants';
+import { skills } from '../../utils/constants.js';
 
 export default function HighscoresHeader() {
 

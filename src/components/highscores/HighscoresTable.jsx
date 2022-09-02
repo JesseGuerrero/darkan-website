@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
-import axios from '../../utils/axios';
+import axios from '../../utils/axios.js';
 
-import HighscoresContext from '../../utils/contexts/HighscoresContext';
+import HighscoresContext from '../../utils/contexts/HighscoresContext.js';
 
 export default function HighscoresTable() {
 

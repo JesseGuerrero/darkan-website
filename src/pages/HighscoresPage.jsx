@@ -6,9 +6,9 @@ import '../stylesheets/highscores/Highscores.scss';
 
 import { skills } from '../utils/constants';
 
-import HighscoresHeader from '../components/highscores/HighscoresHeader';
-import HighscoresTable from '../components/highscores/HighscoresTable';
-import HighscoresContext from '../utils/contexts/HighscoresContext';
+import HighscoresHeader from '../components/highscores/HighscoresHeader.jsx';
+import HighscoresTable from '../components/highscores/HighscoresTable.jsx';
+import HighscoresContext from '../utils/contexts/HighscoresContext.js';
 
 export default function HighscoresPage() {
 
