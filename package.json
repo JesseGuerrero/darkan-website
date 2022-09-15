@@ -30,6 +30,7 @@
         "dev": "run-p develop:*"
     },
     "eslintConfig": {
+        "parser": "@babel/eslint-parser",
         "extends": [
             "react-app"
         ]
