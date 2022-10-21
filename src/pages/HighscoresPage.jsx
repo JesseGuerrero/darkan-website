@@ -9,6 +9,7 @@ import { skills } from '../utils/constants';
 import HighscoresHeader from '../components/highscores/HighscoresHeader.jsx';
 import HighscoresTable from '../components/highscores/HighscoresTable.jsx';
 import HighscoresContext from '../utils/contexts/HighscoresContext.js';
+import HighscoresNavigation from "../components/highscores/HighscoresNavigation.jsx";
 
 export default function HighscoresPage() {
 
@@ -46,6 +47,7 @@ export default function HighscoresPage() {
                 <div className='sub-container-highscores'>
                     <HighscoresHeader />
                     <HighscoresTable />
+                    <HighscoresNavigation />
                 </div>
             </div>
         </HighscoresContext.Provider>

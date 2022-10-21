@@ -1,30 +1,28 @@
 import React from 'react';
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
 import Footer from './components/defaults/Footer.jsx';
 import Header from './components/defaults/Header.jsx';
-import HighscoresPage from './pages/HighscoresPage.jsx';
-import IndexPage from './pages/IndexPage.jsx';
+import Container from "react-bootstrap/Container";
+import Col from "react-bootstrap/Col";
 
 import "./stylesheets/global.scss"
+import PageRoutes from "./pages/PageRoutes.jsx";
 
-function App() {
+function App({props}) {
     return (
-        <Router>
-        <div className="App">
+        <div className='App'>
             <Header />
-                <Routes>
-                    <Route path="/" element={<IndexPage />} />
-
-                    <Route path="/highscores" element={<HighscoresPage />} />
-                    <Route path="/highscores/:category" element={<HighscoresPage />} />
-                    <Route path="/highscores/:category/:page" element={<HighscoresPage />} />
-                    <Route path="/highscores/:category/:skill/:page" element={<HighscoresPage />} />
-                    
-                </Routes>
+            <Container fluid>
+                <div className="row text-center min-vh-100">
+                    <Col md={12}>
+                        <div className='wrapper'>
+                            <PageRoutes props={props} />
+                        </div>
+                    </Col>
+                </div>
+            </Container>
             <Footer />
         </div>
-        </Router>
     );
 }
 

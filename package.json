@@ -24,10 +24,9 @@
     },
     "scripts": {
         "develop:build-client": "BROWSER=none react-scripts start",
-        "develop:build-server": "webpack --config webpack.server.js --mode=development",
-        "develop:start": "nodemon ./server-build/index.js",
+        "prebuild": "webpack --config webpack.server.js --mode=development",
         "build": "react-scripts build",
-        "dev": "run-p develop:*"
+        "postbuild": "nodemon ./server-build/index.js"
     },
     "eslintConfig": {
         "parser": "@babel/eslint-parser",

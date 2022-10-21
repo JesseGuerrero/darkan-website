@@ -17,8 +17,7 @@ const server = express();
 // import api from './api/index.js';
 // server.use('/api', api);
 
-server.use(express.static(path.resolve('./build/')));
-
+server.use(express.static(path.resolve('./build/'), {index: false}));
 server.get('/*', (req, res) => {
   const app = ReactDOMServer.renderToString(
     <StaticRouter location={req.url}>
@@ -32,7 +31,6 @@ server.get('/*', (req, res) => {
       console.error('Something went wrong:', err);
       return res.status(500).send('Oops, better luck next time!');
     }
-
     return res.send(data.replace('<div id="root"></div>', `<div id="root">${app}</div>`));
   });
 });

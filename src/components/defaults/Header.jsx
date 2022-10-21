@@ -14,7 +14,15 @@ export default function Header() {
                     </Link>
                 </div>
                 <div className="nav-links flex flex-ai-c">
-                    <Link to="/">Home</Link>
+                    <div className="dropdown">
+                        <p className="dropbtn flex flex-ai-c">Explore<i className="fas fa-caret-down dwn-arrow"></i></p>
+                        <div className="dropdown-content">
+                            <ul className="dropdown-links">
+                                <li><a href="https://discordapp.com/invite/Z32ggEB" target="_blank" rel="noopener noreferrer">Discord</a></li>
+                                <li><a href="https://github.com/DarkanRS" target="_blank" rel="noopener noreferrer" className="cta-developers">Github</a></li>
+                            </ul>
+                        </div>
+                    </div>
                     <Link to="/highscores">Highscores</Link>
                     <a 
                         href="https://github.com/DarkanRS/client-loader/releases" 
@@ -24,7 +32,7 @@ export default function Header() {
                     >
                         Download
                     </a>
-                    <Link to="/map">World Map</Link>
+                    {/*<Link to="/map">World Map</Link>*/}
                 </div>
             </div>
         </nav>
