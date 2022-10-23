@@ -29,12 +29,15 @@ export default function HighscoresHeader() {
                             >
                                 <optgroup label="Game Mode"></optgroup>
                                 <option value="all">All</option>
-                                <option value="regular">Regular</option>
+                                {/*<option value="regular">Regular</option>*/}
                                 <option value="iron">Iron</option>
                             </select>
                             <select 
                                 value={skill} 
-                                onChange={(e) => console.log(e)} 
+                                onChange={(e) => {
+                                    setSkill(e.target.value);
+                                    setPage(1);
+                                }}
                                 className="filter-skill-hs"
                             >
                                 <optgroup label="Skill"></optgroup>

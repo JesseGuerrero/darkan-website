@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import HighscoresContext from "../../utils/contexts/HighscoresContext";
 
-function HighscoresNavigation() {
+export default function HighscoresNavigation() {
     let { category, setCategory, page, setPage, skill, setSkill } = useContext(HighscoresContext);
     return (
         <div>
@@ -44,5 +44,3 @@ function HighscoresNavigation() {
         </div>
     )
 }
-
-export default HighscoresNavigation;

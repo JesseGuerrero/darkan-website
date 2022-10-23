@@ -48,7 +48,12 @@ export default function HighscoresTable() {
                         return (
                             <tr key={user.displayName} className='row-hover1'>
                                 <td id='player-rank'>{(page - 1) * 15 + index + 1}</td>
-                                <td id='player'>{user.displayName}</td>
+                                <td id='player'>
+                                    {
+                                        (category === "iron" ? (<img className="iron-icon" src="/ironman_icon.png"/>) : (""))
+                                    }
+                                    {user.displayName}
+                                </td>
                                 <td id='player-data-ttl'>{user.totalLevel.toLocaleString('en-US')}</td>
                                 <td id='player-data-exp'>{user.totalXp.toLocaleString('en-US')}</td>
                             </tr>

@@ -10,6 +10,7 @@ import HighscoresHeader from '../components/highscores/HighscoresHeader.jsx';
 import HighscoresTable from '../components/highscores/HighscoresTable.jsx';
 import HighscoresContext from '../utils/contexts/HighscoresContext.js';
 import HighscoresNavigation from "../components/highscores/HighscoresNavigation.jsx";
+import HighscoresSkillTable from "../components/highscores/HighscoresSkillTable.jsx";
 
 export default function HighscoresPage() {
 
@@ -46,7 +47,7 @@ export default function HighscoresPage() {
             <div className='main-container-highscores'>
                 <div className='sub-container-highscores'>
                     <HighscoresHeader />
-                    <HighscoresTable />
+                    {skill == "overall" ? <HighscoresTable /> : <HighscoresSkillTable />}
                     <HighscoresNavigation />
                 </div>
             </div>
