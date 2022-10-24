@@ -24,6 +24,7 @@ export default function Header() {
                         </div>
                     </div>
                     <Link to="/highscores">Highscores</Link>
+                    <Link to="/grand-exchange">Grand Exchange</Link>
                     <a 
                         href="https://github.com/DarkanRS/client-loader/releases" 
                         target="_blank" 
@@ -32,7 +33,7 @@ export default function Header() {
                     >
                         Download
                     </a>
-                    {/*<Link to="/map">World Map</Link>*/}
+
                 </div>
             </div>
         </nav>

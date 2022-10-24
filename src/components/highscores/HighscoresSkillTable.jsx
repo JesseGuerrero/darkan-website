@@ -47,7 +47,7 @@ export default function HighscoresSkillTable() {
                                     <td id="rank">{(users.indexOf(user) + 1 + 15*(page-1)).toLocaleString("en-US")}</td>
                                     <td id="player">
                                         {
-                                            (category === "iron" ? (<img className="iron-icon" src="/ironman_icon.png"/>) : (""))
+                                            (user.ironman === true ? (<img className="iron-icon" src="/ironman_icon.png"/>) : (""))
                                         }
                                         {user.displayName}
                                     </td>
