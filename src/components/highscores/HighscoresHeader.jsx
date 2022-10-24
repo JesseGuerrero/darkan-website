@@ -2,12 +2,71 @@ import React, { useContext } from 'react';
 
 import HighscoresContext from '../../utils/contexts/HighscoresContext.js';
 
-import { skills } from '../../utils/constants.js';
+import {getSkillIDByName, skills} from '../../utils/constants.js';
 
 export default function HighscoresHeader() {
+    let { category, setCategory, page, setPage, skill, setSkill, usernameHighlight, searchUser } = useContext(HighscoresContext);
+    const onChangeHandler = async(event) => {//username search
+        let displayName = event.target.value
+        let pageChange = undefined
+        let foundPlayer = false
+        let foundPlayers = false
+        if(displayName != undefined) {
+            let response = undefined
+            if(category == 'iron')
+                category = 'ironman';
+            if(skill === null)
+                response = await fetch(`https://darkan.org:8443/v1/highscores?limit=9999999&gamemode=${category}`);
+            if(skill !== null)
+                response = await fetch(`https://darkan.org:8443/v1/highscores?limit=9999999&gamemode=${category}&skill=` + getSkillIDByName(skill));
+            let playerData = await response.json();
+            for(let i = 0; i < playerData.length; i++) {
+                if (playerData[i].displayName == displayName) {
+                    pageChange = Math.ceil((i+1) / 15)//15 is limit
+                    foundPlayer = true
+                    foundPlayers = false
+                    break
+                }
+                if (playerData[i].displayName.includes(displayName)) {
+                    if(!foundPlayers) {
+                        pageChange = Math.ceil((i + 1) / 15)
+                        foundPlayers = true
+                    }
+                }
+            }
+        }
+        event.target.classList.remove("valid")
+        event.target.classList.remove("invalid")
+        event.target.classList.remove("multiple-valid")
+        if(foundPlayer)
+            event.target.classList.add("valid")
+        if(foundPlayers && displayName != "")
+            event.target.classList.add("multiple-valid")
+        if(!foundPlayer && !foundPlayers)
+            event.target.classList.add("invalid")
 
-    let { category, setCategory, page, setPage, skill, setSkill, timePeriod, setTimePeriod } = useContext(HighscoresContext);
-
+        if(pageChange == undefined)
+            setPage(page)
+        if(pageChange != undefined)
+            setPage(pageChange)
+        searchUser(displayName)
+    }
+    const submitPlayerSearch = async(event) => {//username search
+        let displayName = event.target.value
+        const response = await fetch("https://darkan.org:8443/v1/highscores?limit=9999999");
+        let playerData = await response.json();
+        let foundPlayer = false
+        for(let i = 0; i < playerData.length; i++)
+            if(playerData[i].displayName == displayName) {
+                foundPlayer = true
+                break
+            }
+        if(foundPlayer && event.key === 'Enter') {
+            displayName = event.target.value.replace(" ", "+")
+            if (typeof window !== 'undefined')
+                window.location = "/highscores/player/" + displayName
+        }
+    }
     return (
         <>
             <div className="header-highscores">
@@ -52,7 +111,8 @@ export default function HighscoresHeader() {
                     </div>
                 </div>
                 <div className="flex flex-jc-c">
-                    <input id="search-user-hs" type="text" placeholder="Search Username" />
+                    <input id="search-user-hs" type="text" placeholder="Search Username" defaultValue=""
+                           onChange={onChangeHandler} onKeyPress={submitPlayerSearch}/>
                 </div>
             </div>
         </>

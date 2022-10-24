@@ -19,8 +19,9 @@ export default function HighscoresPage() {
     let [ category, setCategory ] = useState(categoryParam);
     let [ page, setPage ] = useState(pageParam);
     let [ skill, setSkill ] = useState(skillParam);
+    const [usernameHighlight, searchUser] = useState('');
     
-    let highscoresProvider = useMemo(() => ({ page, setPage, category, setCategory, skill, setSkill }), [ page, setPage, category, setCategory, skill, setSkill ]);
+    let highscoresProvider = useMemo(() => ({ page, setPage, category, setCategory, skill, setSkill, usernameHighlight, searchUser }), [ page, setPage, category, setCategory, skill, setSkill, usernameHighlight, searchUser ]);
 
     useEffect(() => {
 
@@ -38,7 +39,7 @@ export default function HighscoresPage() {
         
         setSkill(skill);
 
-        window.history.replaceState(null, '', `/highscores/${category}/${skill}/${page}`);
+        window.history.replaceState(null, '', `/highscores/skill/${category}/${skill}/${page}`);
 
     }, [ category, page ]);
 

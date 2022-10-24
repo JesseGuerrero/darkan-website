@@ -2,9 +2,10 @@ import React, {useContext, useEffect, useState} from "react";
 import HighscoresContext from "../../utils/contexts/HighscoresContext";
 import axios from "../../utils/axios";
 import {getSkillIDByName, getSkillLevelByXP} from "../../utils/constants";
+import {Link} from "react-router-dom";
 
 export default function HighscoresSkillTable() {
-    let { category, setCategory, page, setPage, skill, setSkill } = useContext(HighscoresContext);
+    let { category, setCategory, page, setPage, skill, setSkill, usernameHighlight, searchUser } = useContext(HighscoresContext);
 
     let [ users, setUsers ] = useState([]);
 
@@ -44,15 +45,17 @@ export default function HighscoresSkillTable() {
                     {
                         users.map(function(user) {
                                 return (<tr className="row-hover1">
-                                    <td id="rank">{(users.indexOf(user) + 1 + 15*(page-1)).toLocaleString("en-US")}</td>
-                                    <td id="player">
+                                    <td className={(user.displayName.includes(usernameHighlight) && usernameHighlight != "") ? "highlight" : ""} id="rank">{(users.indexOf(user) + 1 + 15*(page-1)).toLocaleString("en-US")}</td>
+                                    <td className={(user.displayName.includes(usernameHighlight) && usernameHighlight != "") ? "highlight" : ""} id="player">
+                                        <Link to={"/highscores/player/"+user.displayName.replace(" ", "+")}>
                                         {
                                             (user.ironman === true ? (<img className="iron-icon" src="/ironman_icon.png"/>) : (""))
                                         }
                                         {user.displayName}
+                                        </Link>
                                     </td>
-                                    <td id="level">{getSkillLevelByXP(user.xp[getSkillIDByName(skill)], getSkillIDByName(skill))}</td>
-                                    <td id="exp">{user.xp[getSkillIDByName(skill)].toLocaleString("en-US")}</td>
+                                    <td className={(user.displayName.includes(usernameHighlight) && usernameHighlight != "") ? "highlight" : ""} id="level">{getSkillLevelByXP(user.xp[getSkillIDByName(skill)], getSkillIDByName(skill))}</td>
+                                    <td className={(user.displayName.includes(usernameHighlight) && usernameHighlight != "") ? "highlight" : ""} id="exp">{user.xp[getSkillIDByName(skill)].toLocaleString("en-US")}</td>
                                 </tr>)
                             }
                         )

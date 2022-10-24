@@ -2,10 +2,11 @@ import React, { useContext, useEffect, useState } from 'react';
 import axios from '../../utils/axios.js';
 
 import HighscoresContext from '../../utils/contexts/HighscoresContext.js';
+import {Link} from "react-router-dom";
 
 export default function HighscoresTable() {
 
-    let { category, setCategory, page, setPage, skill, setSkill } = useContext(HighscoresContext);
+    let { category, setCategory, page, setPage, skill, setSkill, usernameHighlight, searchUser } = useContext(HighscoresContext);
 
     let [ users, setUsers ] = useState([]);
 
@@ -46,16 +47,18 @@ export default function HighscoresTable() {
                 <tbody>
                     { users.map((user, index) => {
                         return (
-                            <tr key={user.displayName} className='row-hover1'>
-                                <td id='player-rank'>{(page - 1) * 15 + index + 1}</td>
-                                <td id='player'>
+                            <tr key={user.displayName}>
+                                <td className={(user.displayName.includes(usernameHighlight) && usernameHighlight != "") ? "highlight" : ""} id='player-rank'>{(page - 1) * 15 + index + 1}</td>
+                                <td className={(user.displayName.includes(usernameHighlight) && usernameHighlight != "") ? "highlight" : ""} id='player'>
+                                    <Link to={"/highscores/player/"+user.displayName.replace(" ", "+")}>
                                     {
                                         (user.ironman === true ? (<img className="iron-icon" src="/ironman_icon.png"/>) : (""))
                                     }
                                     {user.displayName}
+                                    </Link>
                                 </td>
-                                <td id='player-data-ttl'>{user.totalLevel.toLocaleString('en-US')}</td>
-                                <td id='player-data-exp'>{user.totalXp.toLocaleString('en-US')}</td>
+                                <td className={(user.displayName.includes(usernameHighlight) && usernameHighlight != "") ? "highlight" : ""} id='player-data-ttl'>{user.totalLevel.toLocaleString('en-US')}</td>
+                                <td className={(user.displayName.includes(usernameHighlight) && usernameHighlight != "") ? "highlight" : ""} id='player-data-exp'>{user.totalXp.toLocaleString('en-US')}</td>
                             </tr>
                         )
                     })}

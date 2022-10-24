@@ -1,0 +1,215 @@
+// Font-awesome
+@import url('https://use.fontawesome.com/releases/v5.0.7/css/all.css');
+
+// Functionality
+@import "src/stylesheets/variables";
+@import "src/stylesheets/mixins";
+
+.main-container-highscores-player {
+  .sub-container-highscores-player {
+    color: rgb(222, 222, 222);
+
+    // search box warning
+    .highlight {
+      background-color: rgb(16, 26, 36) !important;
+    }
+    .invalid {
+      border-color: rgb(255, 114, 118) !important;
+    }
+    .valid {
+      border-color: green !important;
+    }
+    .multiple-valid {
+      border-color: yellow !important;
+    }
+    .green {
+      margin-left: 0.4em;
+      color: green !important;
+    }
+    .grey {
+      margin-left: 0.4em;
+      color: grey !important;
+    }
+    .none {
+      display: None;
+    }
+
+    // filter
+    .time-filter {
+      position: absolute;
+      font-size: $font-sm;
+      color: rgb(222, 222, 222);
+      background-color: rgb(20, 20, 20);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+      height: 2.75rem;
+      width: 10rem;
+      cursor: pointer;
+
+      &:not(:last-child) {
+        @include breakpoint-up(medium) {
+          margin-right: .5rem;
+        }
+      }
+
+      @include breakpoint-up(large) {
+        margin-bottom: 0rem;
+      }
+    }
+
+    // general design
+    h1 {
+      font-size: $font-lg;
+      margin-top: 0rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: $font-xmed;
+      margin-top: 0rem;
+    }
+    a:hover {
+      color: white;
+    }
+    .skill-icon {
+      height: 1.31rem;
+    }
+    #hs-overall {
+      font-size: $font-xmed;
+      text-align: center;
+      color: rgb(240, 202, 138);
+      @include breakpoint-up (large) {
+        margin-bottom: 0rem;
+      }
+      @include breakpoint-up (large) {
+        text-align: left;
+        font-size: $font-xmed;
+      }
+    }
+    .header-highscores-player {
+      text-align: center;
+      padding: 1rem 2.5rem;
+      @include breakpoint-up (medium) {
+        padding: 1rem 2.5rem;
+      }
+      #player-rank::before {
+        content: "Rank #";
+      }
+    }
+    .sub-header-hs {
+      padding: 0rem 1rem;
+      margin-bottom: 2rem;
+      @include breakpoint-up (large) {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+    }
+    .skill-icon-hs {
+      height: 75px;
+    }
+    .filter-skill-hs, .filter-account-hs, .filter-time-hs {
+      font-size: $font-sm;
+      background-color: white;
+      height: 2.75rem;
+      width: 10rem;
+      cursor: pointer;
+      &:not(:last-child) {
+        margin-right: .25rem;
+      }
+      @include breakpoint-up (large) {
+        position: relative;
+        left: 3rem;
+      }
+    }
+    select {
+      appearance: none;
+      background-color: transparent;
+      border: none;
+      border-radius: 2px;
+      padding: 0rem 1rem;
+      margin: 0;
+      width: 100%;
+      font-family: inherit;
+      font-size: inherit;
+      cursor: inherit;
+      line-height: inherit;
+      outline: none;
+    }
+    .filter-option-container {
+      display:none;
+      position:absolute;
+      top:100%;
+      right:0;
+      left:0;
+      z-index:999;
+    }
+    #search-user-hs {
+      width: 25rem;
+      font-size: $font-sm;
+      color: rgb(222, 222, 222);
+      margin-top: .25rem;
+      padding: .75rem;
+      background-color: rgb(5, 5, 5);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 5px;
+      outline: none;
+      @include breakpoint-up (large) {
+        margin-top: auto;
+        width: 12.5rem;
+      }
+    }
+    .backto-hs {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      @include breakpoint-up (large) {
+        margin-bottom: 0rem;
+      }
+    }
+    .return-arrow {
+      margin-right: .5rem;
+    }
+
+    // table design
+    table {
+      box-shadow: 5px 0px 30px rgb(0, 0, 0);
+      text-align: right;
+      border-spacing: 1px;
+      width: 85vw;
+      margin-bottom: 2rem;
+      th {
+        height: 3rem;
+        padding: .75rem;
+        background-color: rgb(10, 10, 10);
+        color: rgb(240, 202, 138);
+        cursor: default;
+      }
+      td {
+        height: 3rem;
+        text-align: right;
+        padding: .5rem;
+        background-color: rgb(20, 20, 20);
+        cursor: default;
+        img {
+          margin-left: 0rem;
+          margin-right: 1rem;
+        }
+      }
+      #rank {
+        width: 5rem;
+      }
+      #player, #level, #exp {
+        width: 10rem;
+      }
+      #player {
+        text-align: left;
+        padding-left: 1rem;
+        @include breakpoint-up (medium) {
+          padding-left: 1rem;
+        }
+      }
+      .player-hs {
+        text-align: right;
+      }
+    }
+  }
+}
