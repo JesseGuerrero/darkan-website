@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 
 import '../../stylesheets/defaults/Header.scss';
 
-export default function Header() {
+export default function Header(props) {
     return (
         <nav className="nav-wrapper">
             <div className="nav-container">
                 <div className="top-logo flex flex-ai-c">
                     <Link to="/">
-                        <img src="/logo.svg" alt="logo" className="logo-img" />
+                        Darkan
                     </Link>
                 </div>
                 <div className="nav-links flex flex-ai-c">
