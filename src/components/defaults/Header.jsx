@@ -25,15 +25,7 @@ export default function Header(props) {
                     </div>
                     <Link to="/highscores">Highscores</Link>
                     <Link to="/grand-exchange">Grand Exchange</Link>
-                    <a 
-                        href="https://github.com/DarkanRS/client-loader/releases" 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="cta-dwnl"
-                    >
-                        Download
-                    </a>
-
+                    <Link to="/download">Download</Link>
                 </div>
             </div>
         </nav>

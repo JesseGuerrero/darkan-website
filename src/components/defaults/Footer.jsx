@@ -13,13 +13,7 @@ export default function Footer() {
                         <Link to="/">Home</Link>
                     </div>
                     <div className="f-link">
-                        <a 
-                            href="https://github.com/DarkanRS/client-loader/releases/latest" 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                        >
-                            Download
-                        </a>
+                        <Link to="/download">Download</Link>
                     </div>
                     <div className="f-link">
                         <a 
