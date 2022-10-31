@@ -54,6 +54,7 @@
         font-size: $font-med;
         width: 50%;
       }
+
       i {
         font-size: $font-med;
         @include breakpoint-up(small) {
@@ -83,6 +84,9 @@
         @include breakpoint-up(large) {
           font-size: $font-lg;
         }
+      }
+      p i {
+        font-size: inherit;
       }
     }
   }

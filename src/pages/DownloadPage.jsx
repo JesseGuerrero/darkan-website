@@ -20,7 +20,7 @@ export default function DownloadPage() {
                 <h1>How To Fix Launcher Issues</h1>
                 <div className="text-body">
                     <p>
-                       &emsp;&emsp;Recently the launcher has had issues with about 1/2 the players when they first start
+                       &emsp;&emsp;Recently the launcher has had issues with about 1/2 the players when they <i>first</i> start
                        installing Darkan. Typically, once they finish installing Darkan with all graphical features
                        fixed, everything turns out fine. So, if you are one of those 50%, hang in there and follow some
                        of these instructions to get to the other side and enjoy Runescape 2012!
