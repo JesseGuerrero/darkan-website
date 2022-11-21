@@ -13,9 +13,9 @@ export default function IndexPage() {
 
             try {
 
-                let res = await axios.get('/players/online-count');
-    
-                setPlayerCount(res.data.count);
+                const res = await fetch('https://darkan.org:8443/v1/players/online-count');
+                let response = await res.json()
+                setPlayerCount(response.count);
             } catch(error) {
                 setPlayerCount(0);
             }

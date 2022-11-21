@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 const instance = axios.create({
-    baseURL: 'https://darkan.org:8443/v1/',
+    baseURL: 'http://144.126.132.23:8443/v1/',
     timeout: 1000,
 });
 
