@@ -10,7 +10,7 @@ export default function Header(props) {
             <div className="nav-container">
                 <div className="top-logo flex flex-ai-c">
                     <Link to="/">
-                        Darkan
+                        World 4
                     </Link>
                 </div>
                 <div className="nav-links flex flex-ai-c">

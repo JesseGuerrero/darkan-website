@@ -35,8 +35,8 @@ export default function IndexPage() {
                 <img src="/lumbridge-lg.png" alt="runescape_2012" className="hero-img" />
                 <div className="sub-container-hero">
                     <div className="hero">
-                        <h1>Darkan</h1>
-                        <p>Play Runescape in 2012</p>
+                        <h1>World 4</h1>
+                        <a href="https://jesseguerrero.github.io/runescape-modded/" target="_blank" rel="noopener noreferrer"> <p>Play Modded 2012 Runescape</p></a>
                         <div className="dwn-client">
                             <a href="https://github.com/DarkanRS/client-loader/releases/latest" target="_blank" rel="noopener noreferrer" className="dwn-btn button-hover">Play Now</a>
                         </div>
