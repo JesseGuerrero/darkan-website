@@ -4,6 +4,9 @@
 // Functionality
 @import "src/stylesheets/variables";
 @import "src/stylesheets/mixins";
+.none {
+    display: None !important;
+}
 .main-container-highscores {
     .sub-container-highscores {
         .highlight {
@@ -23,9 +26,6 @@
         }
         .grey {
             color: grey !important;
-        }
-        .none {
-            display: None;
         }
         .iron-icon {
             height: 1rem;

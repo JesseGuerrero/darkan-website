@@ -3,10 +3,13 @@ import React, { useContext } from 'react';
 import HighscoresContext from '../../utils/contexts/HighscoresContext.js';
 
 import {getSkillIDByName, skills} from '../../utils/constants.js';
+import axios from "axios";
 
 export default function HighscoresHeader() {
     let { category, setCategory, page, setPage, skill, setSkill, usernameHighlight, searchUser } = useContext(HighscoresContext);
     const onChangeHandler = async(event) => {//username search
+        if(category == "GIM")
+            return
         let displayName = event.target.value
         let pageChange = undefined
         let foundPlayer = false
@@ -16,10 +19,10 @@ export default function HighscoresHeader() {
             if(category == 'iron')
                 category = 'ironman';
             if(skill === null)
-                response = await fetch(`https://darkan.org:8443/v1/highscores?limit=9999999&gamemode=${category}`);
+                response = await axios.get(`/highscores?limit=9999999&gamemode=${category}`);
             if(skill !== null)
-                response = await fetch(`https://darkan.org:8443/v1/highscores?limit=9999999&gamemode=${category}&skill=` + getSkillIDByName(skill));
-            let playerData = await response.json();
+                response = await axios.get(`/highscores?limit=9999999&gamemode=${category}&skill=` + getSkillIDByName(skill));
+            let playerData = response;
             for(let i = 0; i < playerData.length; i++) {
                 if (playerData[i].displayName == displayName) {
                     pageChange = Math.ceil((i+1) / 15)//15 is limit
@@ -52,9 +55,11 @@ export default function HighscoresHeader() {
         searchUser(displayName)
     }
     const submitPlayerSearch = async(event) => {//username search
+        if(category == "GIM")
+            return
         let displayName = event.target.value
-        const response = await fetch("https://darkan.org:8443/v1/highscores?limit=9999999");
-        let playerData = await response.json();
+        const response = await axios.get(`/highscores?limit=9999999`);
+        let playerData = response
         let foundPlayer = false
         for(let i = 0; i < playerData.length; i++)
             if(playerData[i].displayName == displayName) {
@@ -74,7 +79,7 @@ export default function HighscoresHeader() {
                 <h2>Track, Compare, Achieve Rank #1</h2>
             </div>
             <div className="sub-header-hs">
-                <h3 id="hs-overall">{skills[skill]}</h3>
+                <h3 id="hs-overall">{category == "GIM" ? "Group Iron" : skills[skill]}</h3>
                 <div className="filter-container">
                     <div className="select-hs-container">
                         <div className="select-hs">
@@ -88,7 +93,7 @@ export default function HighscoresHeader() {
                             >
                                 <optgroup label="Game Mode"></optgroup>
                                 <option value="all">All</option>
-                                {/*<option value="regular">Regular</option>*/}
+                                <option value="GIM">GIM</option>
                                 <option value="iron">Iron</option>
                             </select>
                             <select 
@@ -97,10 +102,10 @@ export default function HighscoresHeader() {
                                     setSkill(e.target.value);
                                     setPage(1);
                                 }}
-                                className="filter-skill-hs"
+                                className={"filter-skill-hs"}
                             >
                                 <optgroup label="Skill"></optgroup>
-                                { Object.keys(skills).map(key => {
+                                { category == "GIM" ? <option value={"All Skills"}>{"All Skills"}</option> : Object.keys(skills).map(key => {
                                     let value = skills[key];
                                     return (
                                         <option value={key} key={key}>{value}</option>

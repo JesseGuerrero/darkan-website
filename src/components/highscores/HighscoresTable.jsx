@@ -9,7 +9,6 @@ export default function HighscoresTable() {
     let { category, setCategory, page, setPage, skill, setSkill, usernameHighlight, searchUser } = useContext(HighscoresContext);
 
     let [ users, setUsers ] = useState([]);
-
     useEffect(() => {
 
         let fetchHighscores = async () => {
@@ -18,7 +17,8 @@ export default function HighscoresTable() {
 
                 if(category == 'iron')
                     category = 'ironman';
-
+                if(category == "GIM")
+                    category = "all";
                 let res = await axios.get(`/highscores?page=${page}&limit=15&gamemode=${category}`);
 
                 setUsers(res.data);
