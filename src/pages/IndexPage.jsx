@@ -38,7 +38,7 @@ export default function IndexPage() {
                         <h1>Darkan</h1>
                         <p>Play Runescape in 2012</p>
                         <div className="dwn-client">
-                            <a href="https://github.com/DarkanRS/client-loader/releases/latest" target="_blank" rel="noopener noreferrer" className="dwn-btn button-hover">Play Now</a>
+                            <a href="/download" className="dwn-btn button-hover">Play Now</a>
                         </div>
                         <p id="no-igp">{ playerCount + ' Players Online' }</p>
                     </div>

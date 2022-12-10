@@ -5,13 +5,13 @@
 @import "src/stylesheets/variables";
 @import "src/stylesheets/mixins";
 .top-container {
-    height: 85vh;
+    height: 90vh;
 }
 
 .main-container-hero {
-    padding-top: 20vh;
+    padding-top: 22.5vh;
     @include breakpoint-up (xlarge) {
-        padding-top: 17.5vh;
+        padding-top: 20vh;
     }
     .hero-img {
         position: absolute;
@@ -34,6 +34,9 @@
                 font-size: $font-lg;
                 color: white;
                 @include breakpoint-up (medium) {
+                    font-size: $font-xmed;
+                }
+                @include breakpoint-up (large) {
                     font-size: $font-lg;
                 }
                 @include breakpoint-up (xlarge) {
