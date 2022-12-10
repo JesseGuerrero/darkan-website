@@ -7,6 +7,10 @@
 
 .download-main-container {
   text-align: center;
+  height: 85vh;
+  .download-sub-container {
+    padding-top: 20vh;
+  }
   h1 {
     font-size: $font-xmed;
     padding: 5vh 20vw 2.5rem 20vw;

@@ -5,6 +5,8 @@ import HighscoresPage from "./HighscoresPage.jsx";
 import GrandExchangePage from "./GrandExchangePage.jsx";
 import HighscorePlayerPage from "./HighscorePlayerPage.jsx";
 import DownloadPage from "./DownloadPage.jsx";
+import FAQPage from "./FAQPage.jsx";
+import LauncherIssuePage from "./LauncherIssuePage.jsx";
 
 function PageRoutes({props}) {
 	return (
@@ -17,6 +19,8 @@ function PageRoutes({props}) {
 			<Route path="/highscores/player/:displayName" element={<HighscorePlayerPage />} />
 			<Route path="/grand-exchange" element={<GrandExchangePage />} />
 			<Route path="/download" element={<DownloadPage />} />
+			<Route path="/faq" element={<FAQPage />} />
+			<Route path="/launcher-issue" element={<LauncherIssuePage />} />
 		</Routes>
 	);
 }

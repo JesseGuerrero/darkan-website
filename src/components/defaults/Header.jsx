@@ -20,6 +20,7 @@ export default function Header(props) {
                             <ul className="dropdown-links">
                                 <li><a href="https://discordapp.com/invite/Z32ggEB" target="_blank" rel="noopener noreferrer">Discord</a></li>
                                 <li><a href="https://github.com/DarkanRS" target="_blank" rel="noopener noreferrer" className="cta-developers">Github</a></li>
+                                <li><Link to="/faq" className="cta-developers">FAQ</Link></li>
                             </ul>
                         </div>
                     </div>
