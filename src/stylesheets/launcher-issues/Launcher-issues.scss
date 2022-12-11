@@ -1,0 +1,146 @@
+// Font-awesome
+@import url('https://use.fontawesome.com/releases/v5.0.7/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+// Functionality
+@import "src/stylesheets/variables";
+@import "src/stylesheets/mixins";
+
+.launcher-issues-main-container {
+  text-align: center;
+  .download-sub-container {
+    padding-top: 15vh;
+  }
+  h1 {
+    font-size: $font-xmed;
+    padding: 1vh 20vw 2.5rem 20vw;
+    @include breakpoint-up (medium) {
+      font-size: $font-xmed;
+      padding: 1vh 25vw 2.5rem 25vw;
+    }
+    @include breakpoint-up (large) {
+      font-size: $font-lg;
+    }
+  }
+
+  .body-container {
+    width: 100%;
+    .alt-header {
+      text-align: center;
+      font-size: $font-xmed;
+      @include breakpoint-up(medium) {
+        text-align: center;
+        font-size: $font-xmed;
+      }
+      @include breakpoint-up(large) {
+        text-align: center;
+        font-size: $font-lg;
+      }
+    }
+
+    .text-body {
+      width: 60%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+      padding-bottom: 1rem;
+      font-size: $font-sm;
+      @include breakpoint-up(small) {
+        font-size: $font-sm;
+        width: 80%;
+      }
+      @include breakpoint-up(medium) {
+        font-size: $font-med;
+        width: 60%;
+      }
+      @include breakpoint-up(large) {
+        font-size: $font-med;
+        width: 50%;
+      }
+
+      i {
+        font-size: $font-med;
+        @include breakpoint-up(small) {
+          font-size: $font-med;
+          width: 80%;
+        }
+        @include breakpoint-up(medium) {
+          font-size: $font-xmed;
+          width: 70%;
+        }
+        @include breakpoint-up(large) {
+          font-size: $font-xmed;
+          width: 60%;
+        }
+      }
+      a {
+        text-decoration: underline;
+        color: lightblue;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: $font-xmed;
+        @include breakpoint-up(medium) {
+          font-size: $font-xmed;
+        }
+        @include breakpoint-up(large) {
+          font-size: $font-lg;
+        }
+      }
+      p i {
+        font-size: inherit;
+      }
+    }
+  }
+
+  .hero-img {
+    position: absolute;
+    left: 0;
+    opacity: .1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    @include breakpoint-up (large) {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .button-container {
+    margin-bottom: 3rem;
+    a {
+      color: rgb(255, 163, 92);
+    }
+    @include breakpoint-up (medium) {
+      display: flex;
+      justify-content: center;
+    }
+    .download-client1, .download-client2, .download-client3 {
+      font-size: $font-sm;
+      padding: .5rem 2rem;
+      width: 75vw;
+      background-color: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 5px;
+      backdrop-filter: blur(10px);
+      @include breakpoint-up (medium) {
+        width: 16rem;
+        &:not(last-child) {
+          margin-right: 1rem;
+        }
+      }
+      @include breakpoint-up (large) {
+        width: 19rem;
+      }
+    }
+    .download-client1, .download-client2 {
+      margin-bottom: 1rem;
+      @include breakpoint-up (large) {
+        margin-bottom: 0rem;
+      }
+    }
+    .download-client3 {
+
+    }
+  }
+}

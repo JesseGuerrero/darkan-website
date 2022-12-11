@@ -6,5 +6,19 @@
 @import "src/stylesheets/mixins";
 
 .faq-main-container {
-  border: transparent;
+  .faq-row {
+    border-color: #3a3a3a !important;
+  }
+  height: 90vh;
+  .body-container {
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    padding-top: 15vh;
+    h2 {
+      margin: auto !important;
+    }
+  }
 }

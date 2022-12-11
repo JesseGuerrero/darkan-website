@@ -1,9 +1,9 @@
 import React from 'react';
-import '../stylesheets/download/Download.scss';
+import '../stylesheets/launcher-issues/Launcher-issues.scss';
 
 export default function LauncherIssuePage() {
     return (
-        <div className="download-main-container">
+        <div className="launcher-issues-main-container">
             <div className="body-container">
                 <h1>How To Fix Launcher Issues</h1>
                 <div className="text-body">

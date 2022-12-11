@@ -6,7 +6,7 @@ export default function DownloadPage() {
         <div className="download-main-container">
             <div className="download-sub-container">
                 <div className="download-header">
-                    <h1>Download Darkan</h1>
+                    <h1>Download & Play</h1>
                 </div>
                 <div className="button-container">
                     <div>

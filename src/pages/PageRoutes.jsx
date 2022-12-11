@@ -20,7 +20,7 @@ function PageRoutes({props}) {
 			<Route path="/grand-exchange" element={<GrandExchangePage />} />
 			<Route path="/download" element={<DownloadPage />} />
 			<Route path="/faq" element={<FAQPage />} />
-			<Route path="/launcher-issue" element={<LauncherIssuePage />} />
+			<Route path="/launcher-issues" element={<LauncherIssuePage />} />
 		</Routes>
 	);
 }

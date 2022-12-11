@@ -29,7 +29,7 @@ const data = {
 }
 
 const styles = {
-    bgColor: "#141414",
+    bgColor: "transparent",
     titleTextColor: "#DEDEDE",
     rowTitleColor: "#DEDEDE",
     rowContentColor: "#DEDEDE",
@@ -39,11 +39,13 @@ const styles = {
 export default function FAQPage() {
     return (
         <div className='faq-main-container'>
-            <Faq
-                data={data}
-                styles={styles}
-            />
-            For launcher issues <Link to="/launcher-issues">click here</Link>
+            <div className="body-container">
+                <Faq
+                    data={data}
+                    styles={styles}
+                />
+                <p>For launcher issues <Link to="/launcher-issues"><u>click here</u></Link></p>
+            </div>
         </div>
     )
 }
