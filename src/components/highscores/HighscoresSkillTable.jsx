@@ -49,7 +49,7 @@ export default function HighscoresSkillTable() {
                                     <td className={(user.displayName.includes(usernameHighlight) && usernameHighlight != "") ? "highlight" : ""} id="player">
                                         <Link to={"/highscores/player/"+user.displayName.replace(" ", "+")}>
                                         {
-                                            (user.ironman === true ? (<img className="iron-icon" src="/ironman_icon.png"/>) : (""))
+                                            (user.ironman === true ? (<img className="iron-icon" src="https://raw.githubusercontent.com/JesseGuerrero/web-files-darkan/master/ironman_icon.png"/>) : (""))
                                         }
                                         {user.displayName}
                                         </Link>

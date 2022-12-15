@@ -3,12 +3,12 @@
   "name": "Darkan 2012 Remake",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "https://github.com/JesseGuerrero/web-files-darkan/blob/master/favicon.ico?raw=true",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "https://raw.githubusercontent.com/JesseGuerrero/web-files-darkan/master/logo192.png",
       "type": "image/png",
       "sizes": "192x192"
     },

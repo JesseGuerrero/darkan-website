@@ -27,7 +27,7 @@ export default function LauncherIssuePage() {
                     <i>My graphics are stuck in safe mode and I am lagging!</i><br></br>
                     This is an issue with Java, not Darkan. The main solution at this time is to try different versions of Java until one works.
                     <br></br>
-                    <img src="/stuck_gfx.png"/>
+                    <img src="https://raw.githubusercontent.com/JesseGuerrero/web-files-darkan/master/stuck_gfx.png"/>
                     <br></br>
                     <br></br>
                     <i>What if both things above fail?</i><br></br>
@@ -40,7 +40,7 @@ export default function LauncherIssuePage() {
                     Open a command prompt and type "java -version". If you see a command error, that means you don't
                     have a path setup for the Java executable, check the "How to switch Java versions" video below...
                     <br></br>
-                    <img src="/check_java.png"/>
+                    <img src="https://raw.githubusercontent.com/JesseGuerrero/web-files-darkan/master/check_java.png"/>
                 </div>
                 <div className="alt-header">Useful videos</div><br></br>
                 <div className="text-body">

@@ -32,7 +32,7 @@ export default function IndexPage() {
     return (
         <div className="top-container">
             <div className="main-container-hero flex flex-jc-c">
-                <img src="/lumbridge-lg.png" alt="runescape_2012" className="hero-img" />
+                <img src="https://raw.githubusercontent.com/JesseGuerrero/web-files-darkan/master/lumbridge-lg.png" alt="runescape_2012" className="hero-img" />
                 <div className="sub-container-hero">
                     <div className="hero">
                         <h1>Darkan</h1>

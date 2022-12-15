@@ -38,7 +38,7 @@ export default function GrandExchangeTable() {
                 { offers.map((offer, index) => {
                     return (
                         <tr>
-                            <td id='item-name'><img className="iron-icon" src={"/ge_icons_tradeable/" + offer.itemId + ".png"}/>{getItemIdToName(offer.itemId)}</td>
+                            <td id='item-name'><img className="iron-icon" src={"https://raw.githubusercontent.com/JesseGuerrero/web-files-darkan/master/ge-icons/" + offer.itemId + ".png"}/>{getItemIdToName(offer.itemId)}</td>
                             <td id='item-type'>{offer.offerType}</td>
                             <td id='amount-left'>{offer.amount.toLocaleString('en-US')}</td>
                             <td id='price-each'>{offer.price.toLocaleString('en-US')}</td>
