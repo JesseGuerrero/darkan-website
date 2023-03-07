@@ -94,7 +94,7 @@ export default function HighscoresHeader() {
                                 <optgroup label="Game Mode"></optgroup>
                                 <option value="all">All</option>
                                 <option value="GIM">GIM</option>
-                                <option value="iron">Iron</option>
+                                {/*<option value="iron">Iron</option>*/}
                             </select>
                             <select 
                                 value={skill} 

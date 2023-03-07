@@ -27,7 +27,7 @@ export default function HighscoresPage() {
     useEffect(() => {
 
         if(!category)
-            setCategory('GIM');
+            setCategory('all');
 
         if(!page || isNaN(page))
             setPage(1);
